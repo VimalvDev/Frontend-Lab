@@ -31,8 +31,8 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 
 ### 4. Clean Indentation & Nesting
 
-•Keep 2-space or 4-space indentation
-•Avoid deeply nested HTML
+Keep 2-space or 4-space indentation
+Avoid deeply nested HTML
 
 ---
 
@@ -46,31 +46,42 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 
 ```<section class="hero-banner"> instead of <div class="box1">```
 
+---
+
 ### 7. Avoid Inline Styles & JS
 
 Keep all CSS and JS in external files.
+
+---
 
 ### 8. Defer Scripts for Performance
 
 <script src="main.js" defer></script>
 
+---
+
 ### 9. Use Accessibility Attributes
 
 <button aria-label="Close menu">X</button>
+
+---
 
 ### 10. Use HTML Validators
 
 Check with W3C HTML Validator before deployment.
 
+---
+
 ### 11. Remove Unused Code
 
 No extra <div>, no unused comments or test sections.
+
+---
 
 ### 12. Favicon and Manifest
 
 <link rel="icon" href="favicon.ico" />
 <link rel="manifest" href="site.webmanifest">
-
 
 ---
 
