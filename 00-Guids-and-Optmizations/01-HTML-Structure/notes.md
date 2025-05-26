@@ -13,15 +13,13 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 
 ### 2. Proper DOCTYPE & Language
 
-```<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Page description here" />```
-
+<meta name="description" content="Page description here" />
 
 ---
-
 
 ### 3. Essential Meta Tags
 
@@ -29,15 +27,12 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Page description here" />
 
-
 ---
-
 
 ### 4. Clean Indentation & Nesting
 
-Keep 2-space or 4-space indentation
-
-Avoid deeply nested HTML
+•Keep 2-space or 4-space indentation
+•Avoid deeply nested HTML
 
 ---
 
