@@ -31,9 +31,9 @@ This guide lists all best practices and steps to optimize HTML for performance, 
 
 ### 3. Descriptive Class & ID Names
 
-`<section class="hero-banner"> instead of <div class="box1">`
+`<section class="hero-banner">` instead of `<div class="box1">`
 
---
+---
 
 ### 4. Lazy Load Images
 
