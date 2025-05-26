@@ -38,8 +38,8 @@ This guide lists all best practices and steps to optimize HTML for performance, 
 ### 4. Lazy Load Images and compress images
 
 - `<img src="image.png" loading="lazy" alt="Example image" />`
-- Use compress files into AVIF or webp
-
+- Compress images using modern formats like WebP or AVIF for better performance
+  
 ---
 
 ### 5. Defer Scripts for Performance
