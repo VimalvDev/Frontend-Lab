@@ -8,7 +8,8 @@ This guide lists all best practices and steps to optimize HTML for performance, 
 
 ### 1. Essential Meta Tags
 
-- `<meta name="viewport"/>`
+- `<meta charset="UTF-8"/>`
+- `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
 - `<meta name="description"/>`
 - `<meta name="robots" content="index, follow">`
 - `<meta name="author" content="Your Name">`
@@ -16,7 +17,6 @@ This guide lists all best practices and steps to optimize HTML for performance, 
 <meta property="og:description" content="Description for social sharing">
 <meta property="og:image" content="https://example.com/image.jpg">
 <meta property="og:url" content="https://example.com">
-<meta name="theme-color" content="#ffffff"> <!-- Sets browser UI color -->
 
 ---
 
