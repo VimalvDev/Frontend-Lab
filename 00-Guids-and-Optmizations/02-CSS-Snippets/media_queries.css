@@ -1,3 +1,8 @@
+/* === CSS Variables === */
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +10,10 @@
   scroll-behavior: smooth;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+}
+body {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 /* 💻 Normal Desktops & Laptops — 1600×900, 1440×900, 1366×768 */
