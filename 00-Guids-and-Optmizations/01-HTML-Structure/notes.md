@@ -12,7 +12,7 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 ---
 
 ### 2. Proper DOCTYPE & Language
-```html
+html
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8" />
