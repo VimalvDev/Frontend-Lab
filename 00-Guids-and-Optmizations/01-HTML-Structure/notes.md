@@ -9,7 +9,7 @@ This guide lists all best practices and steps to optimize HTML for performance, 
 ### 1. Use Semantic HTML Tags
 Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div>`s.
 
---
+---
 
 ### 2. Proper DOCTYPE & Language
 ```html
@@ -19,7 +19,7 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Page description here" />
 
---
+---
 
 ## 3. Essential Meta Tags
 
@@ -27,7 +27,7 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Page description here" />
 
---
+---
 
 ### 4. Clean Indentation & Nesting
 
