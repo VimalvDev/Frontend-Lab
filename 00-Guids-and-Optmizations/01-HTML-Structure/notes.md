@@ -8,9 +8,8 @@ This guide lists all best practices and steps to optimize HTML for performance, 
 
 ### 1. Essential Meta Tags
 
-`<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Page description here" />`
+`<meta name="viewport"/>`
+`<meta name="description"/>`
 
 ---
 
