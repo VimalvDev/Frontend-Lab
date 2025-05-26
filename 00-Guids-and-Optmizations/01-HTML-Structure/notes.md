@@ -17,48 +17,48 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Page description here" />
 
-3. Essential Meta Tags
+### 3. Essential Meta Tags
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Page description here" />
 
-4. Clean Indentation & Nesting
+### 4. Clean Indentation & Nesting
 
 Keep 2-space or 4-space indentation
 
 Avoid deeply nested HTML
 
 
-5. Lazy Load Images
+### 5. Lazy Load Images
 
 <img src="image.png" loading="lazy" alt="Example image" />
 
-6. Descriptive Class & ID Names
+### 6. Descriptive Class & ID Names
 
 <section class="hero-banner"> instead of <div class="box1">
 
-7. Avoid Inline Styles & JS
+### 7. Avoid Inline Styles & JS
 
 Keep all CSS and JS in external files.
 
-8. Defer Scripts for Performance
+### 8. Defer Scripts for Performance
 
 <script src="main.js" defer></script>
 
-9. Use Accessibility Attributes
+### 9. Use Accessibility Attributes
 
 <button aria-label="Close menu">X</button>
 
-10. Use HTML Validators
+### 10. Use HTML Validators
 
 Check with W3C HTML Validator before deployment.
 
-11. Remove Unused Code
+### 11. Remove Unused Code
 
 No extra <div>, no unused comments or test sections.
 
-12. Favicon and Manifest
+### 12. Favicon and Manifest
 
 <link rel="icon" href="favicon.ico" />
 <link rel="manifest" href="site.webmanifest">
@@ -66,7 +66,7 @@ No extra <div>, no unused comments or test sections.
 
 ---
 
-✅ Final Checklist
+### ✅ Final Checklist
 
 [x] Semantic structure
 
@@ -86,7 +86,7 @@ No extra <div>, no unused comments or test sections.
 
 ---
 
-📘 Tools
+### 📘 Tools
 
 HTML Validator: https://validator.w3.org/
 
