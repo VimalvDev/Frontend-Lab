@@ -12,11 +12,11 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 ---
 
 ### 2. Proper DOCTYPE & Language
-<!DOCTYPE html>
+```<!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Page description here" />
+<meta name="description" content="Page description here" />```
 
 
 ---
@@ -24,9 +24,9 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 
 ### 3. Essential Meta Tags
 
-<meta charset="UTF-8" />
+```<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Page description here" />
+<meta name="description" content="Page description here" />```
 
 
 ---
@@ -41,11 +41,11 @@ Avoid deeply nested HTML
 
 ### 5. Lazy Load Images
 
-<img src="image.png" loading="lazy" alt="Example image" />
+```<img src="image.png" loading="lazy" alt="Example image" />```
 
 ### 6. Descriptive Class & ID Names
 
-<section class="hero-banner"> instead of <div class="box1">
+```<section class="hero-banner"> instead of <div class="box1">```
 
 ### 7. Avoid Inline Styles & JS
 
