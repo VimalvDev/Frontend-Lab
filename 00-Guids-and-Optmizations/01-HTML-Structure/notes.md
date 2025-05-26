@@ -56,7 +56,7 @@ Keep all CSS and JS in external files.
 
 ### 8. Defer Scripts for Performance
 
-<script src="main.js" defer></script>
+`<script src="main.js" defer></script>`
 
 ---
 
