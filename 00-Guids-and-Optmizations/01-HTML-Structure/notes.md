@@ -35,9 +35,10 @@ This guide lists all best practices and steps to optimize HTML for performance, 
 
 ---
 
-### 4. Lazy Load Images
+### 4. Lazy Load Images and compress images
 
-`<img src="image.png" loading="lazy" alt="Example image" />`
+- `<img src="image.png" loading="lazy" alt="Example image" />`
+- Use compress files into AVIF or webp
 
 ---
 
@@ -75,6 +76,7 @@ Check with W3C HTML Validator before deployment.
 
 ### 📘 Tools
 
+- IMG compressor: https://squoosh.app
 - HTML Validator: https://validator.w3.org/
 - Minify HTML: https://kangax.github.io/html-minifier/
 - SEO Test: https://www.seoptimer.com/
