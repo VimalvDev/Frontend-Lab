@@ -62,7 +62,7 @@ Keep all CSS and JS in external files.
 
 ### 9. Use Accessibility Attributes
 
-<button aria-label="Close menu">X</button>
+`<button aria-label="Close menu">X</button>`
 
 ---
 
