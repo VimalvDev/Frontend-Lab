@@ -41,4 +41,5 @@ Defined at the `:root` level to ensure consistency across the entire project:
 
 - W3C CSS Validator: https://jigsaw.w3.org/css-validator
 - Add Prefixes: https://autoprefixer.github.io
-- Testing Responsiveness : https://responsively.app
+- Testing Responsiveness: https://responsively.app
+- Minify CSS: https://www.minifier.org or minify vs code extention (press f1)
