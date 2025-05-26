@@ -1,52 +1,40 @@
-/* 🌐 Base styles (Desktop-First) — for 1920×1080, 1440×900, 1366×768 etc. */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* 💻 Normal Desktops & Laptops — 1600×900, 1440×900 */
+/* 💻 Normal Desktops & Laptops — 1600×900, 1440×900, 1366×768 */
 @media (max-width: 1599px) {
-  /* For screens: 1600×900, 1440×900, 1366×768 */
-  /* Optional tweaks for smaller desktop/laptops (1440px, 1366px) */
 }
 
-/* 💻 Small Laptops / Tablets Landscape — 1366×768, 1280×720 */
+/* 💻 Small Laptops / Tablets Landscape — 1366×768, 1280×720, 1024×768 */
 @media (max-width: 1199px) {
-  /* For screens: 1280×720, 1366×768, 1024×768 */
 }
 
-/* 📺 Tablets Portrait + Landscape — 1024×768, 800×1280 */
+/* 📺 Tablets Portrait + Landscape — 912×1368, 800×1280, 768×1024 */
 @media (max-width: 991px) {
-  /* For screens: iPad (768×1024), Galaxy Tab (800×1280), 912×1368 */
 }
 
 /* 📱 Large Mobiles + Small Tablets — 768×1024, 720×1280 */
 @media (max-width: 767px) {
-  /* For screens: iPad Mini Portrait, 720×1280, 600×1024 */
 }
 
-/* 📱 Mid-Sized Mobiles — 600×1024, 540×960, 640×1136 */
+/* 📱 Mid-Sized Mobiles — 640×1136, 600×1024, 540×960*/
 @media (max-width: 600px) {
-  /* For screens: Pixel 6a (600×1024), old Androids like 540×960 */
 }
 
 /* 📱 Mobile Phones — 500×900, 480×800 */
 @media (max-width: 500px) {
-  /* For screens: 480×800, 500×900 */
 }
 
-/* 📱 Small Phones — 428×926, 414×896 */
+/* 📱 Small Phones — 428×926, 414×896, 393×851 */
 @media (max-width: 425px) {
-  /* For screens: iPhone 12, XR (414×896), Pixel 5 (393×851) */
 }
 
 /* 📱 Extra Small Phones — 375×667, 360×800 */
 @media (max-width: 375px) {
-  /* For screens: iPhone SE (375×667), Pixel 4a (360×800) */
-}
-
-/* 📱 Tiny Phones — 320×568 */
-@media (max-width: 320px) {
-  /* For screens: iPhone 5, old Samsung J series (320×568) */
 }
