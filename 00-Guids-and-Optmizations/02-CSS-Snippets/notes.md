@@ -32,6 +32,11 @@ Defined at the `:root` level to ensure consistency across the entire project:
 
 ---
 
+## 2. Responsive Media Qeuries
+- visit style.css
+
+---
+
 ## Tools
 
 - W3C CSS Validator: https://jigsaw.w3.org/css-validator
