@@ -21,7 +21,7 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 
 --
 
-### 3. Essential Meta Tags
+## 3. Essential Meta Tags
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
