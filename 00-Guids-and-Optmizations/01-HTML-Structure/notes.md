@@ -10,11 +10,19 @@ This guide lists all best practices and steps to optimize HTML for performance, 
 
 - `<meta name="viewport"/>`
 - `<meta name="description"/>`
+- `<meta name="robots" content="index, follow">`
+- `<meta name="author" content="Your Name">`
+- `<meta property="og:title" content="Your Page Title">`
+<meta property="og:description" content="Description for social sharing">
+<meta property="og:image" content="https://example.com/image.jpg">
+<meta property="og:url" content="https://example.com">
+<meta name="theme-color" content="#ffffff"> <!-- Sets browser UI color -->
 
 ---
 
 ### 2. Use Semantic HTML Tags
-Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div>`s.
+
+`<main>`, `<section>`, `<article>`, `<nav>`, `<footer>`, `<header>
 
 ---
 
