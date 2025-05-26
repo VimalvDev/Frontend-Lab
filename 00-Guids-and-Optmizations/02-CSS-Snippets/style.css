@@ -1,3 +1,8 @@
+/* Custom Fonts */
+@font-face {
+  font-family: ;
+  src: url(/Fonts/);
+}
 /* === CSS Variables === */
 :root {
   --primary-color: #000;
