@@ -13,11 +13,11 @@ Use `<main>`, `<section>`, `<article>`, `<nav>`, etc., instead of too many `<div
 
 ### 2. Proper DOCTYPE & Language
 
-`<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Page description here" />`
+<meta name="description" content="Page description here" />
 
 ---
 
