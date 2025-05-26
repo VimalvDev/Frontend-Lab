@@ -4,112 +4,77 @@ This guide lists all best practices and steps to optimize HTML for performance, 
 
 ---
 
+### 1. Essential Meta Tags
 ## ✅ Step-by-Step Optimization
 
-### 1. Essential Meta Tags
-
-#### a. For Every website 
+#### a. SEO-Based Meta Tags
 - `<meta charset="UTF-8"/>`
 - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
 - `<meta name="description" content=""/>`
 - `<meta name="robots" content="index, follow">`
 - `<meta name="author" content="Your Name">`
 
-#### b. Professional website only
+#### b. Social media sharing tags
 
 - `<meta property="og:title" content="Your Page Title">`
-<meta property="og:description" <content="Description for social sharing">
-<meta property="og:image" content="https://example.com/image.jpg">
-<meta property="og:url" content="https://example.com">
+- `<meta property="og:description" <content="Description for social sharing">`
+- `<meta property="og:image" content="https://example.com/image.jpg">`
+- `<meta property="og:url" content="https://example.com">`
 
 ---
 
 ### 2. Use Semantic HTML Tags
 
-`<main>`, `<section>`, `<article>`, `<nav>`, `<footer>`, `<header>
+`<main>`, `<section>`, `<article>`, `<nav>`, `<footer>`, `<header>`
 
 ---
 
-### 4. Clean Indentation & Nesting
+### 3. Descriptive Class & ID Names
 
-Keep 2-space or 4-space indentation
-Avoid deeply nested HTML
+`<section class="hero-banner">` instead of `<div class="box1">`
 
----
+--
 
-### 5. Lazy Load Images
+### 4. Lazy Load Images
 
-```<img src="image.png" loading="lazy" alt="Example image" />```
-
----
-
-### 6. Descriptive Class & ID Names
-
-```<section class="hero-banner"> instead of <div class="box1">```
+`<img src="image.png" loading="lazy" alt="Example image" />`
 
 ---
 
-### 7. Avoid Inline Styles & JS
+### 5. Defer Scripts for Performance
 
-Keep all CSS and JS in external files.
-
----
-
-### 8. Defer Scripts for Performance
-
+- To improve page load speed
+- To avoid blocking the browser from rendering your HTML
+- To make scripts run after the HTML is ready
+  
 `<script src="main.js" defer></script>`
 
 ---
 
-### 9. Use Accessibility Attributes
+### 6. Use Accessibility Attributes
 
-`<button aria-label="Close menu">X</button>`
-
+#### When should we use aria-label?
+- Icon-only buttons	`<button aria-label="Close menu">X</button>`
+- SVG-based icons	`<svg ... aria-label="Search" role="img"></svg>`
+  
 ---
 
-### 10. Use HTML Validators
+### 7. Use HTML Validators
 
 Check with W3C HTML Validator before deployment.
+- https://validator.w3.org/#validate_by_input
 
 ---
 
-### 11. Remove Unused Code
+### 8. Favicon and Manifest
 
-No extra <div>, no unused comments or test sections.
-
----
-
-### 12. Favicon and Manifest
-
-<link rel="icon" href="favicon.ico" />
-<link rel="manifest" href="site.webmanifest">
-
----
-
-### ✅ Final Checklist
-
-[x] Semantic structure
-
-[x] Mobile meta + responsive image loading
-
-[x] SEO-friendly titles, meta, alt tags
-
-[x] External CSS & JS
-
-[x] Accessibility + clean code
-
-[x] Script defer & lazy load
-
-[x] W3C validation passed
-
-
+- `<link rel="icon" href="favicon.ico" />`
+- `<link rel="manifest" href="site.webmanifest">`
 
 ---
 
 ### 📘 Tools
 
-HTML Validator: https://validator.w3.org/
-
-Minify HTML: https://kangax.github.io/html-minifier/
-
-SEO Test: https://www.seoptimer.com/
+- HTML Validator: https://validator.w3.org/
+- Minify HTML: https://kangax.github.io/html-minifier/
+- SEO Test: https://www.seoptimer.com/
