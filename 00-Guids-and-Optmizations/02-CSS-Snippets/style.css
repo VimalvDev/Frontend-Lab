@@ -21,34 +21,27 @@ body {
   background-color: var(--secondary-color);
 }
 
-/* 💻 Normal Desktops & Laptops — 1600×900, 1440×900, 1366×768 */
-@media (max-width: 1599px) {
+/* 💻 Normal Desktops & Laptops — 1536*864, 1440×900, 1366×768,  1280×720 */
+@media (max-width: 1536px) {
 }
-
-/* 💻 Small Laptops / Tablets Landscape — 1366×768, 1280×720, 1024×768 */
+/* 💻 Small Laptops / Tablets Landscape — 1024×768 */
 @media (max-width: 1199px) {
 }
-
-/* 📺 Tablets Portrait + Landscape — 912×1368, 800×1280, 768×1024 */
-@media (max-width: 991px) {
+/* 📺 Tablets Portrait + Landscape — 912×1368, 800×1280 */ 
+@media (max-width: 1023px) {
 }
-
-/* 📱 Large Mobiles + Small Tablets — 768×1024, 720×1280 */
-@media (max-width: 767px) {
+/* 📱 Large Mobiles + Small Tablets — 768×1024, 720×1280, 640×1136 */
+@media (max-width: 768px) {
 }
-
-/* 📱 Mid-Sized Mobiles — 640×1136, 600×1024, 540×960*/
+/* 📱 Mid-Sized Mobiles — 600×1024, 540×960*/
 @media (max-width: 600px) {
 }
-
 /* 📱 Mobile Phones — 500×900, 480×800 */
 @media (max-width: 500px) {
 }
-
-/* 📱 Small Phones — 428×926, 414×896, 393×851 */
-@media (max-width: 425px) {
+/* 📱 Small Phones — 424×926, 414×896, 393×851 */
+@media (max-width: 424px) {
 }
-
 /* 📱 Extra Small Phones — 375×667, 360×800 */
 @media (max-width: 375px) {
 }
