@@ -1,4 +1,4 @@
-# 📁 Frontend Dev Notes & Components Library
+# 📁 Frontend Dev Notes
 
 A personal collection of optimized code practices, reusable UI components, creative animations, and bug resolutions — curated while mastering **HTML**, **CSS**, **JavaScript**, and modern frontend tools.
 
