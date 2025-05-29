@@ -31,14 +31,14 @@ body.no-scroll {
 ```
 ### ✅ JS
 
-#### Add on loader start
+- #### Add on loader start
 
 ```js
 document.body.classList.add("no-scroll");
 document.documentElement.classList.add("no-scroll");
 window.scrollTo(0, 0);
 ```
-#### remove on loader end
+- #### remove on loader end
 
 ```js
 document.body.classList.remove("no-scroll");
