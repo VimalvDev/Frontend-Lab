@@ -1,55 +1,69 @@
 # 🐞 Bug: Loader Timer Not Completing on Mobile
 
-## 📁 File
-`loader-delay.js`
-
 ---
 
 ## 🧩 Issue Description
 
-When testing a GSAP-based loader with a timer (`0 to 100` in `25ms` intervals), the loader works fine on desktop but **fails to reach 100 on mobile** before the main content appears.
+When testing a GSAP-based loader animation with a timer (from 0 to 100), the loader worked perfectly on desktop. However, on mobile devices, the timer often **didn't reach 100** before the loader finished its animation.
 
-- The timer starts at `0` and should go to `100` in `2.5 seconds`.
-- However, on mobile, it often cuts off early (e.g., stops at 80–90).
-- This causes the loader to disappear before it’s actually done.
+### 🔍 Observations:
+- The counter should reach 100 in approx **2.5 seconds** (`25ms * 100`).
+- On **mobile**, the loader often disappears early, with the counter stuck at 80–90.
+- This creates an **incomplete user experience**.
 
 ---
 
-## 💣 Cause
+## 💣 Root Cause
 
-The loader animation and timer run **independently**. GSAP continues playing the timeline while the timer is still running.
+The issue occurred because:
 
-> On slower mobile devices, `setInterval()` runs slower due to frame drops or performance throttling, so it **doesn't sync** with the GSAP animation.
+- The **GSAP timeline** and the **`setInterval()` countdown** were **running in parallel**.
+- On **slower or throttled mobile devices**, `setInterval()` doesn't run at perfect intervals (due to frame drops or CPU constraints).
+- GSAP continued the timeline while the timer lagged behind.
 
 ---
 
 ## ✅ Solution
 
-Pause the GSAP timeline when the timer starts and **resume it only after the timer reaches 100**.
-
-### Fix Summary:
-- Use `tl.add()` to insert a `setInterval` countdown inside the timeline.
-- Pause the timeline with `tl.pause()` when the timer starts.
-- Resume the timeline with `tl.resume()` when the counter reaches 100.
+Pause the GSAP timeline until the countdown completes manually. Only resume the timeline after the timer hits 100.
 
 ---
+## 🛠️ Code Fix
 
-## 🛠️ Code Snippet
+### ✅ Updated GSAP + Countdown Sync Logic:
 
 ```js
 tl.add(() => {
-  let count = 0;
   let countdown = document.querySelector(".countdown");
+  let count = 0;
 
   let interval = setInterval(() => {
     if (count <= 100) {
       countdown.textContent = count++;
     } else {
       clearInterval(interval);
-      tl.resume(); // resume the paused timeline
+      resumeTimeline(); // ✅ Resume only after timer completes
     }
   }, 25);
 
-  tl.pause(); // pause timeline until counter hits 100
-});
+  tl.pause(); // ⏸️ Pause the GSAP timeline until countdown ends
+}, "+=0.3");
+
+// Resume GSAP timeline when timer completes
+function resumeTimeline() {
+  tl.resume();
+  // Continue rest of loader animation
+}
 ```
+
+## 🎯 Result
+
+- ✅ Timer and animation are now perfectly synced.
+- ✅ Loader waits for countdown to complete — even on mobile devices.
+- ✅ Bug no longer occurs on low-performance or throttled environments.
+
+---
+
+## 📌 Notes
+- setInterval() is not guaranteed to be accurate on all devices. Always manually sync long timers with animation timelines.
+- This method works well with GSAP timelines, where animation control (pause/resume) is needed.
