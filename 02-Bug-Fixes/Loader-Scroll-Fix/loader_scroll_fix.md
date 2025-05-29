@@ -28,7 +28,7 @@ body.no-scroll {
   position: fixed;
   width: 100%;
 }
-
+```
 ### ✅ JS
 
 #### Add on loader start
@@ -37,13 +37,13 @@ body.no-scroll {
 document.body.classList.add("no-scroll");
 document.documentElement.classList.add("no-scroll");
 window.scrollTo(0, 0);
-
+```
 #### remove on loader end
 
 ```js
 document.body.classList.remove("no-scroll");
 document.documentElement.classList.remove("no-scroll");
-
+```
 ### 📌 Notes
 
 - Always call `window.scrollTo(0,0)` after adding .no-scroll to reset scroll position.
