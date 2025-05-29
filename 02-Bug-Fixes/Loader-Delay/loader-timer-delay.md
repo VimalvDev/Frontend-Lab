@@ -1,7 +1,5 @@
 # 🐞 Bug: Loader Timer Not Completing on Mobile
 
----
-
 ## 🧩 Issue Description
 
 When testing a GSAP-based loader animation with a timer (from 0 to 100), the loader worked perfectly on desktop. However, on mobile devices, the timer often **didn't reach 100** before the loader finished its animation.
