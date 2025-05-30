@@ -1,6 +1,4 @@
-# JavaScript Notes
-
-## Introduction
+# Introduction
 
 - JavaScript (JS) was created by Brendan Eich in 1995.  
 - JS is a programming language used for both frontend (web browsers) and backend (Node.js).  
