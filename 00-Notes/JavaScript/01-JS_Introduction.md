@@ -22,7 +22,7 @@
 
 ## JavaScript Code Execution Process
 
-![JS Code Execution Process](00-Notes/JavaScript/IMGs/js_code_execution_process.png)
+![JS Code Execution Process](IMGs/js_code_execution_process.png)
 
 1. **Source code** – The JavaScript code you write, usually in a `.js` file.  
 2. **Parsing** – The JS engine reads the code and converts it into an **Abstract Syntax Tree (AST)** representing the code’s structure.  
