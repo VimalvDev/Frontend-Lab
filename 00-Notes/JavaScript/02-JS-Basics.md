@@ -103,10 +103,10 @@ console.log(`Hello, my name is ${name}`); // Output: Hello, my name is John.
 
 ---
 
-## 🧠 Conditional Statements
+## Conditional Statements
 JavaScript provides several ways to make decisions and control the flow of your program:
 
-### `if`
+- ### `if`
 Executes a block of code **if** a specified condition is true.
 
 **Example:**
@@ -117,7 +117,7 @@ if (score > 80) {
 }
 ```
 
-### `else if`
+- ### `else if`
 Checks another condition if the previous **`if`** condition was false.
 
 **Example:**
@@ -130,7 +130,7 @@ if (score > 80) {
 }
 ```
 
-### `else`
+- ### `else`
 Executes this block if none of the **`if`** or **`else if`** conditions are true.
 
 **Example:**
@@ -143,10 +143,10 @@ if (score > 80) {
 }
 ```
 
-### Ternary Operator
+- ### Ternary Operator
 A shorthand for `if...else`.
 
-- Syntax: `condition ? value_if_true : value_if_false`
+Syntax: `condition ? value_if_true : value_if_false`
 
 **Example:**
 
@@ -156,7 +156,7 @@ let message = age >= 18 ? "You can vote" : "You are too young";
 console.log(message); // Output: You can vote
 ```
 
-### `switch` Statement
+- ### `switch` Statement
 Best for checking multiple values of a single expression.
 
 **Example:**
