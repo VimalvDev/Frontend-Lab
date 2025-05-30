@@ -233,7 +233,7 @@ do {
 } while (i < 5);
 ```
 
-- ### `for...in` loop
+- ###`for...in` loop
 → Iterates over the keys (properties) of an object.
 → Best suited for objects.
 
@@ -265,7 +265,7 @@ for (let value of arr) {
 
 ## Controlling Loop Execution
 
-- **`break`**  
+- ###`break`
   Exits the loop completely.
 
   ```js
