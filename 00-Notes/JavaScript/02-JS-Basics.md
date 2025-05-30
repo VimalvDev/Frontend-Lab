@@ -268,18 +268,18 @@ for (let value of arr) {
 - ### `break`
   Exits the loop completely.
 
-  ```js
+```js
   for (let i = 0; i < 5; i++) {
     if (i === 3) break;
     console.log(i); // Output: 0, 1, 2
   }
-  ```
+```
 - ### `continue`
   Skips the current iteration and moves to the next one.
 
-  ```js
+```js
   for (let i = 0; i < 5; i++) {
   if (i === 2) continue;
   console.log(i); // Output: 0, 1, 3, 4
   }
-  ```
+```
