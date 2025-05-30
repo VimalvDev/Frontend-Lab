@@ -23,8 +23,8 @@
 - **Function** – Reusable blocks of code.
 
 > **Note:**  
-> Primitive data types store a **copy** of the value.  
-> Non-primitive data types store a **reference** to the original data.  
+> - Primitive data types store a **copy** of the value.  
+> - Non-primitive data types store a **reference** to the original data.  
 >  
 > When assigned to another variable:  
 > - **Primitive:** A copy of the value is made. Changing the new variable does **NOT** affect the original.  
