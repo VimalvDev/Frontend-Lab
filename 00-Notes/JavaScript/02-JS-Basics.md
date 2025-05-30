@@ -14,8 +14,6 @@
 - **Null** – A variable intentionally set to "empty" (nothing). Declared but has no value.  
 - **Undefined** – A variable that is declared but not assigned any value. It is also the default value for uninitialized variables.
 
----
-
 ### 2. Reference Data Types (Non-Primitive)
 
 - **Object** – Collection of key-value pairs > `{ name: "vimal", age: 19 }`
