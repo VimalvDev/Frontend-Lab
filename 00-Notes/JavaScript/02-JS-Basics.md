@@ -269,17 +269,17 @@ for (let value of arr) {
   Exits the loop completely.
 
 ```js
-  for (let i = 0; i < 5; i++) {
-    if (i === 3) break;
-    console.log(i); // Output: 0, 1, 2
-  }
+for (let i = 0; i < 5; i++) {
+  if (i === 3) break;
+  console.log(i); // Output: 0, 1, 2
+}
 ```
 - ### `continue`
   Skips the current iteration and moves to the next one.
 
 ```js
-  for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
   if (i === 2) continue;
   console.log(i); // Output: 0, 1, 3, 4
-  }
+}
 ```
