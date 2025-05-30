@@ -175,3 +175,35 @@ switch (day) {
     console.log("Another day");
 }
 ```
+
+---
+
+## Loops
+JavaScript provides several types of loops to perform repetitive tasks efficiently:
+
+- ### `for` loop
+Good for iterating with a known range.
+
+**Example:**
+
+```js
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+- ### `forEach` loop
+- Calls a function once for each array element.
+- Does not return a new array.
+- Cannot be stopped early (no break or continue).
+- You can use return to skip a specific iteration.
+  
+**Example:**
+
+```js
+const arr = [1, 2, 3];
+arr.forEach(function(item) {
+  console.log(item);
+});
+
+```
