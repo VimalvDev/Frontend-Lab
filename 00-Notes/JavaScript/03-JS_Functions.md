@@ -39,18 +39,28 @@
 
 - Also known as **Function Declaration**
 - A normal function with a name
-
+- Function statements are **hoisted**, so they can be **called before they appear** in the code.
 ```javascript
 function greet(name) {
   console.log("Hello, " + name);
 }
 greet("Vimal"); // Output: Hello, Vimal
 ```
+> **Note:**
+> In JavaScript, **function statement** and `var` are **hoisted**, meaning they’re moved to the top of their scope.  
+> So you can call a function **before it's defined** in the code:
+> ```js
+> print(); // ✅ Works due to hoisting
+> function print() {
+>   console.log("Hoisted function!");
+> }
+> ```
 
 ### 2. Function Expression
 
 - A function stored **inside a variable**
-
+- **Not hoisted** like function declarations. You must **define** them before use.
+  
 ```javascript
 function greet(name) {
   console.log("Hello, " + name);
