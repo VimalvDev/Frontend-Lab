@@ -47,3 +47,56 @@ Every value in JavaScript is either **Truthy** or **Falsy** in a Boolean context
 - `document.all` (special case)
 
 ### All other values are **Truthy** (behave as true).
+
+---
+
+## Variables and Constants
+
+### 1. Let
+- Block-scoped — `{}`  
+- Redeclaration **not allowed**, but reassignment **is allowed**  
+  - `let a = 5; let a = 10;` → **not allowed**  
+  - `let a = 5; a = 10;` → **allowed**  
+
+**Example:**
+```js
+{
+  let x = 10;
+  console.log(x); // ✅ Output: 10
+}
+console.log(x); // ❌ Error! x is not defined outside the block
+```
+
+### 2. Const
+- Block-scoped — `{}`  
+- Redeclaration and reassignment **Both aren't allowed**  
+  - `let a = 5; let a = 10;` → **not allowed**  
+  - `let a = 5; a = 10;` → **not allowed**  
+
+### 3. Var (Older Version)
+- Function-scoped  
+- Redeclaration and reassignment **Both are allowed**  
+  - `let a = 5; let a = 10;` → **allowed**  
+  - `let a = 5; a = 10;` → **allowed**  
+
+**Example:**
+```js
+function myFunction{
+  var x = 10;
+  console.log(y); // ✅ Output: 10
+}
+console.log(y); // ❌ Error! y is not defined outside the block
+```
+
+---
+
+## String Interpolation
+
+- A way to insert **variables** or **expressions** inside a string without using concatenation (`+`).
+- Use **backticks "``"** instead of quotes (" " or ' ') and place variables or expressions inside **${}*.
+
+**Example:**
+```js
+let name = "John";
+console.log(`Hello, my name is ${name}`); // Output: Hello, my name is John.
+```
