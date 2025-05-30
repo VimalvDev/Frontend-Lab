@@ -29,3 +29,23 @@
 > - **Non-primitive:** A reference (memory address) is stored. Changing the new variable **also affects** the original.  
 >  
 > Use the Spread operator (`...array_name`) to copy, merge, or manipulate arrays and objects.
+
+---
+
+## Truthy and Falsy Values
+
+Every value in JavaScript is either **Truthy** or **Falsy** in a Boolean context (e.g., inside an `if` statement).
+
+### Falsy values (behave as false):
+
+- `false`  
+- `0` (zero)  
+- `""` or `''` (empty strings)  
+- `null`  
+- `undefined`  
+- `NaN` (Not a Number)  
+- `document.all` (special case)
+
+---
+
+All other values are **Truthy** (behave as true).
