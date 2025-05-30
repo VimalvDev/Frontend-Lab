@@ -70,6 +70,6 @@ setTimeout(function() {
 ```
 
 > **Note:**
->  A **callback** is a function passed as an argument to another function.  
-> It is commonly used in asynchronous operations like `setTimeout`, `setInterval`, event listeners, or array methods (`map`, `forEach`, etc.).  
-> In the example, the anonymous function is used as a callback that executes after 2 seconds.
+> - A **callback** is a function passed as an argument to another function.  
+> - It is commonly used in asynchronous operations like `setTimeout`, `setInterval`, event listeners, or array methods       (`map`, `forEach`, etc.).  
+> - In the example, the anonymous function is used as a callback that executes after 2 seconds.
