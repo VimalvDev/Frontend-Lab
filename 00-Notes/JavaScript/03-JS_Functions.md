@@ -39,7 +39,7 @@
 
 - Also known as **Function Declaration**
 - A normal function with a name
-- Function statements are **hoisted**, so they can be **called before they appear** in the code.
+- Function statements are **hoisted**.
 ```javascript
 function greet(name) {
   console.log("Hello, " + name);
