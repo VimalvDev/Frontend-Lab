@@ -100,3 +100,78 @@ console.log(y); // ❌ Error! y is not defined outside the block
 let name = "John";
 console.log(`Hello, my name is ${name}`); // Output: Hello, my name is John.
 ```
+
+---
+
+## 🧠 Conditional Statements
+JavaScript provides several ways to make decisions and control the flow of your program:
+
+### `if`
+Executes a block of code **if** a specified condition is true.
+
+**Example:**
+
+```js
+if (score > 80) {
+  console.log("Great job!");
+}
+```
+
+### `else if`
+Checks another condition if the previous **`if`** condition was false.
+
+**Example:**
+
+```js
+if (score > 80) {
+  console.log("Great job!");
+} else if (score > 50) {
+  console.log("Good effort!");
+}
+```
+
+### `else`
+Executes this block if none of the **`if`** or **`else if`** conditions are true.
+
+**Example:**
+
+```js
+if (score > 80) {
+  console.log("Great job!");
+} else {
+  console.log("Keep practicing!");
+}
+```
+
+### Ternary Operator
+A shorthand for `if...else`.
+
+- Syntax: `condition ? value_if_true : value_if_false`
+
+**Example:**
+
+```js
+let age = 18;
+let message = age >= 18 ? "You can vote" : "You are too young";
+console.log(message); // Output: You can vote
+```
+
+### `switch` Statement
+Best for checking multiple values of a single expression.
+
+**Example:**
+
+```js
+let day = "Monday";
+
+switch (day) {
+  case "Monday":
+    console.log("Start of the week!");
+    break;
+  case "Friday":
+    console.log("Almost weekend!");
+    break;
+  default:
+    console.log("Another day");
+}
+```
