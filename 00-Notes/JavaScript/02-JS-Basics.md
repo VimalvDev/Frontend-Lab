@@ -70,14 +70,14 @@ console.log(x); // ❌ Error! x is not defined outside the block
 ### 2. Const
 - Block-scoped — `{}`  
 - Redeclaration and reassignment **Both aren't allowed**  
-  - `let a = 5; let a = 10;` → **not allowed**  
-  - `let a = 5; a = 10;` → **not allowed**  
+  - `const a = 5; const a = 10;` → **not allowed**  
+  - `const a = 5; a = 10;` → **not allowed**  
 
 ### 3. Var (Older Version)
 - Function-scoped  
 - Redeclaration and reassignment **Both are allowed**  
-  - `let a = 5; let a = 10;` → **allowed**  
-  - `let a = 5; a = 10;` → **allowed**  
+  - `var a = 5; var a = 10;` → **allowed**  
+  - `var a = 5; a = 10;` → **allowed**  
 
 **Example:**
 ```js
