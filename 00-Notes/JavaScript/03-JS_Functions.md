@@ -16,16 +16,16 @@
   - Functions can be **passed as arguments** to other functions.
   - Functions can be **returned from another function**.
 
+---
+
 ## Types of Functions in JavaScript
 
-### 1. User-Defined Functions (Custom Functions)
+### a) User-Defined Functions (Custom Functions)
 
 - These are functions that we **create ourselves** to perform specific tasks.
 - They are primarily categorized based on JavaScript versions:
   - **ES5 Version (Older JavaScript)**
   - **ES6 Version (Modern JavaScript)**
-
----
 
 ## ES5 Version
 
