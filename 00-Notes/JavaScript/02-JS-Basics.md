@@ -46,6 +46,4 @@ Every value in JavaScript is either **Truthy** or **Falsy** in a Boolean context
 - `NaN` (Not a Number)  
 - `document.all` (special case)
 
----
-
-All other values are **Truthy** (behave as true).
+### All other values are **Truthy** (behave as true).
