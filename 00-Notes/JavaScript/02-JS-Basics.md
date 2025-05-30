@@ -22,7 +22,7 @@
 - **Array** - A container that holds a list of values, which can be of any type (numbers, strings, objects, functions).
 - **Function** – Reusable blocks of code.
 
-  > **Note:**  
+> **Note:**  
 > Primitive data types store a **copy** of the value.  
 > Non-primitive data types store a **reference** to the original data.  
 >  
