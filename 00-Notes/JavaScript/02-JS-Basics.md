@@ -182,7 +182,7 @@ switch (day) {
 JavaScript provides several types of loops to perform repetitive tasks efficiently:
 
 - ### `for` loop
-Good for iterating with a known range.
+→ Good for iterating with a known range.
 
 **Example:**
 
@@ -193,10 +193,10 @@ for (let i = 0; i < 5; i++) {
 ```
 
 - ### `forEach` loop
-- Calls a function once for each array element.
-- Does not return a new array.
-- Cannot be stopped early (no break or continue).
-- You can use return to skip a specific iteration.
+→ Calls a function once for each array element.
+→ Does not return a new array.
+→ Cannot be stopped early (no break or continue).
+→ You can use return to skip a specific iteration.
   
 **Example:**
 
@@ -205,5 +205,81 @@ const arr = [1, 2, 3];
 arr.forEach(function(item) {
   console.log(item);
 });
-
 ```
+
+- ### `while` loop
+→ Executes a block as long as the condition is **true**.
+
+**Example:**
+
+```js
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+```
+
+- ### `do...while` loop
+→ Executes the block at least once, then checks the condition.
+
+**Example:**
+
+```js
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+```
+
+- ### `for...in` loop
+→ Iterates over the keys (properties) of an object.
+→ Best suited for objects.
+
+**Example:**
+
+```js
+const person = { name: "John", age: 30 };
+
+for (let key in person) {
+  console.log(key, person[key]);
+}
+```
+
+- ### `for...of` loop
+→ Iterates over the values of arrays, strings, maps, sets, etc.
+→ Best suited for iterable objects.
+
+**Example:**
+
+```js
+const arr = [10, 20, 30];
+
+for (let value of arr) {
+  console.log(value);
+}
+```
+
+---
+
+## Controlling Loop Execution
+
+- **`break`**  
+  Exits the loop completely.
+
+  ```js
+  for (let i = 0; i < 5; i++) {
+    if (i === 3) break;
+    console.log(i); // Output: 0, 1, 2
+  }
+  ```
+- **`continue`**  
+  Skips the current iteration and moves to the next one.
+
+  ```js
+  for (let i = 0; i < 5; i++) {
+  if (i === 2) continue;
+  console.log(i); // Output: 0, 1, 3, 4
+  }
+  ```
