@@ -1,6 +1,10 @@
 # Basics of JavaScript
 
-## 1. Primitive Data Types
+---
+
+## Data Types
+
+### 1. Primitive Data Types
 
 - **String** - Text (e.g., `"Hello"`)  
 - **Numbers**:  
@@ -12,7 +16,7 @@
 
 ---
 
-## 2. Reference Data Types (Non-Primitive)
+### 2. Reference Data Types (Non-Primitive)
 
 - **Object** – Collection of key-value pairs  
   ```js
