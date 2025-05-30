@@ -60,7 +60,7 @@ greet("Vimal"); // Output: Hello, Vimal
 
 ### 3. Anonymous Function
 
-- A function without a name, often used in callbacks
+- A function without a name, often used in **callbacks**
 - Cannot be called directly unless assigned or used inside another function
 
 ```javascript
