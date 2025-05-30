@@ -1,56 +1,56 @@
-# 📁 Frontend Dev Notes
+# 🧪 Frontend Lab
 
-A personal collection of optimized code practices, reusable UI components, creative animations, and bug resolutions — curated while mastering **HTML**, **CSS**, **JavaScript**, and modern frontend tools.
-
----
-
-## 📘 00-Guides-and-Optimizations
-
-> Best practices, notes, and performance tips for writing clean, structured, and professional frontend code.
-
-- ✅ Folder-wise notes for HTML, CSS, and JS
-- 📊 Performance optimization strategies
-- 🧩 Structured naming conventions & modular setups
+A personal lab of real-world frontend learnings, best practices, and bug fixes — built and documented while mastering tools like **HTML**, **CSS**, **JavaScript**, **GSAP**, and more. This repository reflects my self-created notes, structured guides, and practical solutions to issues I encountered during my journey.
 
 ---
 
-## 🧩 01-Components
+## 📁 Folder Structure
 
-> A growing library of reusable frontend components and creative effects built from scratch.
+### 📘 00-Notes
 
-- ✨ Scroll animations (GSAP, ScrollTrigger, Lenis)
-- 🧠 Hover & text effects
-- 🧭 Navbars and responsive layouts
-- 📦 UI snippets (cards, buttons, loaders, etc.)
+> Self-written notes based on deep learning from various courses, tutorials, and hands-on projects.
 
----
-
-## 🛠️ 02-bug-fixes
-
-> Common problems encountered in real projects and their documented solutions.
-
-- 🧹 Custom cursor bugs & scroll issues
-- 📄 Each issue explained with code snippets & fixes
+- Core concepts of HTML, CSS, JavaScript
+- GSAP animation techniques and use cases
+- Structured understanding of frontend fundamentals
+- 🔜 Upcoming: React, Next.js, Framer Motion, and more modern tools
 
 ---
 
-## 📈 Purpose
+### ⚙️ 01-Guides-and-Optimizations
 
-This repository serves as:
-- 📚 A personal reference during projects and freelancing
-- 🔄 A reusable component & fix library
-- 🚀 A resource to speed up future development
+> Developer-focused practices, workflows, and performance tips for writing clean and optimized code.
+
+- Best practices for structuring HTML, CSS, JS, and GSAP
+- Optimization techniques for better performance and readability
+- Code snippets, tool recommendations, and modular setup examples
+- Naming conventions and folder structures for scalable projects
 
 ---
 
-## 🤝 Contributions
+### 🛠️ 02-Bugs-and-Fixes
 
-This is a personal learning repository. However, suggestions or improvements are welcome.
+> A logbook of bugs and glitches I faced — and how I solved them.
+
+- Custom cursor issues, scroll problems, animation sync errors
+- Each issue documented with a clear explanation and working fix
+- Real frontend challenges and developer-style solutions
+
+---
+
+## 🎯 Purpose
+
+This repository exists to:
+
+- 📚 Serve as my go-to reference during future development
+- 🧠 Reinforce my learnings by writing and organizing everything from scratch
+- 🔍 Track and document bugs I’ve solved during real development
+- 🛠 Help other frontend learners who might face similar issues
 
 ---
 
 ## 📜 License
 
-This project is for **educational and personal portfolio** use only.  
-**No commercial usage allowed.**
+This project is for **educational** purposes only.  
+> 🚫 **Commercial use is not allowed.**
 
