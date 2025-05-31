@@ -1,79 +1,115 @@
 # 🌐 Window, BOM, and DOM in JavaScript
 
-## 🪟 Window Object
+## Window Object
 
 - The `window` object represents the **browser window or tab**.
 - It is the **global object** in the browser — all global variables and functions are part of it.
 - It holds **everything** — BOM, DOM, and JavaScript core functions.
 
-## 🌍 BOM - Browser Object Model
-
+## BOM - Browser Object Model
 BOM allows JavaScript to **interact with the browser**.
 
-### 🔳 Window Object (Global Browser Object)
+### Window Object (Global Browser Object)
 - `innerWidth` / `innerHeight` → Get viewport size (excluding toolbars)
 - `outerWidth` / `outerHeight` → Get full browser window size
 - `scrollX` / `scrollY` → Get scroll position
 - `window.open("URL")` → Open a new tab/window
-- `window.close()` → Close current window (only if opened via JS)
 
-### 📍 Location Object (URL & Navigation)
+### Location Object (URL & Navigation)
 - `location.href` → Get or set page URL
 - `location.reload()` → Reload current page
 - `location.hostname` → Get domain name
 - `location.pathname` → Get path (`/about.html`)
-- `location.port` → Get port number
 
-### ⏱️ Timing Functions
+### Timing Functions
 - `setTimeout(fn, ms)` → Run once after delay
 - `setInterval(fn, ms)` → Run repeatedly
 - `clearTimeout(id)` → Stop `setTimeout`
 - `clearInterval(id)` → Stop `setInterval`
 
-### 📚 History Object (Browser Navigation)
+### History Object (Browser Navigation)
 - `history.back()` → Go back a page
 - `history.forward()` → Go forward a page
-- `history.length` → Get number of pages in session history
 
-### ⚠️ Dialog Boxes
+### Dialog Boxes
 - `alert("message")` → Show alert popup
 - `confirm("message")` → Confirm dialog (OK/Cancel)
-- `prompt("message")` → Prompt input from user
 
-### 🌐 Navigator Object
-- `navigator.userAgent` → Get browser info
+### Navigator Object
+- `navigator.userAgentData` → Get browser info
 - `navigator.language` → Get user language
-- `navigator.platform` → Get OS info
 - `navigator.onLine` → Check if user is online
 
-### 🖥️ Screen Object
-- `screen.width` / `screen.height` → Get screen dimensions
-- `screen.availWidth` / `availHeight` → Get available screen space (excluding taskbars)
-
 ---
 
-## 📄 DOM - Document Object Model
+## DOM - Document Object Model
 
-- DOM is the **interface** between JavaScript, HTML, and CSS.
+- DOM is a programming interface that lets JavaScript interact with HTML and CSS.
 - It allows dynamic manipulation of the **webpage content and structure**.
-
-### 🧠 Why Use the DOM?
-- HTML alone can’t handle user interactions.
+  
+### Why Use the DOM?
+- HTML alone can’t handle user interactions (scroll,click etc).
 - DOM enables JavaScript to add **events**, **animations**, and **dynamic content**.
+- Any JavaScript code that changes the webpage is part of the DOM manipulation
+  
 
----
+## DOM Manipulation Steps
+-	Select : Selecting the HTML element using JS
+-	Modify : Modifying the selected elements
+-	Event : Add an Event Listener to respond to user actions
 
-## 🧩 DOM Manipulation Steps
+### 1. Accessing Elements
+#### Most Important
+- `document.querySelector(".class or #id or tag")`
+- `document.body //Select the <body> tag of HTML`
+- `document.documentElement //Select the <html> tag of HTML`
+- `document.querySelectorAll("selector") //Selecting multiple elements, Give a Nodelist`
+> **Note:**
+> `document.querySelectorAll()` returns a **NodeList**, not a real array.  
+> It looks like an array and supports `.forEach()`, but lacks methods like `.map()` or `.filter()`.
 
-### 1. 🕵️‍♂️ Accessing Elements
-```js
-document.getElementById("id")
-document.getElementsByClassName("class")
-document.getElementsByTagName("tag")
-document.querySelector(".class or #id or tag")
-document.querySelectorAll("selector")
-document.body
-document.documentElement
-parent.firstElementChild
-parent.lastElementChild
-document.querySelector('element[attribute="value"]')
+#### Less Common, Rarely needed
+- `document.getElementById("id")`
+- `document.getElementsByClassName("class")`
+- `document.getElementsByTagName("tag")`
+- `parent.firstElementChild`
+- `parent.lastElementChild`
+- `document.querySelector('element[attribute="value"]')`
+  
+### 2. Modifying HTML Elements
+
+- `element.textContent = "Text only"`
+Changes only the plain text of elements like <h1>, <p> etc. (ignores HTML tags)
+
+- `element.innerHTML = "<h2>Text inside with tag</h2>"`
+Updates the content and also parses HTML tags (can create or replace elements)
+
+- `input.value = "Set input value"`
+Gets or sets the value of input fields (like textboxes, forms)
+
+- `element.setAttribute("href", "link.html")`
+Sets or changes any attribute (eg, href, src, id)
+
+- `element.getAttribute("href")`
+Gets the value of a given attribute
+
+- `element.innerText = "shows text with its tag"`
+Similar to textContent but respects CSS (e.g. hides text with display: none)
+Rarely used today — use `textContent` for cleaner and more reliable output
+
+### 3. Manipulate CSS with JavaScript
+
+#### Changing **CSS style** of elements
+- `element.style.color = “red”`
+- `element.style.fontSize = “20px”`
+- `element.style.backgroundColor =  “blue”`
+- Any CSS style can be given just by writing the **style name(in camelCase)** after `style.`
+
+#### Adding/Removing CSS Classes (classList)
+- `element.classList.add(“className”)`
+-	`element.classList.remove(“className”)`
+-	`element.classList.toggle(“className”)`
+  -	Toggles a class on/off
+  - If the class does not exist, it adds it
+  - if the class already exists, it removes it
+
