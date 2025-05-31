@@ -6,8 +6,6 @@
 - It is the **global object** in the browser — all global variables and functions are part of it.
 - It holds **everything** — BOM, DOM, and JavaScript core functions.
 
----
-
 ## 🌍 BOM - Browser Object Model
 
 BOM allows JavaScript to **interact with the browser**.
