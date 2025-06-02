@@ -109,7 +109,7 @@ Rarely used today — use `textContent` for cleaner and more reliable output
 - `element.classList.add(“className”)`
 -	`element.classList.remove(“className”)`
 -	`element.classList.toggle(“className”)`
-  -	Toggles a class on/off
-  - If the class does not exist, it adds it
-  - if the class already exists, it removes it
+    -	Toggles a class on/off
+    - If the class does not exist, it adds it
+    - if the class already exists, it removes it
 
