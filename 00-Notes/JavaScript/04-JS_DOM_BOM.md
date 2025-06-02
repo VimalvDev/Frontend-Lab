@@ -57,6 +57,8 @@ BOM allows JavaScript to **interact with the browser**.
 -	Select : Selecting the HTML element using JS
 -	Modify : Modifying the selected elements
 -	Event : Add an Event Listener to respond to user actions
+  
+---
 
 ### 1. Accessing Elements
 #### Most Important
@@ -64,6 +66,7 @@ BOM allows JavaScript to **interact with the browser**.
 - `document.body //Select the <body> tag of HTML`
 - `document.documentElement //Select the <html> tag of HTML`
 - `document.querySelectorAll("selector") //Selecting multiple elements, Give a Nodelist`
+
 > **Note:**
 > 
 > `document.querySelectorAll()` returns a **NodeList**, not a real array.  
@@ -76,7 +79,9 @@ BOM allows JavaScript to **interact with the browser**.
 - `parent.firstElementChild`
 - `parent.lastElementChild`
 - `document.querySelector('element[attribute="value"]')`
-  
+
+---
+
 ### 2. Modifying HTML Elements
 
 - `element.textContent = "Text only"` <br>
@@ -98,6 +103,8 @@ Gets the value of a given attribute
 Similar to textContent but respects CSS (e.g. hides text with `display: none`) <br>
 Rarely used today — use `textContent` for cleaner and more reliable output
 
+---
+
 ### 3. Manipulate CSS with JavaScript
 
 #### Changing **CSS style** of elements
@@ -115,6 +122,7 @@ Rarely used today — use `textContent` for cleaner and more reliable output
     - if the class already exists, it removes it
 
 ---
+
 ### 4. Creating and Deleting Elements using DOM
 #### a) Creating HTML elements steps
 
