@@ -123,9 +123,9 @@ let create = document.createElement("h5"); // Create an h5 tag
 create.textContent = "This is a created h5"; // Add text inside it
 create.classList.add("makeitblue"); // Add a class
 ```
-   - This creates an element in JavaScript, but it does NOT appear on the webpage yet.
-   - It's created in JavaScript memory, not on the actual webpage.
-   - We can add content, styles, classes, and decide where to place it in the HTML.
+     - This creates an element in JavaScript, but it does NOT appear on the webpage yet.
+     - It's created in JavaScript memory, not on the actual webpage.
+     - We can add content, styles, classes, and decide where to place it in the HTML.
 
 - Add the Element to the Webpage
 ```js
