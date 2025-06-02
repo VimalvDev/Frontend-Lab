@@ -186,13 +186,13 @@ btn.addEventListener("click", function () { //adding event listener
 
 #### Event Listeners:
 
-- **Mouse Events**
-`clickw` - Triggers when an element is clicked
-`dblclick` - When an element is double-clicked
-`mouseover` -	When the mouse moves over an element (triggers once, Also work on child)
-`mousemove` - Tracks the mouse movement over an element (triggers continously)
-`mouseenter` - When the mouse enters an element (Doesn't work on parent's child)
-`mouseleave` - When the mouse leaves an element
+- **Mouse Events** <br>
+`clickw` - Triggers when an element is clicked <br>
+`dblclick` - When an element is double-clicked <br>
+`mouseover` -	When the mouse moves over an element (triggers once, Also work on child) <br>
+`mousemove` - Tracks the mouse movement over an element (triggers continously) <br>
+`mouseenter` - When the mouse enters an element (Doesn't work on parent's child) <br>
+`mouseleave` - When the mouse leaves an element <br>
 
 - **Keyboard Events**
 `keydown` -	Triggers when a key is pressed down
