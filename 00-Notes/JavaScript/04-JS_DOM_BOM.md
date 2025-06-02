@@ -118,14 +118,15 @@ Rarely used today — use `textContent` for cleaner and more reliable output
 #### a) Creating HTML elements steps
 
 - Creating an Element
+    - This creates an element in JavaScript, but it does NOT appear on the webpage yet.
+    - It's created in JavaScript memory, not on the actual webpage.
+    - We can add content, styles, classes, and decide where to place it in the HTML.
+
 ```js
 let create = document.createElement("h5"); // Create an h5 tag
 create.textContent = "This is a created h5"; // Add text inside it
 create.classList.add("makeitblue"); // Add a class
 ```
-     - This creates an element in JavaScript, but it does NOT appear on the webpage yet.
-     - It's created in JavaScript memory, not on the actual webpage.
-     - We can add content, styles, classes, and decide where to place it in the HTML.
 
 - Add the Element to the Webpage
     - This places the created element inside the specified parent element.
