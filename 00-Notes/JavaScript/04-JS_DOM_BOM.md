@@ -217,19 +217,19 @@ btn.addEventListener("click", function () { //adding event listener
 
 #### Common Event Object Properties:
 
-- 1. Click Events (click, dblclick) <br>
+- Click Events (click, dblclick) <br>
 `event.target` → The exact element that was clicked
 
-- 2. Mouse Events (mousemove, mouseover, mousedown, mouseup) <br>
+- Mouse Events (mousemove, mouseover, mousedown, mouseup) <br>
 `event.clientX` / `clientY` → Position of the mouse relative to the viewport (visible part of the page) <br>
 `event.pageX` / `pageY` → Position of the mouse relative to the entire document
 
-- 3. Scroll Events (wheel) <br>
+- Scroll Events (wheel) <br>
 `event.deltaX` / `deltaY` → Measures scroll distance
     - `+` value = scrolling down/right <br>
     - `-` value = scrolling up/left <br>
 
-- 4. Keyboard Events (keydown, keyup) <br>
+- Keyboard Events (keydown, keyup) <br>
 `event.key` → The actual key pressed (e.g., "Enter", "a", "Shift")
 
 - Example:
