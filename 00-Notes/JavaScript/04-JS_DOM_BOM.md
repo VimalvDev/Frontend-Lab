@@ -187,7 +187,6 @@ btn.addEventListener("click", function () { //adding event listener
 #### Event Listeners:
 
 - **Mouse Events**
-Event	Description
 `clickw` - Triggers when an element is clicked
 `dblclick` - When an element is double-clicked
 `mouseover` -	When the mouse moves over an element (triggers once, Also work on child)
