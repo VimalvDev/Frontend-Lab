@@ -128,11 +128,11 @@ create.classList.add("makeitblue"); // Add a class
      - We can add content, styles, classes, and decide where to place it in the HTML.
 
 - Add the Element to the Webpage
+    - This places the created element inside the specified parent element.
+    - `append()` means "add at the end" of the selected parent and supports multiple nodes or text.
 ```js
 document.querySelector("parentName").append(elementName);
 ```
-  - This places the created element inside the specified parent element.
-  - `append()` means "add at the end" of the selected parent and supports multiple nodes or text.
 
 > Note: appendChild() vs append()
 >
