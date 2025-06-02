@@ -117,7 +117,7 @@ Rarely used today — use `textContent` for cleaner and more reliable output
 ### 4. Creating and Deleting Elements using DOM
 #### a) Creating HTML elements steps
 
-- `.createElement(")` Creating an Element
+- Creating an Element `.createElement(")`
     - This creates an element in JavaScript, but it does NOT appear on the webpage yet.
     - It's created in JavaScript memory, not on the actual webpage.
     - We can add content, styles, classes, and decide where to place it in the HTML.
@@ -128,7 +128,7 @@ create.textContent = "This is a created h5"; // Add text inside it
 create.classList.add("makeitblue"); // Add a class
 ```
 
-- `append()` Add the Element to the Webpage
+- Add the Element to the Webpage `append()`
     - This places the created element inside the specified parent element.
     - `append()` means "add at the end" of the selected parent and supports multiple nodes or text.
 ```js
