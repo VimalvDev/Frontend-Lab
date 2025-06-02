@@ -170,4 +170,75 @@ Directly removes an existing HTML element.
 document.body.removeChild(newElement); // Removes the created element
 document.body.remove(h2); // Removes an existing element
 ```
+
 ---
+
+### 5. Event Handling 
+
+Example:
+```js
+const btn = document.querySelector(".btn"); //selecting element
+
+btn.addEventListener("click", function () { //adding event listener
+  btn.textContent = "Starting...";
+});
+```
+
+#### Event Listeners:
+
+- **Mouse Events**
+Event	Description
+`clickw` - Triggers when an element is clicked
+`dblclick` - When an element is double-clicked
+`mouseover` -	When the mouse moves over an element (triggers once, Also work on child)
+`mousemove` - Tracks the mouse movement over an element (triggers continously)
+`mouseenter` - When the mouse enters an element (Doesn't work on parent's child)
+`mouseleave` - When the mouse leaves an element
+
+- **Keyboard Events**
+`keydown` -	Triggers when a key is pressed down
+`keyup` -	Triggers when a key is released
+
+- **Forms & Inputs Events**
+`input` -	Fires when a user types or changes value in an input/textarea
+`submit` -	When a form is submitted
+
+
+- **Scroll & Load Events**
+- `scroll` - Fires when the page or a scrollable element scrolls
+`DOMContentLoaded` -	When the HTML is fully loaded and parsed
+`load` -	When all resources (images, scripts, etc.) finish loading
+
+---
+
+### 6. Event Object in JavaScript
+
+- The event object provides detailed information about the event that occurred — such as which key was pressed, mouse position, scroll data, and more.
+- When you attach an event listener, you can access the event object by passing a parameter (commonly named event, e, or ev).
+
+#### Common Event Object Properties:
+
+- 1. Click Events (click, dblclick)
+`event.target` → The exact element that was clicked
+
+- 2. Mouse Events (mousemove, mouseover, mousedown, mouseup)
+`event.clientX` / `clientY` → Position of the mouse relative to the viewport (visible part of the page)
+
+`event.pageX` / `pageY` → Position of the mouse relative to the entire document
+
+- 3. Scroll Events (wheel)
+`event.deltaX` / `deltaY` → Measures scroll distance
+    - `+` value = scrolling down/right
+
+    - `-` value = scrolling up/left
+
+- 4. Keyboard Events (keydown, keyup)
+`event.key` → The actual key pressed (e.g., "Enter", "a", "Shift")
+
+- Example:
+```js
+document.body.addEventListener("mousemove", function (event) {
+  console.log("Mouse is moving...");
+  console.log("X:", event.clientX, "Y:", event.clientY); // Logs mouse position
+});
+```
