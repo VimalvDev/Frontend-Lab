@@ -84,17 +84,17 @@ Changes only the plain text of elements like `<h1>`, `<p>` etc (ignores HTML tag
 - `element.innerHTML = "<h2>Text inside with tag</h2>"` <br>
 Updates the content and also parses HTML tags (can create or replace elements)
 
-- `input.value = "Set input value"`
+- `input.value = "Set input value"` <br>
 Gets or sets the value of input fields (like textboxes, forms)
 
-- `element.setAttribute("href", "link.html")`
+- `element.setAttribute("href", "link.html")` <br>
 Sets or changes any attribute (eg, href, src, id)
 
-- `element.getAttribute("href")`
+- `element.getAttribute("href")` <br>
 Gets the value of a given attribute
 
-- `element.innerText = "shows text with its tag"`
-Similar to textContent but respects CSS (e.g. hides text with display: none)
+- `element.innerText = "shows text with its tag"` <br>
+Similar to textContent but respects CSS (e.g. hides text with display: none) <br>
 Rarely used today — use `textContent` for cleaner and more reliable output
 
 ### 3. Manipulate CSS with JavaScript
