@@ -65,6 +65,7 @@ BOM allows JavaScript to **interact with the browser**.
 - `document.documentElement //Select the <html> tag of HTML`
 - `document.querySelectorAll("selector") //Selecting multiple elements, Give a Nodelist`
 > **Note:**
+> 
 > `document.querySelectorAll()` returns a **NodeList**, not a real array.  
 > It looks like an array and supports `.forEach()`, but lacks methods like `.map()` or `.filter()`.
 
