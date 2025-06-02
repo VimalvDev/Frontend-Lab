@@ -38,16 +38,34 @@ Constructors are used to **create and initialize objects**. JavaScript supports 
 > Older way of creating constructor functions before ES6.
 
 ```js
-function makeHuman(name, age) {
-  this.name = name;
+function makeHuman(name, age) { //Function based class
+  this.name = name; //Properties, this. assign values
   this.age = age;
 }
 
-let ans = new makeHuman("Suraj", 19);
+let ans = new makeHuman("Suraj", 19); //Creates a new blank object
 console.log(ans);
 ```
-new keyword creates a blank object.
+- `new` keyword creates a blank object.
+- `this` assigns values to that blank object.
+- This approach mimics class-like behavior.
 
-this assigns values to that blank object.
+## 2. Class-Based Constructor (ES6+)
+>Introduced in ES6 — modern way to create reusable and clean object structures.
+```js
+class person {   //class
+  constructor(nickname,surname) { //constructor with 2 parameters
+    this.nickname = nickname; //attributes
+    this.surname = surname;
+  }
+  method() { //method
+    return `This is a method ${this.nickname} and ${this.surname}`;
+  }
+}
+let calling = new person("suraj", 'verma');
+console.log(calling.method()) //calling the method
+```
 
-This approach mimics class-like behavior.
+- `class` is a blueprint of code which is used to create multiple `objects`
+- Helps organize code and supports object-oriented design.
+- Use the constructor() method to initialize or assign parameters (properties) to objects when creating them using the new keyword.
