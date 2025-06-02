@@ -33,7 +33,7 @@
 
 Constructors are used to **create and initialize objects**. JavaScript supports two types:
 
-### 1️⃣ Function-Based Constructor (ES5)
+### 1. Function-Based Constructor (ES5)
 
 > Older way of creating constructor functions before ES6.
 
@@ -45,3 +45,9 @@ function makeHuman(name, age) {
 
 let ans = new makeHuman("Suraj", 19);
 console.log(ans);
+```
+new keyword creates a blank object.
+
+this assigns values to that blank object.
+
+This approach mimics class-like behavior.
