@@ -79,7 +79,7 @@ BOM allows JavaScript to **interact with the browser**.
 ### 2. Modifying HTML Elements
 
 - `element.textContent = "Text only"`
-Changes only the plain text of elements like <h1>, <p> etc. (ignores HTML tags)
+Changes only the plain text of elements like `<h1>`, `<p>` etc (ignores HTML tags).
 
 - `element.innerHTML = "<h2>Text inside with tag</h2>"`
 Updates the content and also parses HTML tags (can create or replace elements)
