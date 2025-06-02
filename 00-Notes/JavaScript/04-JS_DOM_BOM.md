@@ -88,13 +88,13 @@ Updates the content and also parses HTML tags (can create or replace elements)
 Gets or sets the value of input fields (like textboxes, forms)
 
 - `element.setAttribute("href", "link.html")` <br>
-Sets or changes any attribute (eg, href, src, id)
+Sets or changes any attribute (eg, `href`, `src`, `id`)
 
 - `element.getAttribute("href")` <br>
 Gets the value of a given attribute
 
 - `element.innerText = "shows text with its tag"` <br>
-Similar to textContent but respects CSS (e.g. hides text with display: none) <br>
+Similar to textContent but respects CSS (e.g. hides text with `display: none`) <br>
 Rarely used today — use `textContent` for cleaner and more reliable output
 
 ### 3. Manipulate CSS with JavaScript
@@ -113,3 +113,38 @@ Rarely used today — use `textContent` for cleaner and more reliable output
     - If the class does not exist, it adds it
     - if the class already exists, it removes it
 
+### 4. Creating and Deleting Elements using DOM
+#### a) Creating HTML elements steps
+
+- Creating an Element
+```js
+let create = document.createElement("h5"); // Create an h5 tag
+create.textContent = "This is a created h5"; // Add text inside it
+create.classList.add("makeitblue"); // Add a class
+```
+   - This creates an element in JavaScript, but it does NOT appear on the webpage yet.
+   - It's created in JavaScript memory, not on the actual webpage.
+   - We can add content, styles, classes, and decide where to place it in the HTML.
+
+- Add the Element to the Webpage
+```js
+document.querySelector("parentName").append(elementName);
+```
+  - This places the created element inside the specified parent element.
+  - `append()` means "add at the end" of the selected parent and supports multiple nodes or text.
+
+> Note: appendChild() vs append()
+>
+> appendChild()
+> → Only accepts Node elements (like elements created with createElement)
+> → Cannot insert text directly
+>
+> append()
+> → Can insert both Node elements and text strings
+> → Supports adding multiple elements or strings at once
+>
+> Example:
+```js
+parent.appendChild(div);       // Works only with elements
+parent.append(div, "Text");    // Can append element + text together
+```
