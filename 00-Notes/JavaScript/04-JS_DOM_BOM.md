@@ -194,18 +194,18 @@ btn.addEventListener("click", function () { //adding event listener
 `mouseenter` - When the mouse enters an element (Doesn't work on parent's child) <br>
 `mouseleave` - When the mouse leaves an element <br>
 
-- **Keyboard Events**
-`keydown` -	Triggers when a key is pressed down
+- **Keyboard Events** <br>
+`keydown` -	Triggers when a key is pressed down <br>
 `keyup` -	Triggers when a key is released
 
-- **Forms & Inputs Events**
-`input` -	Fires when a user types or changes value in an input/textarea
+- **Forms & Inputs Events** <br>
+`input` -	Fires when a user types or changes value in an input/textarea <br>
 `submit` -	When a form is submitted
 
 
-- **Scroll & Load Events**
-- `scroll` - Fires when the page or a scrollable element scrolls
-`DOMContentLoaded` -	When the HTML is fully loaded and parsed
+- **Scroll & Load Events** <br>
+`scroll` - Fires when the page or a scrollable element scrolls <br>
+`DOMContentLoaded` -	When the HTML is fully loaded and parsed <br>
 `load` -	When all resources (images, scripts, etc.) finish loading
 
 ---
@@ -217,21 +217,19 @@ btn.addEventListener("click", function () { //adding event listener
 
 #### Common Event Object Properties:
 
-- 1. Click Events (click, dblclick)
+- 1. Click Events (click, dblclick) <br>
 `event.target` → The exact element that was clicked
 
-- 2. Mouse Events (mousemove, mouseover, mousedown, mouseup)
-`event.clientX` / `clientY` → Position of the mouse relative to the viewport (visible part of the page)
-
+- 2. Mouse Events (mousemove, mouseover, mousedown, mouseup) <br>
+`event.clientX` / `clientY` → Position of the mouse relative to the viewport (visible part of the page) <br>
 `event.pageX` / `pageY` → Position of the mouse relative to the entire document
 
-- 3. Scroll Events (wheel)
+- 3. Scroll Events (wheel) <br>
 `event.deltaX` / `deltaY` → Measures scroll distance
-    - `+` value = scrolling down/right
+    - `+` value = scrolling down/right <br>
+    - `-` value = scrolling up/left <br>
 
-    - `-` value = scrolling up/left
-
-- 4. Keyboard Events (keydown, keyup)
+- 4. Keyboard Events (keydown, keyup) <br>
 `event.key` → The actual key pressed (e.g., "Enter", "a", "Shift")
 
 - Example:
