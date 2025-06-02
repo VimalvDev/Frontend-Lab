@@ -146,7 +146,21 @@ document.querySelector("parentName").append(elementName);
 > → Supports adding multiple elements or strings at once
 >
 > Example:
+> ```js
+> parent.appendChild(div);       // Works only with elements
+> parent.append(div, "Text");    // Can append element + text together
+> ```
+
+#### b) Removing HTML elements steps
+
+- `removeChild(elementName)` <br>
+Removes the element which is created using DOM.
+
+- `.remove()`
+Directly removes an existing HTML element.
+
+Example:
 ```js
-parent.appendChild(div);       // Works only with elements
-parent.append(div, "Text");    // Can append element + text together
+document.body.removeChild(newElement); // Removes the created element
+document.body.remove(h2); // Removes an existing element
 ```
