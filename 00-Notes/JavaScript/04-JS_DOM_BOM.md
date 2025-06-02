@@ -151,15 +151,12 @@ document.querySelector("parentName").append(elementName);
 > parent.append(div, "Text");    // Can append element + text together
 > ```
 
-#### b) Removing HTML elements steps
+#### b) Removing HTML elements
 
 - `removeChild(elementName)` <br>
 Removes the element which is created using DOM.
-
 - `.remove()`
 Directly removes an existing HTML element.
-
-Example:
 ```js
 document.body.removeChild(newElement); // Removes the created element
 document.body.remove(h2); // Removes an existing element
