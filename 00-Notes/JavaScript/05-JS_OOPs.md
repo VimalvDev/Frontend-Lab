@@ -113,14 +113,13 @@ let person = new User("Vimal", 20); // Creating new object
 > Example:
 > ```js
 > class Person {
-> constructor(name, age) {
->   this.name = name;
->   this.age = age;
->
->   this.describe = (place) => { //parameter of describe method
->     return `My name is ${this.name} and my age is ${this.age}, I'm from ${place}`; //using place without "this.place"
->   };
-> }
+>   constructor(name, age) {
+>     this.name = name;
+>     this.age = age;
+>     this.describe = (place) => { //parameter of describe method
+>     return `My name is ${this.name} and my age is ${this.age}, I'm from ${place}`;
+>     };
+>   }
 > }
 > let person1 = new Person("Vimal", 19);
 > console.log(person1.describe("Delhi"));
