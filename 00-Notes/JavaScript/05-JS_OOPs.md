@@ -219,7 +219,7 @@ dog.speak(); // Output: Buddy, the Labrador, barks.
 
 ---
 
-## 2. Encapsulation in JavaScript (OOP)
+## 2. Encapsulation
 
 ### What is Encapsulation?
 
@@ -228,7 +228,7 @@ dog.speak(); // Output: Buddy, the Labrador, barks.
 
 > 💊 Think of it like a medicine capsule — the ingredients are safely packed inside. Only specific instructions (methods) can access or change them.
 
-### 🔐 Private Properties
+### Private Properties
 
 In modern JavaScript (ES2020+), we can declare **private fields** by adding the variable name with `#`.
 
@@ -246,6 +246,38 @@ class BankAccount {
   }
 }
 ```
-> console.log(account.#balance); 
+> console.log(account.#balance); <br>
 > // SyntaxError: Private field '#balance' must be declared in an enclosing class
 
+---
+
+## 3. Abstraction
+
+### What is Abstraction?
+- Abstraction means **hiding the complex** or **unnecessary details** and only showing the useful parts of something.
+- It also means **hiding some parts** of the data so they can’t be **changed directly** from outside the class.
+- By using `#` before a variable inside a class, we make it **private** (hidden from outside).
+
+### Real life Example
+Think of a car:
+- We use a **key** to start the engine.
+- We don’t need to understand **how** the engine, battery, or fuel system work — it’s hidden.
+- We just use the interface (steering, pedals, etc.).
+
+```js
+class BankAccount {
+  #balance = 0; // Encapsulation
+
+  deposit(amount) {
+    this.#balance += amount; // Abstraction -> Hiding the process 
+  }
+
+  getBalance() {
+    return `$${this.#balance}`;
+  }
+}
+```
+
+> **Note**
+> - **Encapsulation** = Hiding **data** (like a capsule 💊)  
+> - **Abstraction** = Hiding **complexity** (like ATM interface 🏧)
