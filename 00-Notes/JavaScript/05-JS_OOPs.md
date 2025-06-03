@@ -230,7 +230,7 @@ dog.speak(); // Output: Buddy, the Labrador, barks.
 
 ### Private Properties
 
-In modern JavaScript (ES2020+), we can declare **private fields** by adding the variable name with `#`.
+In modern JavaScript (ES2020+), we can declare **private fields** by adding **before variable** names with `#`.
 
 ```js
 class BankAccount {
@@ -245,9 +245,71 @@ class BankAccount {
     return `$ ${this.#balance}`; // Return current balance
   }
 }
+const account = new BankAccount();
+account.deposit(100);
+console.log(account.getBalance()); // $100
 ```
 > console.log(account.#balance); <br>
 > // SyntaxError: Private field '#balance' must be declared in an enclosing class
+
+### Getters and Setters
+Getters and setters allow **controlled access** to private or protected data. They are used to read or modify properties safely, often including validation or additional logic.
+
+**Example**
+```js
+class BankAccount {
+  constructor(balance = 0) {
+    this._balance = balance; // Convention: underscore means 'private'
+  }
+
+  // Getter to read the balance
+  get balance() {
+    return this._balance;
+  }
+
+  // Setter to update the balance safely
+  set balance(amount) {
+    if (amount < 0) {
+      throw new Error("Balance cannot be negative");
+    }
+    this._balance = amount;
+  }
+
+  deposit(amount) {
+    if (amount > 0) {
+      this._balance += amount;
+    }
+  }
+
+  withdraw(amount) {
+    if (amount > this._balance) {
+      throw new Error("Insufficient funds");
+    }
+    this._balance -= amount;
+  }
+}
+
+const account = new BankAccount(100);
+account.deposit(50);
+console.log(account.balance); // 150
+account.balance = 200; // Uses setter
+console.log(account.balance); // 200
+// account.balance = -50; // Throws Error: Balance cannot be negative
+```
+> **Note: <br>
+> `_` vs `#` for Private Variables in JavaScript**
+>
+> - `_variable` (underscore) is **only a naming convention** to indicate that the property should be treated as private, but it is still accessible from outside the class.
+>
+> - `#variable` (hash) is **true private field syntax introduced in ES2020**, which enforces privacy by the language itself — these fields **cannot be accessed or modified from outside the class**.
+>
+> - Trying to access a `#` private field from outside the class will result in a **syntax error**.
+>
+> - Using `_` does not prevent access, it relies on developer discipline, while `#` guarantees enforced privacy.
+>
+> - `#` private fields have **better encapsulation** but require modern JavaScript support (ES2020+).
+>
+> - Choose `_` if you want compatibility and simplicity but no strict privacy; choose `#` for real privacy and encapsulation.
 
 ---
 
