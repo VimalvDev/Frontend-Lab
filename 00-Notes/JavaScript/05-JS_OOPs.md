@@ -297,18 +297,13 @@ console.log(account.balance); // 200
 // account.balance = -50; // Throws Error: Balance cannot be negative
 ```
 > **Note: <br>
+>
 > `_` vs `#` for Private Variables in JavaScript**
->
 > - `_variable` (underscore) is **only a naming convention** to indicate that the property should be treated as private, but it is still accessible from outside the class.
->
 > - `#variable` (hash) is **true private field syntax introduced in ES2020**, which enforces privacy by the language itself — these fields **cannot be accessed or modified from outside the class**.
->
 > - Trying to access a `#` private field from outside the class will result in a **syntax error**.
->
 > - Using `_` does not prevent access, it relies on developer discipline, while `#` guarantees enforced privacy.
->
 > - `#` private fields have **better encapsulation** but require modern JavaScript support (ES2020+).
->
 > - Choose `_` if you want compatibility and simplicity but no strict privacy; choose `#` for real privacy and encapsulation.
 
 ---
