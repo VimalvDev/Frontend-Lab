@@ -340,3 +340,49 @@ class BankAccount {
 > **Note**
 > - **Encapsulation** = Hiding **data** (like a capsule 💊)  
 > - **Abstraction** = Hiding **complexity** (like ATM interface 🏧)
+
+---
+
+## 4. Polymorphism
+
+### What is Polymorphism?
+Polymorphism means **many forms**. It allows one function or method to **behave differently** depending on the object that it is called on.
+
+### Polymorphism Types
+
+#### 1. Static Polymorphism (Compile-time)
+- Achieved using `static` keyword in JavaScript.
+- **Static methods** are called directly on the class (not on objects).
+- Which method to call is decided before the program runs. That’s why we don’t create objects to use static methods.
+
+**Example**
+```js
+class Calculator {
+  static add(a, b) {
+    return a + b;
+  }
+}
+console.log(Calculator.add(5, 3)); // No need to create object
+```
+
+#### 2. Dynamic Polymorphism (Runtime)
+- Achieved through **method overriding** in child classes.
+- A child class provides its **own version of a method** already defined in its parent class.
+- When the method is called on a child class object, the **child’s version runs** instead of the parent’s.
+
+**Example**
+```js
+class Animal { 
+  speak() { // Parent class method
+    return "Animal speaks";
+  }
+}
+class Dog extends Animal {
+  speak() { // Same name subclass/child class method
+    return "Dog barks";
+  }
+}
+let dog = new Dog(); // Creating new object with subclass name
+console.log(dog.speak()); // Output: "Dog barks"
+```
+
