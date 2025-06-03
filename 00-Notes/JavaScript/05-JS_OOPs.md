@@ -128,3 +128,122 @@ let person = new User("Vimal", 20); // Creating new object
 > console.log(person2.describe("Brijpuri"));
 >```
 > - `place` is a parameter of the `describe()` method, not of the constructor, so we don't write `this.place`
+
+---
+
+# Principles of OOPs
+
+## 1. Inheritance 
+
+Inheritance is a core concept of Object-Oriented Programming that allows one class or function to **acquire the properties** and **methods** of another. In JavaScript, inheritance can be implemented in two main ways:
+
+### 1. Prototype-Based Inheritance (Before ES6)
+
+JavaScript was originally built on **prototypes**, not classical classes like Java or C++. In this method:
+- Functions act like classes.
+- We use the `.prototype` property to attach methods that all instances/objects can access.
+
+### Example:
+
+```js
+function makeHuman(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Adding a **method** to the prototype
+makeHuman.prototype.printMyName = function () {
+  console.log(this.name);
+  console.log(this.age);
+};
+
+const human1 = new makeHuman("Vimal", 19);
+const human2 = new makeHuman("Suraj", 19);
+
+human1.printMyName();
+human2.printMyName();
+```
+
+### 2. Class-Based Inheritance (ES6 and Modern JavaScript)
+ES6 introduced the `class` syntax, making inheritance more readable and closer to traditional OOP languages.
+- Use the `extends` keyword to inherit from a parent class.
+
+### Example without `super()`
+```js
+// Parent class
+class Animal {
+  constructor(name) { //Parent class's constructor
+    this.name = name;
+  }
+  sound() {
+    console.log(`${this.name} makes a sound.`);
+  }
+}
+
+// Child class
+class Dog extends Animal {
+  speak() { // Child class's method
+    console.log(`${this.name} barks.`);
+  }
+}
+
+const dog = new Dog("Buddy");
+dog.sound(); // Output: Buddy makes a sound.
+dog.speak(); // Output: Buddy barks.
+```
+
+### Example with `super()`
+- To access and pass **arguments** to the parent class's constructor, we must use `super()` inside the child class's constructor.
+
+```js
+//Parent class
+class Animal {
+  constructor(name) { //Parent class's constructor
+    this.name = name;
+  }
+}
+//Child class
+class Dog extends Animal {
+  constructor(name, breed) { //Child classn's constructor
+    super(name); // MUST call parent constructor first
+    this.breed = breed;
+  }
+  speak() {
+    console.log(`${this.name}, the ${this.breed}, barks.`);
+  }
+}
+
+const dog = new Dog("Buddy", "Labrador");
+dog.speak(); // Output: Buddy, the Labrador, barks.
+```
+
+---
+
+## Encapsulation in JavaScript (OOP)
+
+### What is Encapsulation?
+
+- Wrapping data (attributes) and methods (functions) into a single unit called a **`class`**.
+- Restricting direct access to some of the object's internal data to protect it from outside interference or misuse.
+
+> Think of it like a capsule: only the right me thods are allowed to access or modify its contents.
+
+---
+
+### 🔐 Private Properties in JavaScript
+
+In modern JavaScript (ES2020+), you can declare **private fields** by prefixing the variable name with `#`.
+
+```js
+class BankAccount {
+  #balance = 0; // Private data member
+
+  deposit(amount) {
+    this.#balance += amount; // Update private property
+    return this.#balance;
+  }
+
+  getBalance() {
+    return `$ ${this.#balance}`; // Return current balance
+  }
+}
