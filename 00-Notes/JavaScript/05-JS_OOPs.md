@@ -94,3 +94,38 @@ class User {
 ```
 
 #### 2. How `new` and `this` work together?
+```js
+function User(name, age) {
+  this.name = name; //Assigning
+  this.age = age;
+}
+
+let person = new User("Vimal", 20); // Creating new object
+```
+- `new` creates an **empty** object in memory
+- `this` assigns values to that object
+- Both are required
+    - Without `new`: `this` has no object
+    - Without `this`: the blank object remains empty
+
+> **Note**
+>
+> Example:
+> ```js
+> class Person {
+> constructor(name, age) {
+>   this.name = name;
+>   this.age = age;
+>
+>   this.describe = (place) => { //parameter of describe method
+>     return `My name is ${this.name} and my age is ${this.age}, I'm from ${place}`; //using place without "this.place"
+>   };
+> }
+> }
+> let person1 = new Person("Vimal", 19);
+> console.log(person1.describe("Delhi"));
+>
+> let person2 = new Person("Suraj", 19.5);
+> console.log(person2.describe("Brijpuri"));
+>```
+> - `place` is a parameter of the `describe()` method, not of the constructor, so we don't write `this.place`
