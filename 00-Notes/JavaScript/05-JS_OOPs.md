@@ -69,3 +69,28 @@ console.log(calling.method()) //calling the method
 - `class` is a blueprint of code which is used to create multiple `objects`
 - Helps organize code and supports object-oriented design.
 - Use the constructor() method to initialize or assign parameters (properties) to objects when creating them using the new keyword.
+
+### Some important questions
+
+#### 1. Do we always need classes + constructors to create objects?
+- No, For simple use cases:
+```js
+const user = {
+  name: "Vimal",
+  age: 20
+};
+```
+
+- Yes, For professional & scalable Development
+    - Create multiple reusable objects
+    - Keep code clean, scalable, and organized
+```js
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+
+#### 2. How `new` and `this` work together?
