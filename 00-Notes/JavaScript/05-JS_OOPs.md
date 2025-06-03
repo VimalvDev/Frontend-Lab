@@ -273,8 +273,8 @@ class BankAccount {
       throw new Error("Balance cannot be negative");
     }
     this._balance = amount;
-    //Use throw → no need for else because code stops on error <br>
-    //Don’t use throw → use else to separate logic clearly
+    //When Used `throw` → no need for `else` because code stops on error <br>
+    //Whe didn't use `throw` → use `else` to separate logic clearly
   }
 
   deposit(amount) {
