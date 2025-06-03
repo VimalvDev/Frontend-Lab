@@ -219,20 +219,18 @@ dog.speak(); // Output: Buddy, the Labrador, barks.
 
 ---
 
-## Encapsulation in JavaScript (OOP)
+## 2. Encapsulation in JavaScript (OOP)
 
 ### What is Encapsulation?
 
 - Wrapping data (attributes) and methods (functions) into a single unit called a **`class`**.
-- Restricting direct access to some of the object's internal data to protect it from outside interference or misuse.
+- It also means hiding some parts of the data so they can’t be changed directly from outside the class.
 
-> Think of it like a capsule: only the right me thods are allowed to access or modify its contents.
+> 💊 Think of it like a medicine capsule — the ingredients are safely packed inside. Only specific instructions (methods) can access or change them.
 
----
+### 🔐 Private Properties
 
-### 🔐 Private Properties in JavaScript
-
-In modern JavaScript (ES2020+), you can declare **private fields** by prefixing the variable name with `#`.
+In modern JavaScript (ES2020+), we can declare **private fields** by adding the variable name with `#`.
 
 ```js
 class BankAccount {
@@ -243,7 +241,11 @@ class BankAccount {
     return this.#balance;
   }
 
-  getBalance() {
+  getBalance() { // Method can be accessed by outside, but cant access #balance
     return `$ ${this.#balance}`; // Return current balance
   }
 }
+```
+> console.log(account.#balance); 
+> // SyntaxError: Private field '#balance' must be declared in an enclosing class
+
