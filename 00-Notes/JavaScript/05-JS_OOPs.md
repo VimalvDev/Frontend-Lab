@@ -27,6 +27,25 @@
 > If you make a cake (object), it follows a recipe (prototype).  
 > If you add a new feature (like berries), you update the recipe (prototype), and all future cakes can have berries.
 
+### Another way of creating `object` in JavaScript
+- `Object.create(proto)` creates a new object and sets its prototype to `proto`.
+- Useful for **prototypal inheritance** without using `class` or `constructor`.
+
+**Example**
+```js
+const animal = { // Its a simple object, Not a constructor, not a function
+  speak() {
+    console.log("Animal speaks");
+  }
+};
+
+const dog = Object.create(animal); // Inherits from animal
+dog.speak(); // Animal speaks
+```
+- If `dog` doesn’t have a `method`, JS looks up the `prototype chain`.
+- `dog` can access `speak()`, but it's not defined directly on `dog`, it's **inherited**.
+- This is a lightweight way to create `objects` with inheritance.
+
 ---
 
 ## Constructors in JavaScript
@@ -204,7 +223,7 @@ class Animal {
 }
 //Child class
 class Dog extends Animal {
-  constructor(name, breed) { //Child classn's constructor
+  constructor(name, breed) { //Child class's constructor
     super(name); // MUST call parent constructor first
     this.breed = breed;
   }
@@ -216,6 +235,25 @@ class Dog extends Animal {
 const dog = new Dog("Buddy", "Labrador");
 dog.speak(); // Output: Buddy, the Labrador, barks.
 ```
+
+>**Note**
+> To identify the type of an `object` and its relation to `classes` or `constructors`
+>
+> ### `instanceof` Operator
+> - Checks if an object is an **instance of a particular class** (or constructor function).
+> - Returns `true` if the object exists in that class's prototype chain.
+> ```js
+> console.log(dog instanceof Dog); // true
+> console.log(dog instanceof Animal); // true
+> console.log(dog instanceof Object); // true
+> ```
+> ### `constructor` Property
+> - Refers to the function that created the instance.
+> - Can be used for comparison like **type checking**.
+> ```js
+> console.log(dog.constructor === Dog); // true
+> console.log(dog.constructor === Animal); // false
+> ```
 
 ---
 
