@@ -172,12 +172,11 @@ JavaScript provides several built-in functions and methods that can be used dire
   	- `split(“a“)` – Splits on the basis of character
 - `startsWith()` – Checks if a string starts with a specific character or sequence of characters.
 - `includes()` – Checks if the given sequence of characters exists in the string.
-	- Returns `true` if found, otherwise `false`
->```js
->const name = "frontend development";
->console.log(name.includes("end"));   // true
->console.log(name.includes("backend")); // false
->```
+```js
+const name = "frontend development";
+console.log(name.includes("end"));   // true
+console.log(name.includes("backend")); // false
+```
 - `toUpperCase()` - Converts entire string to **UPPERCASE**
 - `toLowerCase()` - Converts entire string to **lowercase**
 
