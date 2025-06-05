@@ -165,6 +165,9 @@ JavaScript provides several built-in functions and methods that can be used dire
 
 ### 5. **String Functions**
 
+- `slice("from","upto")` - Extracts a part of a string and returns it as a new substring without modifying the orignal string.
+	- `slice(0,5)` - Retruns the substring from `index 0` up to (but not including) `index 5`
+	- `slice(6)` - Returns the substring from index 6 to the **end of the string**
 - `split()` – Divides a string into an array based on a condition.
 	- `split(“”)` – Splits every character of the string
 	- `split(“ “)` – Splits every word on the basis of space
