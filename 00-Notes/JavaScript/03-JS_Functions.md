@@ -173,9 +173,8 @@ JavaScript provides several built-in functions and methods that can be used dire
 - `startsWith()` – Checks if a string starts with a specific character or sequence of characters.
 - `includes()` – Checks if the given sequence of characters exists in the string.
 ```js
-const name = "frontend development";
-console.log(name.includes("end"));   // true
-console.log(name.includes("backend")); // false
+const vowels = "aeiou";
+console.log(vowels.includes(string[i));   // true
 ```
 - `toUpperCase()` - Converts entire string to **UPPERCASE**
 - `toLowerCase()` - Converts entire string to **lowercase**
