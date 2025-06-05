@@ -170,6 +170,9 @@ JavaScript provides several built-in functions and methods that can be used dire
 	- `split(“”)` – Splits every character of the string
 	- `split(“ “)` – Splits every word on the basis of space
   	- `split(“a“)` – Splits on the basis of character
+- `join()` - Joins all elements of the array into one string.
+	- `join(“”)` – Join every characters of the array
+	- `join(“ “)` – Join all array elements into a string with a space between each character
 - `startsWith()` – Checks if a string starts with a specific character or sequence of characters.
 - `includes()` – Checks if the given sequence of characters exists in the string.
 ```js
