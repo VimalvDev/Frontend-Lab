@@ -187,15 +187,25 @@ JavaScript provides several built-in functions and methods that can be used dire
   const nested = [1, 2, [3, 4]];
   const flatArr = nested.flat();  // Result: [1, 2, 3, 4]
   ```
-- `push()` – Adds an element to the end of array.
+- `push()` – **Adds** an element to the **end** of array.
   ```js
   const arr = [1, 2];
   arr.push(3);  // Result: [1, 2, 3]
   ```
-- `pop()` – Removes the last element from array.
+- `unshift()` – **Adds** an element to the **start** of array.
+```js
+const arr = [2, 3];
+arr.unshift(1);  // Result: [1, 2, 3]
+```
+- `pop()` – **Removes** the **last** element from array.
   ```js
   const arr = [1, 2, 3];
   arr.pop();  // Returns: 3, arr becomes [1, 2]
+  ```
+- `shift()` – **Removes** the **first** element from array.
+  ```js
+  const arr = [1, 2, 3];
+  arr.shift();  // Returns: 1, arr becomes [2, 3]
   ```
 - `map()` – Transforms each element in an array based on a condition.
    ```js
