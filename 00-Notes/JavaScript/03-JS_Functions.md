@@ -165,7 +165,6 @@ JavaScript provides several built-in functions and methods that can be used dire
 
 ### 5. **String Functions**
 
-- `trim()` – Removes extra spaces (blank space) from the string.
 - `split()` – Divides a string into an array based on a condition.
 	- `split(“”)` – Splits every character of the string
 	- `split(“ “)` – Splits every word on the basis of space
@@ -173,14 +172,16 @@ JavaScript provides several built-in functions and methods that can be used dire
 - `join()` - Joins all elements of the array into one string.
 	- `join(“”)` – Join every characters of the array
 	- `join(“ “)` – Join all array elements into a string with a space between each character
-- `startsWith()` – Checks if a string starts with a specific character or sequence of characters.
 - `includes()` – Checks if the given sequence of characters exists in the string.
 ```js
 const vowels = "aeiou";
 console.log(vowels.includes(string[i));   // true
 ```
+- `trim()` – Removes extra spaces (blank space) from the string.
+- `startsWith()` – Checks if a string starts with a specific character or sequence of characters.
 - `toUpperCase()` - Converts entire string to **UPPERCASE**
 - `toLowerCase()` - Converts entire string to **lowercase**
+- `replaceAll("what","to")` - Replaces **all** occurences of a spcecific character or substring with another.
 
 ### 6. **Array Functions** (Most Important)
 
