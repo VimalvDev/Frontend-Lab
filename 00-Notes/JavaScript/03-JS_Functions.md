@@ -167,12 +167,19 @@ JavaScript provides several built-in functions and methods that can be used dire
 
 - `trim()` – Removes extra spaces (blank space) from the string.
 - `split()` – Divides a string into an array based on a condition.
-  -	`split(“”)` – Splits every character of the string
+	- `split(“”)` – Splits every character of the string
 	- `split(“ “)` – Splits every word on the basis of space
-  -	`split(“a“)` – Splits on the basis of character
+  	- `split(“a“)` – Splits on the basis of character
 - `startsWith()` – Checks if a string starts with a specific character or sequence of characters.
 - `includes()` – Checks if the given sequence of characters exists in the string.
-
+	- Returns `true` if found, otherwise `false`
+>```js
+>const name = "frontend development";
+>console.log(name.includes("end"));   // true
+>console.log(name.includes("backend")); // false
+>```
+- `toUpperCase()` - Converts entire string to **UPPERCASE**
+- `toLowerCase()` - Converts entire string to **lowercase**
 
 ### 6. **Array Functions** (Most Important)
 
