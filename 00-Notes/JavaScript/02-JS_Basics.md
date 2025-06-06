@@ -90,7 +90,7 @@ console.log(y); // ❌ Error! y is not defined outside the block
 
 ---
 
-## String Interpolation
+## Template literal / Interpolation
 
 - A way to insert **variables** or **expressions** inside a string without using concatenation (`+`).
 - Use **backticks "``"** instead of quotes (" " or ' ') and place variables or expressions inside **${}*.
