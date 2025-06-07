@@ -190,6 +190,7 @@ console.log(vowels.includes(string[i));   // true
 - `toUpperCase()` - Converts entire string to **UPPERCASE**
 - `toLowerCase()` - Converts entire string to **lowercase**
 - `replaceAll("what","to")` - Replaces **all** occurences of a spcecific character or substring with another.
+- `repeat("what","times")` - Repeats the given string `n` times
 
 ### 6. **Array Functions** (Most Important)
 
