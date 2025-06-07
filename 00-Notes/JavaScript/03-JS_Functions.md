@@ -61,11 +61,16 @@
 
 ### 2. Function Expression
 
-  - A function stored **inside a variable**
+  - A function stored **inside a variable**. The function may and may not have name also.
   - **Not hoisted** like function declarations. You must **define** them before use.
 
   ```javascript
-  const greet = function (name) { // Stored in a variable
+  const greet = function (name) { // Anonymous function expression
+  console.log("Hello, " + name);
+  };
+  greet("Vimal"); // Output: Hello, Vimal
+
+  const greet = function greetFun(name) { named function expression
   console.log("Hello, " + name);
   };
   greet("Vimal"); // Output: Hello, Vimal
@@ -73,8 +78,8 @@
 
 ### 3. Anonymous Function
 
-  - A function without a name, often used in **callbacks**
-  - Cannot be called directly unless assigned or used inside another function
+  - A function without a name, often used as a **callback**
+  - Cannot be called directly unless assigned to a variable or passed into another function
 
   ```javascript
   setTimeout(function () {
@@ -86,7 +91,7 @@
 >
 > - A **callback** is a function passed as an argument to another function.
 > - It is commonly used in asynchronous operations like `setTimeout`, `setInterval`, event listeners, or array methods (`map`, `forEach`, etc.).
-> - In the example, the anonymous function is used as a callback that executes after 2 seconds.
+> - In the example above, the anonymous function is used as a callback that runs after 2 seconds.
 
 ---
 
