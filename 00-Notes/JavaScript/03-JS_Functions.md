@@ -65,9 +65,9 @@
   - **Not hoisted** like function declarations. You must **define** them before use.
 
   ```javascript
-  function greet(name) {
-    console.log("Hello, " + name);
-  }
+  const greet = function (name) { // Stored in a variable
+  console.log("Hello, " + name);
+  };
   greet("Vimal"); // Output: Hello, Vimal
   ```
 
