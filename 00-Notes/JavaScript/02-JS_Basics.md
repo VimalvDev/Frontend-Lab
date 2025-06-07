@@ -90,6 +90,52 @@ console.log(y); // ❌ Error! y is not defined outside the block
 
 ---
 
+## Operators
+
+### 1. Arithmetic Operators
+- `+` - Addition
+- `-` - Subtraction
+- `*` - Multiplication
+- `/` - Division
+- `%` - Modulus (Remainder)
+- `**` - Exponentiation (Power)
+
+### 2. Assignment Operators
+- `=` - Assigning 
+- `+=` - Addition + assigning
+- `-=` - Subtraction + assigning
+- `*=` - Multiplication + assigning
+- `/=` - Division + assigning
+
+### 3. Comparison Operators
+- `==` - Equal to (Ignore Data Type of values)
+- `===` - Strictly Equal to (Strictly checks Data type of values)
+- `!=` - Not equal
+- `!==` - Strictly Not equal
+- `<` - Less than
+- `>` - Greater than
+- `>=` - Greater or Equal
+- `<=` - Less or Equal
+
+### 4. Logical Operators
+- `&&` - AND (Both must be true)
+- `||` - OR (At least one must be true)
+- `!` - NOT ( Changes `True` into `False`, and `False` into `True`)
+
+### 5. Nullish Coalescing Operator
+- `??` - Returns the **Right** value only if the **Left** value is `null` or `undefined`.
+```js
+let name = null;
+console.log(name ?? "Guest"); // Output: "Guest"
+```
+>**Note:**
+> Difference from `||`(OR):
+> `||` returns right value if **left** is any `falsy` (`null`, `undefined`, `0`, `''`, `false`, etc.)
+> `??` operator doesn't consider `Truthy` or `Falsy` values unlike `||`.
+> `??` returns right value only if **left** is `null` or `undefined`.
+
+---
+
 ## Template literal / Interpolation
 
 - A way to insert **variables** or **expressions** inside a string without using concatenation (`+`).
