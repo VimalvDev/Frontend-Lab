@@ -185,6 +185,7 @@ JavaScript provides several built-in functions and methods that can be used dire
 const vowels = "aeiou";
 console.log(vowels.includes(string[i));   // true
 ```
+- `indexOf("searchValue")` - Returns the **first** index at which a given **value** is found in a String. If the value is **not found**, it returns `-1`.
 - `trim()` – Removes extra spaces (blank space) from the string.
 - `startsWith()` – Checks if a string starts with a specific character or sequence of characters.
 - `toUpperCase()` - Converts entire string to **UPPERCASE**
@@ -234,6 +235,12 @@ arr.unshift(1);  // Result: [1, 2, 3]
   ```js
   const arr = [1, 2, 3, 4];
   const evens = arr.filter(x => x % 2 === 0);  // Result: [2, 4]
+  ```
+- `indexOf()` - Returns the **first** index at which a given **value** is found in an Array. If the value is **not found**, it returns `-1`
+  ```js
+  let arr = [10, 20, 30, 40, 20];
+  console.log(arr.indexOf(20));     // Output: 1
+  console.log(arr.indexOf(50));     // Output: -1
   ```
 - `reduce()` – Reduces the array to a single value.
   - ```
