@@ -16,6 +16,27 @@
   - Functions can be **passed as arguments** to other functions.
   - Functions can be **returned from another function**.
 
+## Pure Functions in JavaScript
+
+- A **Pure function** returns the same output for the same (identical) inputs (argument).
+- Doesn't modify external variables, data or state.
+- Fully relies only on the input parameters
+- Example
+```js
+//Pure function
+function add(a, b) {
+  return a + b; // Always same output for same inputs
+}
+console.log(add(2, 3)); // Output: 5
+
+//Not a pure function
+let total = 0;
+function addToTotal(num) { 
+  total += num; // Modifies external variable → Side effect
+  return total;
+}
+```
+
 ---
 
 ## Types of Functions in JavaScript
