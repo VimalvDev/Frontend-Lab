@@ -119,15 +119,15 @@ function addToTotal(num) {
 ## ES6 Version (Modern JavaScript)
 - ES6 introduced arrow functions, shorter and cleaner alternatives to regular functions.
 
-### 4. Basic Arrow Function
+### 4. Arrow Function
 
   - Shorter syntax for writing functions.
-
+  - Doesn't need `{}` and `return` if there is single expression to execute.
+  - Doesn't need `()` if there is a single parameter only.
   ```js
-  const greet = () => {
-    console.log("Hello!");
-  };
-  greet(); // Output: Hello!
+  const sum = (x,y) => x>y ? x+y : x-y;
+  let output = sum(150,70); // Optional but recommaned to store output in a variable.
+  console.log(output);
   ```
 
 ### 5. Arrow Function with One Parameter
