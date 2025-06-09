@@ -18,9 +18,9 @@
 
 ## Pure Functions in JavaScript
 
-- A **Pure function** returns the same output for the same (identical) inputs (argument).
+- A **Pure function** returns the same output for the same inputs.
 - Doesn't modify external variables, data or state.
-- Fully relies only on the input parameters
+- Uses only the data given to it through parameters, doesn't depend on any variabels or state from outside.
 - Example
 ```js
 //Pure function
