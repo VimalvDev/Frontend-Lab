@@ -228,7 +228,7 @@ switch (day) {
 JavaScript provides several types of loops to perform repetitive tasks efficiently:
 
 - ### `for` loop
-→ Good for iterating with a known range.
+→ Best when you **know the exact number of iterations** (arrays)
 
 **Example:**
 
@@ -239,10 +239,9 @@ for (let i = 0; i < 5; i++) {
 ```
 
 - ### `forEach` loop
-→ Calls a function once for each array element.
-→ Does not return a new array.
-→ Cannot be stopped early (no break or continue).
-→ You can use return to skip a specific iteration.
+→ Calls a function once for each element in array element.
+→ Cannot be stopped using `break` or `continue`.
+→ Can use `return` to skip the current iteration in a callback.
   
 **Example:**
 
@@ -254,7 +253,8 @@ arr.forEach(function(item) {
 ```
 
 - ### `while` loop
-→ Executes a block as long as the condition is **true**.
+→ Runs a block while the condition is **true**.
+→ Condition is checked **before** each iteration.
 
 **Example:**
 
@@ -266,22 +266,10 @@ while (i < 5) {
 }
 ```
 
-- ### `do...while` loop
-→ Executes the block at least once, then checks the condition.
-
-**Example:**
-
-```js
-let i = 0;
-do {
-  console.log(i);
-  i++;
-} while (i < 5);
-```
-
 - ### `for...in` loop
-→ Iterates over the keys (properties) of an object.
 → Best suited for objects.
+→ Not recommended for **array**.
+→ Iterates over the keys (properties names) of an object.
 
 **Example:**
 
@@ -294,8 +282,9 @@ for (let key in person) {
 ```
 
 - ### `for...of` loop
-→ Iterates over the values of arrays, strings, maps, sets, etc.
-→ Best suited for iterable objects.
+→ Iterates over the values of arrays, strings, maps, sets.
+→ Returns values, not keys.
+→ Best suited for iterable objects (`string`, `arrays`).
 
 **Example:**
 
@@ -305,6 +294,19 @@ const arr = [10, 20, 30];
 for (let value of arr) {
   console.log(value);
 }
+```
+
+- ### `do...while` loop
+→ Executes the block at **least once**, then checks the condition.
+
+**Example:**
+
+```js
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
 ```
 
 ---
