@@ -206,6 +206,11 @@ JavaScript provides several built-in functions and methods that can be used dire
 const vowels = "aeiou";
 console.log(vowels.includes(string[i));   // true
 ```
+- `charCodeAt(index)` – Returns the Unicode (ASCII) value of the character at the given index.
+```js
+const str = "A";
+console.log(str.charCodeAt(0)); // Output: 65
+```
 - `indexOf("searchValue")` - Returns the **first** index at which a given **value** is found in a String. If the value is **not found**, it returns `-1`.
 - `trim()` – Removes extra spaces (blank space) from the string.
 - `startsWith()` – Checks if a string starts with a specific character or sequence of characters.
