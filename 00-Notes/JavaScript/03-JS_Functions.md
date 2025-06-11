@@ -211,7 +211,7 @@ console.log(vowels.includes(string[i));   // true
 const str = "A";
 console.log(str.charCodeAt(0)); // Output: 65
 ```
-- `indexOf("searchValue")` - Returns the **first** index at which a given **value** is found in a String. If the value is **not found**, it returns `-1`.
+- `indexOf("searchValue","startFrom")` - `searchValue` Returns the **first** index at which a given **value** is found in a String. If the value is **not found**, it returns `-1`.
 - `trim()` – Removes extra spaces (blank space) from the string.
 - `startsWith()` – Checks if a string starts with a specific character or sequence of characters.
 - `toUpperCase()` - Converts entire string to **UPPERCASE**
