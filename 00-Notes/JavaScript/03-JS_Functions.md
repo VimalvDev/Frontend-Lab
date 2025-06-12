@@ -274,6 +274,17 @@ console.log(str.charCodeAt(0)); // Output: 65
   const arr = [1, 2, 3, 4];
   const evens = arr.filter(x => x % 2 === 0);  // Result: [2, 4]
   ```
+- `sort()` = Converts elements to **strings** and sorts them by their **ASCII** values.
+  	- if `a-b` is `negative`, Then it will not **swap**.
+  	- if `a-b` is `positive`, Then it will **swap**
+  ```js
+  let array = [1,5,3,2,6,4,2,35]
+  let sorting = (a, b) => {
+      return a - b
+  }
+  array.sort(sorting)
+  console.log(array)
+  ```
 - `indexOf()` - Returns the **first** index at which a given **value** is found in an Array. If the value is **not found**, it returns `-1`
   ```js
   let arr = [10, 20, 30, 40, 20];
