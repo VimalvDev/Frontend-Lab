@@ -191,28 +191,28 @@ JavaScript provides several built-in functions and methods that can be used dire
 
 ### 5. **String Functions**
 
-- `slice("from","upto")` - Extracts a part of a string and returns it as a new substring without modifying the orignal string.
-	- `slice(0,5)` - Retruns the substring from `index 0` up to (but not including) `index 5`
-	- `slice(6)` - Returns the substring from index 6 to the **end of the string**
-	- `slice(-10` - Starts counting the string from the end, then returns the substring
+- `slice(start,end)` - Extracts part of a string and returns it as a new substring without modifying the orignal string.
+	- `slice(0,5)` - Retruns the substring from `index 0` up to `index 4` (excluding `index 5`)
+	- `slice(6)` - Returns the substring from `index 6` to the **end of the string**
+	- `slice(-10`) - Counts from end of string, then slices the string.
 - `split()` – Divides a string into an array based on a condition.
 	- `split(“”)` – Splits every character of the string
 	- `split(“ “)` – Splits every word on the basis of space
   	- `split(“a“)` – Splits on the basis of character
-- `join()` - Joins all elements of the array into one string.
-	- `join(“”)` – Join every characters of the array
-	- `join(“ “)` – Join all array elements into a string with a space between each character
+- `join()` - Joins all elements of the array into one **string**.
+	- `join(“”)` – Join every characters of the array into a string without space
+	- `join(“ “)` – Join every characters of the array into a string with a space.
 - `includes()` – Checks if the given sequence of characters exists in the string.
 ```js
 const vowels = "aeiou";
-console.log(vowels.includes(string[i));   // true
+console.log(vowels.includes(string[i]));   // true
 ```
 - `charCodeAt(index)` – Returns the Unicode (ASCII) value of the character at the given index.
 ```js
 const str = "A";
 console.log(str.charCodeAt(0)); // Output: 65
 ```
-- `indexOf("searchValue","startFrom")` - `searchValue` Returns the **first** index at which a given **value** is found in a String. If the value is **not found**, it returns `-1`.
+- `indexOf(searchValue,startFrom)` - Returns the **first** index at which a given **value** is found in a String. If the value is **not found**, it returns `-1`.
 - `trim()` – Removes extra spaces (blank space) from the string.
 - `startsWith()` – Checks if a string starts with a specific character or sequence of characters.
 - `toUpperCase()` - Converts entire string to **UPPERCASE**
@@ -221,9 +221,20 @@ console.log(str.charCodeAt(0)); // Output: 65
 - `repeat("what","times")` - Repeats the given string `n` times
 
 ### 6. **Array Functions** (Most Important)
-
+- `slice(start,end)` - Returns a **shallow copy** of part of the array. Doesn't modify the **orignal array**.
+  ```js
+  const arr = [1, 2, 3, 4];
+  arr.slice(1, 3); // [2, 3]
+  ```
+- `splice(start, deleteCount, ...addItems)` - Can **remove, add or replace** elements. Modifies the **orignal array**.
+  ```js
+  const arr = [1, 2, 3, 4];
+  // Remove 2 elements starting at index 1 (2 and 3)
+  // Add 9 and 10 at index 1
+  arr.splice(1, 2, 9, 10);
+  console.log(arr); // [1, 9, 10, 4]
+  ```
 - `reverse()` – Reverses the order of array elements.
-
   ```js
   const arr = [1, 2, 3];
   arr.reverse();  // Result: [3, 2, 1]
@@ -239,10 +250,10 @@ console.log(str.charCodeAt(0)); // Output: 65
   arr.push(3);  // Result: [1, 2, 3]
   ```
 - `unshift()` – **Adds** an element to the **start** of array.
-```js
-const arr = [2, 3];
-arr.unshift(1);  // Result: [1, 2, 3]
-```
+  ```js
+  const arr = [2, 3];
+  arr.unshift(1);  // Result: [1, 2, 3]
+  ```
 - `pop()` – **Removes** the **last** element from array.
   ```js
   const arr = [1, 2, 3];
