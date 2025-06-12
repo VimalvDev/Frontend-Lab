@@ -87,6 +87,9 @@ function myFunction{
 }
 console.log(y); // ❌ Error! y is not defined outside the block
 ```
+---
+
+
 
 ---
 
