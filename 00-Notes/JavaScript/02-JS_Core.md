@@ -136,8 +136,33 @@ console.log(student1); // { name: "Vimal", age: 19 }
 
 let student2 = getObject("Advik", 18); //2nd value
 console.log(student2); // { name: "Advik", age: 18 }
-
 ```
+
+### `keys`, `values` and `entries`
+These are built-in JavaScript methods used to extract data from objects in **array formate**
+
+#### 1. `Object.keys(obj)`
+Returns an **array of keys (property names) from the object.
+```js
+const user = {
+  name: "Vimal",
+  age: 19
+};
+console.log(Object.keys(user)); 
+// Output: [ "name", "age" ]
+``` 
+#### 2. `Object.values(obj)`
+Returns an **array of values from the object.
+```js
+console.log(Object.values(user)); 
+// Output: [ "Vimal", 19 ]
+``` 
+#### 3. `Object.entries(obj)`
+Returns an **array of entries**, where each entry is a `[key, value]` pair in its own array.
+```js
+console.log(Object.entries(user)); 
+// Output: [ ["name", "Vimal"], ["age", 19] ]
+``` 
 
 ---
 
