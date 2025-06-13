@@ -67,8 +67,35 @@ console.log(person["age"]);        // Output: 20
 const key = "isStudent";
 console.log(person[key]);          // Output: true
 ```
-> **Note**
+> **Note:**
 > Bracket notation is also used for **computed properties**, where the key is **calculated at runtime**.
+
+### Functions as **Object Properties (Methods)
+- A function can be used as a **property** in an object
+- When a function is used this way, it's called a **method**
+```js
+const user = {
+  name: "Vimal",
+  greet: function () {
+    console.log("Hello, " + this.name);
+  }
+};
+user.greet(); // Output: Hello, Vimal
+```
+> **Note:**
+> Do not use **arrow functions** as object methods because
+>     - Arrow functions **dont have their own `this`
+>     - They inherit `this` from the outer scope, which is outside the object.
+> ```js
+> const user = {
+>   name: "Vimal",
+>   greet: () => {
+>     console.log("Hello, " + this.name); // ❌ 'this' will be undefined or global
+>   }
+> };
+> user.greet(); // Output: Hello, undefined (or error)
+> ```
+
 ---
 
 ## Truthy and Falsy Values
