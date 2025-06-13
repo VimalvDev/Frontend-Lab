@@ -96,6 +96,30 @@ user.greet(); // Output: Hello, Vimal
 > user.greet(); // Output: Hello, undefined (or error)
 > ```
 
+### Computed Properties
+#### What is **computed properties**
+Computed properties allow us to **dynamically** define the property key using a variable or an expression insdie **square brackets** `[]`.
+```js
+const keyName = "email"; // Adding this value into the object
+const user = { // object
+  name: "Vimal",
+  [keyName]: "vimal@example.com"
+};
+console.log(user);
+// Output: { name: 'Vimal', email: 'vimal@example.com' }
+```
+
+#### Adding new properties to an `object`
+```js
+const user = {
+  name: "Vimal"
+};
+
+user.age = 20; // Dot notation
+user["age"] = 20; // Bracket notation (Key as string)
+console.log(user); 
+// Output: { name: 'Vimal', age: 20 }
+```
 ---
 
 ## Truthy and Falsy Values
