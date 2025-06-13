@@ -32,6 +32,45 @@
 
 ---
 
+## Object in JavaScript
+Objects are **reference data** types used to store collections of **key-value pairs**.
+
+### Object Literal & Properties
+
+#### Properites:
+- Objects are made of **key-value pairs**.
+- Keys are also known as **properties**
+
+#### Creating Objects:
+We can define an object using **objet literal syntax** with `{}`
+```js
+const person = { // Object literal
+  name: "Vimal", // Key and Value
+  age: 20,
+  isStudent: true
+};
+```
+
+### Accessing Object Properties
+
+#### 1. Dot Notation:
+Used when the **property name is valid identifier** (No spaces, starts with letter).
+```js
+console.log(person.name); // Output: "Vimal"
+```
+
+#### 2. Bracket Notation:
+Used when the **key is stored in a variable** or has **special characters or spaces**.
+```js
+console.log(person["age"]);        // Output: 20
+
+const key = "isStudent";
+console.log(person[key]);          // Output: true
+```
+> **Note**
+> Bracket notation is also used for **computed properties**, where the key is **calculated at runtime**.
+---
+
 ## Truthy and Falsy Values
 
 Every value in JavaScript is either **Truthy** or **Falsy** in a Boolean context (e.g., inside an `if` statement).
