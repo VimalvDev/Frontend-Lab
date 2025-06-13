@@ -120,6 +120,25 @@ user["age"] = 20; // Bracket notation (Key as string)
 console.log(user); 
 // Output: { name: 'Vimal', age: 20 }
 ```
+
+### Object Shorthand Property
+- What is it?
+When the **property name and variable name are the same**, we can use shorthand syntax to make object creation more short and can use the same object for multiple values
+```js
+function getObject(name, age) {
+  return {
+    name,
+    age
+  };
+}
+let student1 = getObject("Vimal", 19); // 1st value
+console.log(student1); // { name: "Vimal", age: 19 }
+
+let student2 = getObject("Advik", 18); //2nd value
+console.log(student2); // { name: "Advik", age: 18 }
+
+```
+
 ---
 
 ## Truthy and Falsy Values
