@@ -1,4 +1,4 @@
-# Basics of JavaScript
+# JavaScript Core topics
 
 ---
 
