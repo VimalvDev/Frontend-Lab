@@ -164,6 +164,31 @@ console.log(Object.entries(user));
 // Output: [ ["name", "Vimal"], ["age", 19] ]
 ``` 
 
+### Optional Chaining `?.`
+Used to safely access **nested values** without getting an error if something is `undefined` or `null`
+
+#### Key points
+- Helps avoid `TypeError` when accessing deep (nested) properties.
+- Returns `undefined` if value doesn't exist, instead of showing error.
+- Works with objects, arrays, and functions.
+
+#### Example
+```js
+const user = {
+  name: "Alex",
+  address: {
+    city: "Mumbai"
+  }
+};
+console.log(user.address.city);     // "Mumbai"
+console.log(user.contact?.email);    // undefined (no error)
+console.log(user.contact.email);     // ❌ Error
+```
+
+#### When to use?
+- Accessing API data
+- Handling **optional user inputs**
+- Dealing with **DOM elements** that may no exist
 ---
 
 ## Truthy and Falsy Values
