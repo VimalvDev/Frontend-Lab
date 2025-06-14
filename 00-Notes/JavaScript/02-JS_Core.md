@@ -189,6 +189,68 @@ console.log(user.contact.email);     // ❌ Error
 - Accessing API data
 - Handling **optional user inputs**
 - Dealing with **DOM elements** that may no exist
+
+## Object Destructuring
+Object destructuring is a simple way to **extract values** from an object and store them in variables.
+
+### ✅ Basic Syntax
+
+```js
+const person = {
+  name: "Vimal",
+  age: 19
+};
+const { name, age } = person;
+
+console.log(name); // "Vimal"
+console.log(age);  // 19
+```
+
+### Destructuring with Rest Operator
+The `...rest` syntax collects the remaining properties into a new object.
+
+```js
+const object1 = {
+  name: "Vimal",
+  age: 19,
+  country: "India"
+};
+const { name, ...rest } = object1;
+
+console.log(name); // "Vimal"
+console.log(rest); // { age: 19, country: "India" }
+```
+
+### Renaming Variables (Rare but useful)
+We can rename the destructured variables:
+
+```js
+const { age: userAge } = object1;
+console.log(userAge); // 19
+```
+
+### Nested Object Destructuring (Very Useful)
+If an object has another object inside, we can directly extract inner values.
+
+```js
+const object1 = {
+  completion: {
+    html: "Full",
+    css: "Full",
+    js: "learning"
+  }
+};
+const { completion: { html, css, js } } = object1; // Extracting values using `:{}`
+
+console.log(completion) //Error
+console.log(html); // "Full"
+console.log(css);  // "Full"
+console.log(js);   // "learning"
+```
+> **Note:**
+> `completion` is not a `variable` here, only its properties (`html`, `css`, `js`) are extracted.
+
+
 ---
 
 ## Truthy and Falsy Values
