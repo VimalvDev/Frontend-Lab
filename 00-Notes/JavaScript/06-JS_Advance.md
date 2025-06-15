@@ -34,24 +34,23 @@ Error.stack – Tracing error location (line number + call path of the error cod
 
 ---
 
+## Understanding `this` Keyword in JavaScript
 
-## JavaScript `this` Keyword & Bindings
-- `this` in JavaScript refers to the **object** that is **calling** the function.
-- It can be a little tricky, as its value depends on **how the function is called** (not where it's defined).
+### What is a Keyword?
+A keyword is a **reserved word that has a special meaning in programming language.
 
----
+### What is `this` in JavaScript?
+`this` keyword value depends on **how a function is called**, not where it is defined. It means, the value of `this` keeps changing based on different conditions.
 
-### 1. Global Context
+### Types of `this` in different conditions
 
-In the global scope (outside any object), `this` refers to:
-
-- `window` object in browsers
-- `global` object in Node.js
-
+#### 1. Global Scope
+Value of `this`: `window` object (in browser) or `global` object (in Node.js)
 ```js
-console.log(this); // In browser: Window
+console.log(this); // → Window object (in browser)
 ```
-### 2. `this` inside an Object (method call -> implicit binding)
+
+#### 2. `this` inside an Object (method call -> implicit binding)
 When a function is called using an object (as a method), `this` refers to the **object**
 ```js
 const user = {
