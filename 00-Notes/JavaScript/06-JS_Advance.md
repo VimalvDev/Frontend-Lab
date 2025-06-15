@@ -32,17 +32,16 @@ Error.name – Name/type of error (referenceError, typeError etc)
 Error.message – Error description (what went wrong)
 Error.stack – Tracing error location (line number + call path of the error code)
 
+---
 
 
-## 🔍 JavaScript `this` Keyword & Bindings
-
-`this` in JavaScript refers to the object that is **calling** the function.
-
-It can be a little tricky, as its value depends on **how the function is called** (not where it's defined).
+## JavaScript `this` Keyword & Bindings
+- `this` in JavaScript refers to the **object** that is **calling** the function.
+- It can be a little tricky, as its value depends on **how the function is called** (not where it's defined).
 
 ---
 
-### 🟢 1. Global Context
+### 1. Global Context
 
 In the global scope (outside any object), `this` refers to:
 
@@ -51,3 +50,88 @@ In the global scope (outside any object), `this` refers to:
 
 ```js
 console.log(this); // In browser: Window
+```
+### 2. `this` inside an Object (method call -> implicit binding)
+When a function is called using an object (as a method), `this` refers to the **object**
+```js
+const user = {
+  name: "Vimal",
+  greet() {
+    console.log(`Hi, I'm ${this.name}`);
+  }
+};
+
+user.greet(); // "Hi, I'm Vimal"
+```
+
+### 3. Function Borrowing (Using this in multiple objects)
+- We can reuse a function across objects by assigning it as a method. This is called **function borrowing**.
+- In Function Borrowing, the value of `this` refers to the **object** calling the function.
+```js
+function sayHello() {
+  console.log(`Hello, I am ${this.name}`);
+}
+
+const person1 = { name: "Vimal", greet: sayHello };
+const person2 = { name: "Ravi", greet: sayHello };
+
+person1.greet(); // Hello, I am Vimal
+person2.greet(); // Hello, I am Ravi
+```
+
+### 4. `this` in Regular Function (Not inside an object)
+If we call a regular function without any **object*, this will point to the **global object** (window in browser).
+
+```js
+function show() {
+  console.log(this); // window (in browser)
+}
+show();
+```
+
+### 5. Arrow Functions and `this`
+Arrow functions do not have their own `this`. They inherit `this` from their parent (lexical scope).
+
+```js
+const obj = {
+  name: "Vimal",
+  arrowFunc: () => {
+    console.log(this.name); // ❌ undefined (arrow doesn't bind `this`)
+  },
+  normalFunc() {
+    console.log(this.name); // ✅ "Vimal"
+  }
+};
+
+obj.arrowFunc();
+obj.normalFunc();
+```
+
+### 6. Explicit Binding (call, apply, bind)
+- We can manually `bind` the value of `this` using:
+- `call`, `apply` and `bind` are built-in **methods** of all functions in JavaScript
+  
+- `call()`
+Calls function immediately, lets us pass arguments one by one.
+```js
+function intro(city) {
+  console.log(`${this.name} from ${city}`);
+}
+const person = { name: "Vimal" };
+intro.call(person, "Delhi"); // Vimal from Delhi
+```
+
+- `apply()`
+Same as call but arguments are passed as **an array**.
+
+```js
+intro.apply(person, ["Delhi"]); // Vimal from Delhi
+```
+
+- `bind()`
+Returns a new function with `this` bound. We can call it later.
+
+```js
+const boundIntro = intro.bind(person, "Delhi");
+boundIntro(); // Vimal from Delhi
+```
