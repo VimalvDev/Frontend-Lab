@@ -39,6 +39,7 @@ Error.stack – Tracing error location (line number + call path of the error cod
 ### What is a Keyword?
 A keyword is a **reserved word that has a special meaning in programming language.
 
+___
 ### What is `this` in JavaScript?
 `this` keyword value depends on **how a function is called**, not where it is defined. It means, the value of `this` keeps changing based on different conditions.
 
