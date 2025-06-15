@@ -36,13 +36,13 @@ Error.stack – Tracing error location (line number + call path of the error cod
 
 ## Understanding `this` Keyword in JavaScript
 
-- ### What is a Keyword?
+### What is a Keyword?
 A keyword is a **reserved word that has a special meaning in programming language.
 
-- ### What is `this` in JavaScript?
+### What is `this` in JavaScript?
 `this` keyword value depends on **how a function is called**, not where it is defined. It means, the value of `this` keeps changing based on different conditions.
 
-- ### Types of `this` in different conditions
+### Types of `this` in different conditions
 
 #### 1. Global Scope
 Value of `this`: `window` object (in browser) or `global` object (in Node.js)
