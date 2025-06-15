@@ -31,3 +31,23 @@ Division function executed.
 Error.name – Name/type of error (referenceError, typeError etc)
 Error.message – Error description (what went wrong)
 Error.stack – Tracing error location (line number + call path of the error code)
+
+
+
+## 🔍 JavaScript `this` Keyword & Bindings
+
+`this` in JavaScript refers to the object that is **calling** the function.
+
+It can be a little tricky, as its value depends on **how the function is called** (not where it's defined).
+
+---
+
+### 🟢 1. Global Context
+
+In the global scope (outside any object), `this` refers to:
+
+- `window` object in browsers
+- `global` object in Node.js
+
+```js
+console.log(this); // In browser: Window
