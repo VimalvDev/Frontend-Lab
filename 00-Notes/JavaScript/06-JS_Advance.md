@@ -37,30 +37,76 @@ Error.stack – Tracing error location (line number + call path of the error cod
 ## Understanding `this` Keyword in JavaScript
 
 ### What is a Keyword?
-- A keyword is a **reserved word that has a special meaning in programming language.
+A keyword is a **reserved word that has a special meaning in programming language.
 
 ### What is `this` in JavaScript?
-- `this` keyword value depends on **how a function is called**, not where it is defined. It means, the value of `this` keeps changing based on different conditions.
+`this` keyword value depends on **how a function is called**, not where it is defined. It means, the value of `this` keeps changing based on different conditions.
 
-### Types of `this` in different conditions
+---
+## Value of `this` in different conditions
 
-#### 1. Global Scope
-Value of `this`: `window` object (in browser) or `global` object (in Node.js)
+### 1. Global Scope
+- Calling outside `Function` or `object`
+- Value of `this`: `window` object (in browser) or `global` object (in Node.js)
 ```js
 console.log(this); // → Window object (in browser)
 ```
+### 2. Function Scope (Regular Function)
+- Calling inside a `Function`
+- Value of `this`: `window` object (not bound to any `object`)
+```js
+function show() {
+  console.log(this); // → Window object
+}
+show();
+```
 
-#### 2. `this` inside an Object (method call -> implicit binding)
-When a function is called using an object (as a method), `this` refers to the **object**
+### 3. Method (Known as Implicit Binding)
+- A method is a function that is either **written** as a key inside an **object** or defined inside a **class**
+- Value of `this`: The `object` itself
 ```js
 const user = {
   name: "Vimal",
   greet() {
-    console.log(`Hi, I'm ${this.name}`);
+    console.log(`Hi, I'm ${this.name}`); "Hi, I'm Vimal"
   }
 };
+user.greet();
+```
 
-user.greet(); // "Hi, I'm Vimal"
+### 4. Function Inside Method (ES5)
+- Value of `this`:
+    - Method (function inside the object) gets `object` itself
+    - Inner Method (Method inside Method) gets `window` object
+```js
+const obj = { // Object
+  age: 25,
+  fun: function () { //Object Method
+    console.log(this); // → obj
+    function inner() { // Method inside a Method 
+      console.log(this); // → window
+    }
+    inner();
+  }
+};
+obj.fun();
+```
+
+### 4. Arrow Function Inside Method (ES6)
+- Value of `this`: The `object`
+> **Note**:
+> Arrow function inherits `this` from the parent, if its inside the method, then value of `this` is `object`, but if its outside the method, then value of `this` is `window` object
+```js
+const obj = {
+  name: "Vimal",
+  fun: function () {
+    const arrow = () => {
+      console.log(this.name); // → "Vimal"
+    };
+    arrow();
+  }
+};
+obj.fun();
 ```
 
 ### 3. Function Borrowing (Using this in multiple objects)
@@ -78,15 +124,7 @@ person1.greet(); // Hello, I am Vimal
 person2.greet(); // Hello, I am Ravi
 ```
 
-### 4. `this` in Regular Function (Not inside an object)
-If we call a regular function without any **object*, this will point to the **global object** (window in browser).
 
-```js
-function show() {
-  console.log(this); // window (in browser)
-}
-show();
-```
 
 ### 5. Arrow Functions and `this`
 Arrow functions do not have their own `this`. They inherit `this` from their parent (lexical scope).
