@@ -1,8 +1,8 @@
 # 📘 JavaScript Core Notes – Table of Contents
 
 1. [Data Types](#data-types)
-  - [Primitive Data Types](#1-primitive-data-types)
-  - [Reference Data Types](#2-reference-data-types-non-primitive)
+   - [Primitive Data Types](#1-primitive-data-types)
+   - [Reference Data Types](#2-reference-data-types-non-primitive)
 2. [Object in JavaScript](#object-in-javascript)
   - [Object Literal & Properties](#object-literal--properties)
   - [Accessing Object Properties](#accessing-object-properties)
