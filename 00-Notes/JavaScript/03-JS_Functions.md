@@ -8,7 +8,7 @@
   - [ES5 Version (Older JavaScript)](#es5-version-older-javascript)  
   - [ES6 Version (Modern JavaScript)](#es6-version-modern-javascript)  
 - b. [In-Built Functions (Predefined Functions)](#b-in-built-functions-predefined-functions)  
-  - [Timing Functions](#1-timing-functions)  
+  - 🔹 [Timing Functions](#1-timing-functions)  
   - [Event Functions](#2-event-functions)  
   - [Console & Debugging Functions](#3-console--debugging-functions)  
   - [User Interaction Functions (Not used anymore)](#4-user-interaction-functions-not-used-anymore)  
