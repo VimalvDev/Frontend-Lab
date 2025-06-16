@@ -1,5 +1,4 @@
 # 📘 JavaScript Core Notes – Table of Contents
-# 📘 JavaScript Core Notes – Table of Contents
 
 - [Data Types](#data-types)
   - [Primitive Data Types](#1-primitive-data-types)
