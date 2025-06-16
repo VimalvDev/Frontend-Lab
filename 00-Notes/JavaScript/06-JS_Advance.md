@@ -132,6 +132,7 @@ document.querySelector("button").addEventListener("click", function () {
 ## Explicit Binding - `call()`, `apply()`, `bind()`
 - These methods are built-in **methods** of all functions in JavaScript
 - These methods are used when we want to **manually set** the value of `this`
+- **Function Borrowing is a use-case of `call`, `apply`, and `bind` where we borrow a method from one object to use with another
   
 ### 1. `call()`
 - Calls function immediately
@@ -150,7 +151,11 @@ greet.call(person, "Delhi"); // → Vimal from Delhi
 - Same as `call()` but passes arguments as **an array**.
 
 ```js
-intro.apply(person, ["Delhi"]); // Vimal from Delhi
+function greet(city) {
+  console.log(`${this.name} from ${city}`);
+}
+const person = { name: "Vimal" };
+greet.apply(person, ["Delhi"]); // → Vimal from Delhi
 ```
 
 ### 3. `bind()`
