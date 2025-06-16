@@ -4,19 +4,19 @@
 ### 2. [First-Class Functions](#first-class-functions)
 ### 3. [Pure Functions](#pure-functions)
 ### 4. [Types of Functions](#types-of-functions)  
-  - [User-Defined Functions](#a.-User-Defined-Functions---Custom-Functions)  
-    - [ES5 Version](#ES5-Version-(Older-JavaScript))  
-    - [ES6 Version](#ES6-Version-(Modern-JavaScript))
-  - [In-Built Functions](#b-in-built-functions)  
-    - [Timing Functions](#timing-functions)  
-    - [Event Functions](#event-functions)  
-    - [Console & Debugging Functions](#console--debugging-functions)  
-    - [User Interaction Functions](#user-interaction-functions)  
-    - [String Functions](#string-functions)  
-    - [Array Functions](#array-functions)  
-    - [Type Conversion and Validation Functions](#type-conversion-and-validation-functions)  
-    - [Math Functions](#math-functions)  
-    - [Type Checking Functions](#type-checking-functions)
+- [a. User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)  
+  - [ES5 Version (Older JavaScript)](#es5-version-older-javascript)  
+  - [ES6 Version (Modern JavaScript)](#es6-version-modern-javascript)  
+- [b. In-Built Functions (Predefined Functions)](#b-in-built-functions-predefined-functions)  
+  - [Timing Functions](#timing-functions)  
+  - [Event Functions](#event-functions)  
+  - [Console & Debugging Functions](#console--debugging-functions)  
+  - [User Interaction Functions](#user-interaction-functions)  
+  - [String Functions](#string-functions)  
+  - [Array Functions](#array-functions)  
+  - [Type Conversion and Validation Functions](#type-conversion-and-validation-functions)  
+  - [Math Functions](#math-functions)  
+  - [Type Checking Functions](#type-checking-functions)
 
 ---
 
@@ -167,7 +167,7 @@ function addToTotal(num) {
   ```
 
 ---
-## b) In-Built Functions (Predefined Functions)
+## b. In-Built Functions (Predefined Functions)
 JavaScript provides several built-in functions and methods that can be used directly.
 
 ### 1. **Timing Functions**
