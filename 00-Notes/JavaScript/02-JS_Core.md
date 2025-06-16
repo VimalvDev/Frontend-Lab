@@ -163,8 +163,8 @@ Returns an **array of entries**, where each entry is a `[key, value]` pair in it
 console.log(Object.entries(user)); 
 // Output: [ ["name", "Vimal"], ["age", 19] ]
 ``` 
-
-### [Optional chaining in Object](06-JS_Advance.md)
+## Some advance `object` Topics:
+### [Optional chaining in Object](06-JS_Advance.md#Optional-Chaining-?.)
 ### [Object Destructuring in Object](06-JS_Advance.md)
 
 ---
