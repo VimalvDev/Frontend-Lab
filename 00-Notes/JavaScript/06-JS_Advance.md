@@ -92,7 +92,7 @@ const obj = { // Object
 obj.fun();
 ```
 
-### 4. Arrow Function Inside Method (ES6)
+### 5. Arrow Function Inside Method (ES6)
 - Value of `this`: The `object`
 > **Note**:
 > Arrow function inherits `this` from the parent, if its inside the method, then value of `this` is `object`, but if its outside the method, then value of `this` is `window` object
@@ -109,66 +109,58 @@ const obj = {
 obj.fun();
 ```
 
-### 3. Function Borrowing (Using this in multiple objects)
-- We can reuse a function across objects by assigning it as a method. This is called **function borrowing**.
-- In Function Borrowing, the value of `this` refers to the **object** calling the function.
+### 6. Constructor Function
+- Value of `this`: A **new** blank `object` created by `new` keyword
 ```js
-function sayHello() {
-  console.log(`Hello, I am ${this.name}`);
+function Person(name, age) {
+  this.name = name;
+  this.age = age; // Assign values to the blank object
 }
-
-const person1 = { name: "Vimal", greet: sayHello };
-const person2 = { name: "Ravi", greet: sayHello };
-
-person1.greet(); // Hello, I am Vimal
-person2.greet(); // Hello, I am Ravi
+const newPerson = new Person("Vimal", 19); //Creates blank object
+console.log(newPerson); // → {name: "Vimal", age: 19}
 ```
 
 
 
-### 5. Arrow Functions and `this`
-Arrow functions do not have their own `this`. They inherit `this` from their parent (lexical scope).
-
+### 7. Event Listener
+- Value of `this`: The **element** on which the event is triggered
 ```js
-const obj = {
-  name: "Vimal",
-  arrowFunc: () => {
-    console.log(this.name); // ❌ undefined (arrow doesn't bind `this`)
-  },
-  normalFunc() {
-    console.log(this.name); // ✅ "Vimal"
-  }
-};
-
-obj.arrowFunc();
-obj.normalFunc();
+document.querySelector("button").addEventListener("click", function () {
+  console.log(this); // → the button element
+});
 ```
 
-### 6. Explicit Binding (call, apply, bind)
-- We can manually `bind` the value of `this` using:
-- `call`, `apply` and `bind` are built-in **methods** of all functions in JavaScript
+## Explicit Binding - `call()`, `apply()`, `bind()`
+- These methods are built-in **methods** of all functions in JavaScript
+- These methods are used when we want to **manually set** the value of `this`
   
-- `call()`
-Calls function immediately, lets us pass arguments one by one.
+### 1. `call()`
+- Calls function immediately
+- let us pass arguments one by one.
+- Change the value of `this` to a specific **object or function**
+
 ```js
-function intro(city) {
+function greet(city) {
   console.log(`${this.name} from ${city}`);
 }
 const person = { name: "Vimal" };
-intro.call(person, "Delhi"); // Vimal from Delhi
+greet.call(person, "Delhi"); // → Vimal from Delhi
 ```
 
-- `apply()`
-Same as call but arguments are passed as **an array**.
+### 2. `apply()`
+- Same as `call()` but passes arguments as **an array**.
 
 ```js
 intro.apply(person, ["Delhi"]); // Vimal from Delhi
 ```
 
-- `bind()`
-Returns a new function with `this` bound. We can call it later.
+### 3. `bind()`
+- Returns a new function instead of calling the function **immediately**
 
 ```js
-const boundIntro = intro.bind(person, "Delhi");
-boundIntro(); // Vimal from Delhi
+const greetLater = greet.bind(person, "Delhi");
+greetLater(); // → Vimal from Delhi
 ```
+> **Note:**
+> **Method call -> Implicit binding ->Automatically set `this`
+> **Function borrowing -> Explicit binding ->Manually set `this`
