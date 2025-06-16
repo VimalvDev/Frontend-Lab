@@ -67,7 +67,7 @@ show();
 const user = {
   name: "Vimal",
   greet() {
-    console.log(`Hi, I'm ${this.name}`); "Hi, I'm Vimal"
+    console.log(`Hi, I'm ${this.name}`); //Hi, I'm Vimal
   }
 };
 user.greet();
