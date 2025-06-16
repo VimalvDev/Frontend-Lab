@@ -4,7 +4,7 @@
 ### 2. [First-Class Functions](#first-class-functions)
 ### 3. [Pure Functions](#pure-functions)
 ### 4. [Types of Functions](#types-of-functions)  
-  - [User-Defined Functions](#a-User-Defined-Functions-(Custom-Functions))  
+  - [User-Defined Functions](#a.-User-Defined-Functions---Custom-Functions)  
     - [ES5 Version](#ES5-Version-(Older-JavaScript))  
     - [ES6 Version](#ES6-Version-(Modern-JavaScript))
   - [In-Built Functions](#b-in-built-functions)  
@@ -61,7 +61,7 @@ function addToTotal(num) {
 
 ## Types of Functions
 
-## a) User-Defined Functions (Custom Functions)
+## a. User-Defined Functions - Custom Functions
 
 - These are functions that we **create ourselves** to perform specific tasks.
 - They are primarily categorized based on JavaScript versions:
