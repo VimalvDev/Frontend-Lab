@@ -70,7 +70,7 @@ console.log(person[key]);          // Output: true
 > **Note:**
 > Bracket notation is also used for **computed properties**, where the key is **calculated at runtime**.
 
-### Functions as **Object Properties (Methods)
+### Functions as **Object Properties** (Methods)
 - A function can be used as a **property** in an object
 - When a function is used this way, it's called a **method**
 ```js
