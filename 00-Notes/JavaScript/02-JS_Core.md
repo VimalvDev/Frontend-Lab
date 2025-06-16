@@ -224,9 +224,6 @@ function myFunction{
 }
 console.log(y); // ❌ Error! y is not defined outside the block
 ```
----
-
-
 
 ---
 
@@ -274,6 +271,10 @@ console.log(name ?? "Guest"); // Output: "Guest"
 > `??` operator doesn't consider `Truthy` or `Falsy` values unlike `||`.
 > `??` returns right value only if **left** is `null` or `undefined`.
 
+### 6. Optional Operators
+- `typeof` - Checks the data types
+- `delete` - Remove a property from object
+ 
 ---
 
 ## Template literal / Interpolation
