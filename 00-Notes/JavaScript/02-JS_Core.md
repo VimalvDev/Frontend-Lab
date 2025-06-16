@@ -164,6 +164,9 @@ console.log(Object.entries(user));
 // Output: [ ["name", "Vimal"], ["age", 19] ]
 ``` 
 
+### [Optional chaining in Object](06-JS_Advance.md)
+### [Object Destructuring in Object](06-JS_Advance.md)
+
 ### Optional Chaining `?.`
 Used to safely access **nested values** without getting an error if something is `undefined` or `null`
 
