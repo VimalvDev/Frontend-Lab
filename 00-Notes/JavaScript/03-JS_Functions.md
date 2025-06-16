@@ -1,4 +1,35 @@
-# JavaScript Functions
+# 📘 JavaScript Functions – Table of Contents
+
+### 1. [Function Types (ES5 & ES6)](#1-function-types-es5--es6)
+  - [Function Declaration (Statement)](#function-declaration-statement)
+  - [Function Expression](#function-expression)
+  - [Anonymous Function](#anonymous-function)
+  - [Named Function Expression](#named-function-expression)
+  - [Arrow Function (ES6)](#arrow-function-es6)
+  - [Immediately Invoked Function Expression (IIFE)](#immediately-invoked-function-expression-iife)
+  - [Function Constructor (Optional)](#function-constructor-optional)
+
+### 2. [Function Hoisting](#2-function-hoisting)
+
+### 3. [Pure Functions](#3-pure-functions)
+
+### 4. [First-Class Functions](#4-first-class-functions)
+
+### 5. [Built-in vs User-defined Functions](#5-built-in-vs-user-defined-functions)
+
+### 6. [Built-in String Functions](#6-built-in-string-functions)
+
+### 7. [Built-in Array Functions](#7-built-in-array-functions)
+  - [forEach()](#foreach)
+  - [map()](#map)
+  - [filter()](#filter)
+  - [reduce()](#reduce)
+  - [some()](#some)
+  - [every()](#every)
+  - [find() & findIndex()](#find--findindex)
+
+### 8. [Notes & Interview Tips](#8-notes--interview-tips)
+
 
 ## What is a Function?
 
