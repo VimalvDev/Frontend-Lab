@@ -161,5 +161,5 @@ const greetLater = greet.bind(person, "Delhi");
 greetLater(); // → Vimal from Delhi
 ```
 > **Note:**
->-**Method call** -> Implicit binding ->Automatically set `this`
->-**Function borrowing** -> Explicit binding ->Manually set `this`
+>- **Method call** -> Implicit binding ->Automatically set `this`
+>- **Function borrowing** -> Explicit binding ->Manually set `this`
