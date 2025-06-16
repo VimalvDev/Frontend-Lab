@@ -35,8 +35,8 @@ Error.stack – Tracing error location (line number + call path of the error cod
 ---
 ## Advance `object` Concepts
 
-## Optional Chaining `?.`
-Used to safely access **nested values** without getting an error if something is `undefined` or `null`
+## Optional Chaining
+`?.` Used to safely access **nested values** without getting an error if something is `undefined` or `null`
 
 #### Key points
 - Helps avoid `TypeError` when accessing deep (nested) properties.
