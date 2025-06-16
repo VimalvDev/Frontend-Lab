@@ -164,8 +164,8 @@ console.log(Object.entries(user));
 // Output: [ ["name", "Vimal"], ["age", 19] ]
 ``` 
 ## Some advance `object` Topics:
-[Optional chaining in Object](06-JS_Advance.md#optional-chaining-?)
-[Object Destructuring in Object](06-JS_Advance.md#Object-Destructuring)
+- [Optional chaining in Object](06-JS_Advance.md#optional-chaining)
+- [Object Destructuring in Object](06-JS_Advance.md#Object-Destructuring)
 
 ---
 
