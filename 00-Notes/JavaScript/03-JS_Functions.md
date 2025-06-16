@@ -291,15 +291,49 @@ console.log(str.charCodeAt(0)); // Output: 65
   console.log(arr.indexOf(20));     // Output: 1
   console.log(arr.indexOf(50));     // Output: -1
   ```
-  
-- `reduce()` – Reduces the array to a single value.
+- `find()` - Returns the **first value** that matches the given condition.
+  ```js
+  const nums = [1, 3, 5];
+  const result = nums.find(n => n > 2);  // 3
+  ```
+- `findIndex()` - Returns the **index** of the **first element** that matches the given condition.
+  ```js
+  const nums = [1, 3, 5];
+  const index = nums.findIndex(n => n > 2);  // 1
+  ```
+>**Note:**
+> `find()` and `findIndex()` are similar, but:
+> - `find()` returns the actual element.
+> - `findIndex()` returns its index.
+>
+> `indexOf()` is different — it only checks for **exact values**, not conditions:
+> ```js
+> const nums = [1, 3, 5];
+> nums.indexOf(3);              // ✅ 1
+> nums.indexOf(n => n > 2);     // ❌ Won’t work!
+> ```
+
+- `some()` - Returns `true` if **any element** matches the condition
+  ```js
+  const nums = [1, 2, 3];
+  const hasEven = nums.some(n => n % 2 === 0);  // true
+  ```
+- `every()` - Returns `true` if **all elements** matches the condition.
+  ```js
+  const nums = [2, 4, 6];
+  const allEven = nums.every(n => n % 2 === 0);  // true
+  ```
+>**Note:**
+> - `some()` -> Is any **one** element true?
+> - `every()` -> Are all elements true?
+
+- `reduce()` – Reduces the array to a single value like sums, products or even transforming arrays into objects.
   - ```
     const arr = [1, 2, 3, 4];
     const sum = arr.reduce((acc, curr) => acc + curr, 0);  // Result: 10
     ```
 > **Note**
 > How reduce() Works:
-> 
 > `reduce()` is used to combine all elements of an array into a single value.
 > 
 > In this example:
