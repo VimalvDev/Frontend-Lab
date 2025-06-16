@@ -1,35 +1,26 @@
 # 📘 JavaScript Functions – Table of Contents
 
-### 1. [Function Types (ES5 & ES6)](#1-function-types-es5--es6)
-  - [Function Declaration (Statement)](#function-declaration-statement)
-  - [Function Expression](#function-expression)
-  - [Anonymous Function](#anonymous-function)
-  - [Named Function Expression](#named-function-expression)
-  - [Arrow Function (ES6)](#arrow-function-es6)
-  - [Immediately Invoked Function Expression (IIFE)](#immediately-invoked-function-expression-iife)
-  - [Function Constructor (Optional)](#function-constructor-optional)
+## 📚 Table of Contents – JavaScript Functions
 
-### 2. [Function Hoisting](#2-function-hoisting)
+1. [What is a Function](#what-is-a-function)
+2. [First-Class Functions](#first-class-functions)
+3. [Pure Functions](#pure-functions)
+4. [Types of Functions](#types-of-functions)  
+   a. [User-Defined Functions](#a-user-defined-functions)  
+   - [ES5 Version](#es5-version)  
+   - [ES6 Version](#es6-version)  
+   b. [In-Built Functions](#b-in-built-functions)  
+   - [Timing Functions](#timing-functions)  
+   - [Event Functions](#event-functions)  
+   - [Console & Debugging Functions](#console--debugging-functions)  
+   - [User Interaction Functions](#user-interaction-functions)  
+   - [String Functions](#string-functions)  
+   - [Array Functions](#array-functions)  
+   - [Type Conversion and Validation Functions](#type-conversion-and-validation-functions)  
+   - [Math Functions](#math-functions)  
+   - [Type Checking Functions](#type-checking-functions)
 
-### 3. [Pure Functions](#3-pure-functions)
-
-### 4. [First-Class Functions](#4-first-class-functions)
-
-### 5. [Built-in vs User-defined Functions](#5-built-in-vs-user-defined-functions)
-
-### 6. [Built-in String Functions](#6-built-in-string-functions)
-
-### 7. [Built-in Array Functions](#7-built-in-array-functions)
-  - [forEach()](#foreach)
-  - [map()](#map)
-  - [filter()](#filter)
-  - [reduce()](#reduce)
-  - [some()](#some)
-  - [every()](#every)
-  - [find() & findIndex()](#find--findindex)
-
-### 8. [Notes & Interview Tips](#8-notes--interview-tips)
-
+---
 
 ## What is a Function?
 
