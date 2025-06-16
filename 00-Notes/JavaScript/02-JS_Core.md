@@ -42,7 +42,7 @@ Objects are **reference data** types used to store collections of **key-value pa
 - Keys are also known as **properties**
 
 #### Creating Objects:
-We can define an object using **objet literal syntax** with `{}`
+We can define an object using **object literal syntax** with `{}`
 ```js
 const person = { // Object literal
   name: "Vimal", // Key and Value
@@ -84,7 +84,7 @@ user.greet(); // Output: Hello, Vimal
 ```
 > **Note:**
 > Do not use **arrow functions** as object methods because
->     - Arrow functions **dont have their own `this`
+>     - Arrow functions **don't have their own `this`
 >     - They inherit `this` from the outer scope, which is outside the object.
 > ```js
 > const user = {
@@ -98,7 +98,7 @@ user.greet(); // Output: Hello, Vimal
 
 ### Computed Properties
 #### What is **computed properties**
-Computed properties allow us to **dynamically** define the property key using a variable or an expression insdie **square brackets** `[]`.
+Computed properties allow us to **dynamically** define the property key using a variable or an expression inside **square brackets** `[]`.
 ```js
 const keyName = "email"; // Adding this value into the object
 const user = { // object
@@ -139,7 +139,7 @@ console.log(student2); // { name: "Advik", age: 18 }
 ```
 
 ### `keys`, `values` and `entries`
-These are built-in JavaScript methods used to extract data from objects in **array formate**
+These are built-in JavaScript methods used to extract data from objects in **array format**
 
 #### 1. `Object.keys(obj)`
 Returns an **array of keys (property names) from the object.
@@ -381,7 +381,7 @@ for (let i = 0; i < 5; i++) {
 - ### `forEach` loop
 → Calls a function once for each element in array element.
 → Cannot be stopped using `break` or `continue`.
-→ Can use `return` to skip the current iteration in a callback.
+→ Can use `return` to exits the current iteration in a callback.
   
 **Example:**
 
