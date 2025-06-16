@@ -31,14 +31,14 @@
   - No need to specify a **return type** (like `int`, `string`, etc.) as in other languages.
   - Functions are defined using the `function` keyword.
 
-## First-Class Functions in JavaScript
+## First-Class Functions
 
 - JavaScript treats functions as **first-class citizens**, which means:
   - Functions can be **assigned to variables**.
   - Functions can be **passed as arguments** to other functions.
   - Functions can be **returned from another function**.
 
-## Pure Functions in JavaScript
+## Pure Functions
 
 - A **Pure function** returns the same output for the same inputs.
 - Doesn't modify external variables, data or state.
@@ -61,7 +61,7 @@ function addToTotal(num) {
 
 ---
 
-## Types of Functions in JavaScript
+## Types of Functions
 
 ## a) User-Defined Functions (Custom Functions)
 
