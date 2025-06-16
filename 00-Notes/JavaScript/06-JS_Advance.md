@@ -33,6 +33,7 @@ Error.message – Error description (what went wrong)
 Error.stack – Tracing error location (line number + call path of the error code)
 
 ---
+## Advance `object` Concepts
 
 ### Optional Chaining `?.`
 Used to safely access **nested values** without getting an error if something is `undefined` or `null`
@@ -60,7 +61,7 @@ console.log(user.contact.email);     // ❌ Error
 - Handling **optional user inputs**
 - Dealing with **DOM elements** that may no exist
 
-## Object Destructuring
+### Object Destructuring
 Object destructuring is a simple way to **extract values** from an object and store them in variables.
 
 ### ✅ Basic Syntax
