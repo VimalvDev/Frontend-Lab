@@ -1,9 +1,9 @@
 # 📘 JavaScript Functions – Table of Contents
 
-[What is a Function](#what-is-a-function)
-2. [First-Class Functions](#first-class-functions)
-3. [Pure Functions](#pure-functions)
-4. [Types of Functions](#types-of-functions)  
+### 1. [What is a Function](#what-is-a-function)
+### 2. [First-Class Functions](#first-class-functions)
+### 3. [Pure Functions](#pure-functions)
+### 4. [Types of Functions](#types-of-functions)  
   - a. [User-Defined Functions](#a-user-defined-functions)  
     - [ES5 Version](#es5-version)  
     - [ES6 Version](#es6-version)
