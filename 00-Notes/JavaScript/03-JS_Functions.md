@@ -20,7 +20,7 @@
 
 - A **Pure function** returns the same output for the same inputs.
 - Doesn't modify external variables, data or state.
-- Uses only the data given to it through parameters, doesn't depend on any variabels or state from outside.
+- Uses only the data given to it through parameters, doesn't depend on any variables or state from outside.
 - Example
 ```js
 //Pure function
@@ -91,7 +91,7 @@ function addToTotal(num) {
   };
   greet("Vimal"); // Output: Hello, Vimal
 
-  const greet = function greetFun(name) { named function expression
+  const greet = function greetFun(name) { // Named function expression
   console.log("Hello, " + name);
   };
   greet("Vimal"); // Output: Hello, Vimal
@@ -291,6 +291,7 @@ console.log(str.charCodeAt(0)); // Output: 65
   console.log(arr.indexOf(20));     // Output: 1
   console.log(arr.indexOf(50));     // Output: -1
   ```
+  
 - `reduce()` – Reduces the array to a single value.
   - ```
     const arr = [1, 2, 3, 4];
