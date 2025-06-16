@@ -1,8 +1,6 @@
 # 📘 JavaScript Functions – Table of Contents
 
-## 📚 Table of Contents – JavaScript Functions
-
-1. [What is a Function](#what-is-a-function)
+[What is a Function](#what-is-a-function)
 2. [First-Class Functions](#first-class-functions)
 3. [Pure Functions](#pure-functions)
 4. [Types of Functions](#types-of-functions)  
