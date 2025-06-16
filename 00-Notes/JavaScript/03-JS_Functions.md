@@ -5,8 +5,8 @@
 ### 3. [Pure Functions](#pure-functions)
 ### 4. [Types of Functions](#types-of-functions)  
   - [User-Defined Functions](#a-user-defined-functions)  
-    - [ES5 Version](#es5-version)  
-    - [ES6 Version](#es6-version)
+    - [ES5 Version](#ES5-Version-(Older-JavaScript))  
+    - [ES6 Version](#ES6-Version-(Modern-JavaScript))
   - [In-Built Functions](#b-in-built-functions)  
     - [Timing Functions](#timing-functions)  
     - [Event Functions](#event-functions)  
@@ -73,8 +73,6 @@ function addToTotal(num) {
 - **ES5 (ECMAScript 5)** is the **older version of JavaScript**.
 - Still widely supported and commonly used.
 - Functions are defined using the traditional `function` keyword.
-
-![](IMGs/js_es5_functions.png)
 
 ### 1. Function Statement
 
