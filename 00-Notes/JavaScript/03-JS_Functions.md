@@ -4,7 +4,7 @@
 ### 2. [First-Class Functions](#first-class-functions)
 ### 3. [Pure Functions](#pure-functions)
 ### 4. [Types of Functions](#types-of-functions)  
-  - [User-Defined Functions](#a-user-defined-functions)  
+  - [User-Defined Functions](#a-User-Defined-Functions-(Custom-Functions))  
     - [ES5 Version](#ES5-Version-(Older-JavaScript))  
     - [ES6 Version](#ES6-Version-(Modern-JavaScript))
   - [In-Built Functions](#b-in-built-functions)  
