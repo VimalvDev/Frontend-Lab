@@ -165,7 +165,7 @@ console.log(Object.entries(user));
 ``` 
 ## Some advance `object` Topics:
 ### [Optional chaining in Object](06-JS_Advance.md#Optional-Chaining-?.)
-### [Object Destructuring in Object](06-JS_Advance.md#Object Destructuring)
+### [Object Destructuring in Object](06-JS_Advance.md#Object-Destructuring)
 
 ---
 
