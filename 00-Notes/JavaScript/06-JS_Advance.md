@@ -257,3 +257,28 @@ greetLater(); // → Vimal from Delhi
 > **Note:**
 >- **Method call** -> Implicit binding ->Automatically set `this`
 >- **Function borrowing** -> Explicit binding ->Manually set `this`
+
+---
+
+## JavaScript Modules
+JavaScript Modules help us split code into smaller, reusable files. This makes projects easier to manage, debug, and scale.
+
+## ✅ Why Use Modules?
+
+- Avoid messy, long single files.
+- Reuse code in multiple files.
+- Keep functions and variables in their own files.
+
+## 📁 Types of Modules
+
+### 1. ES Modules (Modern JavaScript Modules)
+
+- Use `import` and `export` keywords.
+- Supported in all modern browsers and Node.js (with `.js` or `.mjs` extension).
+- Mostly used in frontend web development.
+
+```js
+// utils.js
+export function greet(name) {
+  console.log(`Hello, ${name}`);
+}
