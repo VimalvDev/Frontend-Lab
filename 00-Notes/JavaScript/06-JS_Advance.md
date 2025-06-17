@@ -263,13 +263,13 @@ greetLater(); // → Vimal from Delhi
 ## JavaScript Modules
 JavaScript Modules help us split code into smaller, reusable files. This makes projects easier to manage, debug, and scale.
 
-## ✅ Why Use Modules?
+## Why Use Modules?
 
 - Avoid messy, long single files.
 - Reuse code in multiple files.
 - Keep functions and variables in their own files.
 
-## 📁 Types of Modules
+## Types of Modules
 
 ### 1. ES Modules (Modern JavaScript Modules)
 
@@ -280,5 +280,78 @@ JavaScript Modules help us split code into smaller, reusable files. This makes p
 ```js
 // utils.js
 export function greet(name) {
+console.log(`Hello, ${name}`);
+}
+```
+```js
+// main.js
+import { greet } from './utils.js';
+greet("ThugZone");
+```
+
+### 2. CommonJS (Older Module System in Node.js)
+- Uses `require()` and `module.exports`
+- Stil used in many Node.js packages (especially backend tools)
+- Not natively supported in browsers
+
+```js
+// utils.js
+function greet(name) {
   console.log(`Hello, ${name}`);
 }
+module.exports = { greet };
+```
+```js
+// main.js
+const { greet } = require('./utils');
+greet("ThugZone");
+```
+
+## Named Export and Default Export
+### Named Export
+- We can export **multiple functions or variables**
+```js
+// math.js
+export const PI = 3.14;
+export function square(x) { return x * x; }
+```
+```js
+// main.js
+import { PI, square } from './math.js';
+```
+
+### Default Export
+- Export **only one value** (function, object,class)
+```js
+// greet.js
+export default function(name) {
+  console.log("Hi", name);
+}
+```
+```js
+// main.js
+import greet from './greet.js';
+greet("ThugZone");
+```
+
+## Dynamic Import (Lazy Loading)
+- Loads Module **only when needed** (e.g on button click)
+- Returns a Promise.
+```js
+// On demand loading
+async function loadModule() {
+  const module = await import('./utils.js');
+  module.greet("ThugZone");
+}
+```
+```js
+// Using .then()
+import('./utils.js')
+  .then((mod) => mod.greet("ThugZone"))
+  .catch(err => console.log("Failed to load", err));
+```
+
+## File Extensions in ES Modules
+1. `.js` -> Default, works in both browser and Node.js
+2. `.mjs` -> Used in Node.js if `type: module` is **not set** in package.json
+3. `.ts`/`.mts` -> For TypeScript-Based modules
