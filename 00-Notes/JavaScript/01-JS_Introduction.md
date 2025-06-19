@@ -57,7 +57,7 @@
 
 ![JS Code Execution Process](IMGs/js_code_execution_process.png)
 
-1. **Source code** – The JavaScript code you write, usually in a `.js` file.  
+1. **Source code** – The JavaScript code we write, usually in a `.js` file.  
 2. **Parsing** – The JS engine reads the code and converts it into an **Abstract Syntax Tree (AST)** representing the code’s structure.  
 3. **Compilation** – The Just-In-Time (JIT) compiler translates the AST into machine code that the computer understands.  
 4. **Execution** – The machine code runs in the **Call Stack**, where functions execute one by one.  
