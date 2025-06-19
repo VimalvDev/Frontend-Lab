@@ -30,6 +30,7 @@
 
 7. [Temporal Dead Zone (TDZ)](#temporal-dead-zone-tdz)  
 
+---
 
 ## JavaScript Introduction
 
