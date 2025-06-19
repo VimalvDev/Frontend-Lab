@@ -11,7 +11,8 @@
 
 4. [JIT Compiler in JavaScript](#jit-compiler-in-javascript)  
 
-5. [JavaScript Execution Context & Call Stack](#JavaScript-Execution-Context-&-Call-Stack-(How-JS-code-runs-behind-the-scenes))  
+5. [JavaScript Execution Context & Call Stack](#javascript-execution-context--call-stack-how-js-code-runs-behind-the-scenes
+)  
    - [Browser and JS Engine](#browser-and-js-engine)  
    - [Types of Execution Context](#types-of-execution-context)  
    - [Components of Execution Context](#components-of-execution-context)  
