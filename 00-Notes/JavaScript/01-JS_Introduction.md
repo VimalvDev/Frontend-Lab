@@ -1,20 +1,17 @@
 # 📘 JavaScript Introduction – Table of Contents
 
 1. [Introduction to JavaScript](#JavaScript-Introduction)  
-   - [History and Purpose](#history-and-purpose)  
-   - [ES5 vs ES6+](#es5-vs-es6)  
+   - [History](#history)  
+   - [ES5 vs ES6+](#JavaScript-Versions)  
 
 2. [Built-in Browser Interfaces](#built-in-browser-interfaces)  
 
-3. [JavaScript Code Execution Process](#javascript-code-execution-process)  
-   - [Parsing and AST](#parsing-and-ast)  
-   - [JIT Compilation](#jit-compilation)  
-   - [Inline Caching](#inline-caching)  
-   - [Other Optimizations](#other-optimization-techniques)  
+3. [JavaScript Code Execution Process](#javascript-code-execution-process)    
+   - [Optimization Techniques](#Key-Optimization-Techniques)  
 
 4. [JIT Compiler in JavaScript](#jit-compiler-in-javascript)  
 
-5. [JavaScript Execution Context & Call Stack](#javascript-execution-context--call-stack)  
+5. [JavaScript Execution Context & Call Stack](#JavaScript-Execution-Context-&-Call-Stack-(How-JS-code-runs-behind-the-scenes))  
    - [Browser and JS Engine](#browser-and-js-engine)  
    - [Types of Execution Context](#types-of-execution-context)  
    - [Components of Execution Context](#components-of-execution-context)  
@@ -31,10 +28,12 @@
 
 ## JavaScript Introduction
 
+### History
 - JavaScript (JS) was created by Brendan Eich in 1995.  
 - JS is a programming language used for both frontend (web browsers) and backend (Node.js).  
 - Managed by **ECMAScript**: ECMAScript (ES) sets the standards for JavaScript, introducing new features, removing outdated ones, and improving the language over time.
 
+### JavaScript Versions
 - JS has two major versions:  
   - **ES5** – Older version, still widely used and supported.  
   - **ES6 (ECMAScript 2015)** and beyond – Introduced modern features like `let`, `const`, arrow functions, classes, and more.
