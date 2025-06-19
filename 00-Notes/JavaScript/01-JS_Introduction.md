@@ -1,6 +1,6 @@
 # 📘 JavaScript Introduction – Table of Contents
 
-1. [Introduction to JavaScript](#introduction-to-javascript)  
+1. [Introduction to JavaScript](#JavaScript-Introduction)  
    - [History and Purpose](#history-and-purpose)  
    - [ES5 vs ES6+](#es5-vs-es6)  
 
