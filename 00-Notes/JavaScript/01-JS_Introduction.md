@@ -104,3 +104,33 @@ The **Call Stack** is where execution contexts are **pushed** and **popped** to 
 > - In the execution phase, the code runs line-by-line, and each variable and function gets its actual value.
 
 ---
+
+## Hoisting in JavaScript
+Hoisting is a behavior in JavaScript where **variable** and **function declaration** are moved to the **top of their scope** (memory phase) before the code is executed.
+
+### What Gets Hoisted?
+- `var`  → Hoisted and initialized as `undefined`
+- `functions` declarations  → hoisted with full function body
+- `let` and `const`  → hoisted but **not initialized** because they are in **temporal zone**
+
+### 1. Hoisting with `var`
+- Variables declared using `var` are hoisted to the top of their scope (global execution context)
+- But they are initialized as `undefined` during the **creation phase** in executuion context
+```js
+console.log(a); // undefined
+var a = 10;
+```
+
+### 2. Hoisting with `function` declarations
+- Function declarations are fully hoisted
+- We can call the function even before it's written in the code
+
+```js
+greet(); // Hello
+
+function greet() {
+  console.log("Hello");
+}
+```
+
+### 3. Hoisting with `let` and `const`
