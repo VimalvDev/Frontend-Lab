@@ -1,4 +1,37 @@
-# Introduction
+# 📘 JavaScript Introduction – Table of Contents
+
+1. [Introduction to JavaScript](#introduction-to-javascript)  
+   - [History and Purpose](#history-and-purpose)  
+   - [ES5 vs ES6+](#es5-vs-es6)  
+
+2. [Built-in Browser Interfaces](#built-in-browser-interfaces)  
+   - [Window](#window)  
+   - [BOM (Browser Object Model)](#bom-browser-object-model)  
+   - [DOM (Document Object Model)](#dom-document-object-model)  
+
+3. [JavaScript Code Execution Process](#javascript-code-execution-process)  
+   - [Parsing and AST](#parsing-and-ast)  
+   - [JIT Compilation](#jit-compilation)  
+   - [Inline Caching](#inline-caching)  
+   - [Other Optimizations](#other-optimization-techniques)  
+
+4. [JIT Compiler in JavaScript](#jit-compiler-in-javascript)  
+
+5. [JavaScript Execution Context & Call Stack](#javascript-execution-context--call-stack)  
+   - [Browser and JS Engine](#browser-and-js-engine)  
+   - [Types of Execution Context](#types-of-execution-context)  
+   - [Components of Execution Context](#components-of-execution-context)  
+   - [Call Stack](#call-stack-execution-context-stack)  
+
+6. [Hoisting in JavaScript](#hoisting-in-javascript)  
+   - [Hoisting with `var`](#hoisting-with-var)  
+   - [Hoisting with `function`](#hoisting-with-function-declarations)  
+   - [Hoisting with `let` and `const`](#hoisting-with-let-and-const)  
+
+7. [Temporal Dead Zone (TDZ)](#temporal-dead-zone-tdz)  
+
+
+## JavaScript Introduction
 
 - JavaScript (JS) was created by Brendan Eich in 1995.  
 - JS is a programming language used for both frontend (web browsers) and backend (Node.js).  
