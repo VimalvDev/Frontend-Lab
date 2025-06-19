@@ -23,7 +23,7 @@
    - [Hoisting with `function`](#hoisting-with-function-declarations)  
    - [Hoisting with `let` and `const`](#hoisting-with-let-and-const)  
 
-7. [Temporal Dead Zone (TDZ)](#temporal-dead-zone-tdz)  
+7. [Temporal Dead Zone (TDZ)](#what-is-temporal-dead-zone?)  
 
 ---
 
