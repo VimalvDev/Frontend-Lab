@@ -13,7 +13,7 @@
 
 5. [JavaScript Execution Context & Call Stack](#javascript-execution-context--call-stack-how-js-code-runs-behind-the-scenes
 )  
-   - [What happens when JS code runs?](#What-happens-when-JS-code-runs?)  
+   - [What happens when JS code runs?](#What-happens-when-JS-code-runs)  
    - [Types of Execution Context](#types-of-execution-context)  
    - [What's inside every Execution Context?](#what's-inside-every-execution-context)  
    - [Call Stack](#call-stack--execution-context-stack)  
