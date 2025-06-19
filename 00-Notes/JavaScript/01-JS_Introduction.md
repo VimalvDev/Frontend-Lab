@@ -15,7 +15,7 @@
 )  
    - [What happens when JS code runs?](#What-happens-when-JS-code-runs?)  
    - [Types of Execution Context](#types-of-execution-context)  
-   - [What's inside every Execution Context?](#what's-inside-every-execution-context?)  
+   - [What's inside every Execution Context?](#what's-inside-every-execution-context)  
    - [Call Stack](#call-stack--execution-context-stack)  
 
 6. [Hoisting in JavaScript](#hoisting-in-javascript)  
@@ -23,7 +23,7 @@
    - [Hoisting with `function`](#hoisting-with-function-declarations)  
    - [Hoisting with `let` and `const`](#hoisting-with-let-and-const)  
 
-7. [Temporal Dead Zone (TDZ)](#what-is-temporal-dead-zone?)  
+7. [Temporal Dead Zone (TDZ)](#what-is-temporal-dead-zone)  
 
 ---
 
