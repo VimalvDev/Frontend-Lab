@@ -77,6 +77,10 @@ When JS code is executed in the browser, it passes through:
       - Scope (lexical scope chain)
       - Value of `this` keyword
 
+### Types of Execution Context:
+1. **Global Execution Context** - Created when JS starts, runs in the browser window or Nodejs.
+2. **Function Execution Context** - Created when a function is called.
+   
 ### What's inside every Execution Context?
 Every execution context contains three main parts:
 1. **Variable Object**
