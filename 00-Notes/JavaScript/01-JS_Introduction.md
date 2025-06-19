@@ -134,3 +134,26 @@ function greet() {
 ```
 
 ### 3. Hoisting with `let` and `const`
+- `let` and `const` are **also hoisted**, but they are **not initialized**(assigning a default value) during the creation phase.
+- They remain in the **Temporal Dead Zone (TDZ) from the start of the scope until their declaration.
+- Accessing them before declaration causes a **ReferenceError**.
+```js
+console.log(b); // ❌ ReferenceError
+let b = 20;
+
+console.log(c); // ❌ ReferenceError
+const c = 30;
+```
+## What is Temporal Dead Zone?
+- The TDZ is the time between the **start of the block** and the **actual declaration** of the variable.
+- Inside this zone, accessing `let` or `const` variables will throw an error.
+
+```js
+{
+  // This is the start of the block
+  console.log(x); // ❌ ReferenceError (x is in TDZ)
+
+  let x = 10;      // ✅ Declaration — TDZ ends here
+  console.log(x);  // ✅ Works: 10
+}
+```
