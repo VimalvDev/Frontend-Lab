@@ -69,7 +69,7 @@ When JS code is executed in the browser, it passes through:
       - **Executes our code**
       - **Allocates memory** to variables and functions
       - Manages the **Call Stack, Heap,** and the **Execution Context**
-3. Execution Context
+3. **Execution Context**
    - The environment created by the JavaScript Engine **where each piece of code runs**
    - Every time JS code runs, an execution context is created.
    - Execution Context has:
@@ -94,3 +94,6 @@ Every execution context contains three main parts:
 3. **Value of `this` keyword**
    - This is a **special keyword** that refers to "who" is calling the function
    - To know about value of `this` go to [this keyword values](06-JS_Advance.md#Understanding-this-Keyword-in-JavaScript)
+
+### Call Stack (Execution Context Stack)
+The **Call Stack** is where execution contexts are **pushed** and **popped** to manage function calls in correct order.
