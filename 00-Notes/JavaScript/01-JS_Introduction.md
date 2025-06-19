@@ -55,11 +55,42 @@
 
 ---
 
-## How JS Runs in the Browser
+## JavaScript Execution Context & Call Stack (How JS code runs behind the scenes)
+JavaScript is a **synchronous**, **single-threaded** programming language, which means it can only execute one command at a time, line by line.
 
-- JavaScript code runs inside browsers like Chrome.  
-- The code instructs the browser to store and process values in the computer’s RAM.  
-- The browser executes these values while running JavaScript to create dynamic, interactive web pages.
+### What happens when JS code runs?
+When JS code is executed in the browser, it passes through:
 
----
+1. **Browser**
+  - The platform where the javaScript code runs (chrome, firefox etc)
+  - It contains the **JavaScript Engine**
+2. **JavaScript Engine**
+  - A program inside the browser (eg V8 in Chrome) that:
+      - **Executes our code**
+      - **Allocates memory** to variables and functions
+      - Manages the **Call Stack, Heap,** and the **Execution Context**
+3. Execution Context
+  - The environment created by the JavaScript Engine **where each piece of code runs**
+  - Every time JS code runs, an execution context is created.
+  - Execution Context has:
+      - Memory storage (for variabels/functions)
+      - Scope (lexical scope chain)
+      - Value of `this` keyword
 
+### What's inside every Execution Context?
+Every execution context contains three main parts:
+1. **Variable Object**
+  - It stores:
+      - All variables and function declarations
+      - Before code starts executing, JS puts them here during the **Creation Phase**
+  - **Global Execution Context** → It stores global variables/functions
+  - **Function Execution Context** → It stores functions's local variables/parameters
+
+2. **Scope Chain**
+  - It's like a path that JS follows to **find variables
+  - If a variable is **not found inside a function**, Js goes up to the **Outer environment**
+  - This is how **nester functions** can access variables from outer functions
+
+3. **Value of `this` keyword**
+  - This is a **special keyword** that refers to "who" is calling the function
+  - To know about value of `this` go to [this keyword values](/06-JS_Advance.md)
