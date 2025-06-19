@@ -16,7 +16,7 @@
    - [What happens when JS code runs?](#What-happens-when-JS-code-runs)  
    - [Types of Execution Context](#types-of-execution-context)  
    - [What's inside every Execution Context?](#whats-inside-every-execution-context)  
-   - [Call Stack](#call-stack-execution-context-stack)  
+   - [Call Stack - Execution context stack](#call-stack-execution-context-stack)  
 
 6. [Hoisting in JavaScript](#hoisting-in-javascript)  
    - [Hoisting with `var`](#1-hoisting-with-var)  
