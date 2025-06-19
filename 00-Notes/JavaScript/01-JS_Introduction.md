@@ -5,9 +5,6 @@
    - [ES5 vs ES6+](#es5-vs-es6)  
 
 2. [Built-in Browser Interfaces](#built-in-browser-interfaces)  
-   - [Window](#window)  
-   - [BOM (Browser Object Model)](#bom-browser-object-model)  
-   - [DOM (Document Object Model)](#dom-document-object-model)  
 
 3. [JavaScript Code Execution Process](#javascript-code-execution-process)  
    - [Parsing and AST](#parsing-and-ast)  
