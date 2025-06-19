@@ -100,4 +100,5 @@ The **Call Stack** is where execution contexts are **pushed** and **popped** to 
 ![](IMGs/call-stack.png)
 
 >**Note:**
-> - In starting of creation phase, every var variables values are defiend as `undefined`, and functions values have function itself. After going into the execution phase, then each variable and function gets their value.
+> - In the creation phase, all `var` are set to `undefined`, and function declarations are stored with their actual function code.
+> - In the execution phase, the code runs line-by-line, and each variable and function gets its actual value.
