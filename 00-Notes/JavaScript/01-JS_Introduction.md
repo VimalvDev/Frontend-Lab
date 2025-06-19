@@ -62,7 +62,7 @@ JavaScript is a **synchronous**, **single-threaded** programming language, which
 When JS code is executed in the browser, it passes through:
 
 1. **Browser**
-   - The platform where the javaScript code runs (chrome, firefox etc)
+   - The platform where the JavaScript code runs (chrome, firefox etc)
    - It contains the **JavaScript Engine**
 2. **JavaScript Engine**
    - A program inside the browser (eg V8 in Chrome) that:
@@ -73,7 +73,7 @@ When JS code is executed in the browser, it passes through:
    - The environment created by the JavaScript Engine **where each piece of code runs**
    - Every time JS code runs, an execution context is created.
    - Execution Context has:
-      - Memory storage (for variabels/functions)
+      - Memory storage (for variables/functions)
       - Scope (lexical scope chain)
       - Value of `this` keyword
 
@@ -88,8 +88,8 @@ Every execution context contains three main parts:
 
 2. **Scope Chain**
    - It's like a path that JS follows to **find variables
-   - If a variable is **not found inside a function**, Js goes up to the **Outer environment**
-   - This is how **nester functions** can access variables from outer functions
+   - If a variable is **not found in the current scope**, JS moves outward to the **lexical environment** where the function was defined
+   - This is how **nested functions** can access variables from outer functions
 
 3. **Value of `this` keyword**
    - This is a **special keyword** that refers to "who" is calling the function
@@ -111,11 +111,11 @@ Hoisting is a behavior in JavaScript where **variable** and **function declarati
 ### What Gets Hoisted?
 - `var`  → Hoisted and initialized as `undefined`
 - `functions` declarations  → hoisted with full function body
-- `let` and `const`  → hoisted but **not initialized** because they are in **temporal zone**
+- `let` and `const`  → hoisted but **not initialized** because they are in **Temporal Dead Zone**
 
 ### 1. Hoisting with `var`
 - Variables declared using `var` are hoisted to the top of their scope (global execution context)
-- But they are initialized as `undefined` during the **creation phase** in executuion context
+- But they are initialized as `undefined` during the **creation phase** in execution context
 ```js
 console.log(a); // undefined
 var a = 10;
