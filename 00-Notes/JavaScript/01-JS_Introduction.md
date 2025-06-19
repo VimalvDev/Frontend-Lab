@@ -62,17 +62,17 @@ JavaScript is a **synchronous**, **single-threaded** programming language, which
 When JS code is executed in the browser, it passes through:
 
 1. **Browser**
-  - The platform where the javaScript code runs (chrome, firefox etc)
-  - It contains the **JavaScript Engine**
+   - The platform where the javaScript code runs (chrome, firefox etc)
+   - It contains the **JavaScript Engine**
 2. **JavaScript Engine**
-  - A program inside the browser (eg V8 in Chrome) that:
+   - A program inside the browser (eg V8 in Chrome) that:
       - **Executes our code**
       - **Allocates memory** to variables and functions
       - Manages the **Call Stack, Heap,** and the **Execution Context**
 3. Execution Context
-  - The environment created by the JavaScript Engine **where each piece of code runs**
-  - Every time JS code runs, an execution context is created.
-  - Execution Context has:
+   - The environment created by the JavaScript Engine **where each piece of code runs**
+   - Every time JS code runs, an execution context is created.
+   - Execution Context has:
       - Memory storage (for variabels/functions)
       - Scope (lexical scope chain)
       - Value of `this` keyword
@@ -80,17 +80,17 @@ When JS code is executed in the browser, it passes through:
 ### What's inside every Execution Context?
 Every execution context contains three main parts:
 1. **Variable Object**
-  - It stores:
+   - It stores:
       - All variables and function declarations
       - Before code starts executing, JS puts them here during the **Creation Phase**
-  - **Global Execution Context** → It stores global variables/functions
-  - **Function Execution Context** → It stores functions's local variables/parameters
+   - **Global Execution Context** → It stores global variables/functions
+   - **Function Execution Context** → It stores functions's local variables/parameters
 
 2. **Scope Chain**
-  - It's like a path that JS follows to **find variables
-  - If a variable is **not found inside a function**, Js goes up to the **Outer environment**
-  - This is how **nester functions** can access variables from outer functions
+   - It's like a path that JS follows to **find variables
+   - If a variable is **not found inside a function**, Js goes up to the **Outer environment**
+   - This is how **nester functions** can access variables from outer functions
 
 3. **Value of `this` keyword**
-  - This is a **special keyword** that refers to "who" is calling the function
-  - To know about value of `this` go to [this keyword values](06-JS_Advance.md#Understanding-this-Keyword-in-JavaScript)
+   - This is a **special keyword** that refers to "who" is calling the function
+   - To know about value of `this` go to [this keyword values](06-JS_Advance.md#Understanding-this-Keyword-in-JavaScript)
