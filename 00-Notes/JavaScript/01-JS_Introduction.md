@@ -97,3 +97,4 @@ Every execution context contains three main parts:
 
 ### Call Stack (Execution Context Stack)
 The **Call Stack** is where execution contexts are **pushed** and **popped** to manage function calls in correct order.
+[](IMGs/call-stack.png)
