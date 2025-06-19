@@ -19,9 +19,9 @@
    - [Call Stack](#call-stack--execution-context-stack)  
 
 6. [Hoisting in JavaScript](#hoisting-in-javascript)  
-   - [Hoisting with `var`](#hoisting-with-var)  
-   - [Hoisting with `function`](#hoisting-with-function-declarations)  
-   - [Hoisting with `let` and `const`](#hoisting-with-let-and-const)  
+   - [Hoisting with `var`](#1-hoisting-with-var)  
+   - [Hoisting with `function` declarations](#2-hoisting-with-function-declarations)  
+   - [Hoisting with `let` and `const`](#3-hoisting-with-let-and-const)
 
 7. [Temporal Dead Zone (TDZ)](#what-is-temporal-dead-zone)  
 
