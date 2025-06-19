@@ -93,4 +93,4 @@ Every execution context contains three main parts:
 
 3. **Value of `this` keyword**
   - This is a **special keyword** that refers to "who" is calling the function
-  - To know about value of `this` go to [this keyword values](/06-JS_Advance.md)
+  - To know about value of `this` go to [this keyword values](06-JS_Advance.md)
