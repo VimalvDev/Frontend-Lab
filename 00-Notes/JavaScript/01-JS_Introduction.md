@@ -124,7 +124,7 @@ Every execution context contains three main parts:
    - **Function Execution Context** → It stores functions's local variables/parameters
 
 2. **Scope Chain**
-   - It's like a path that JS follows to **find variables
+   - It's like a path that JS follows to **find variables**
    - If a variable is **not found in the current scope**, JS moves outward to the **lexical environment** where the function was defined
    - This is how **nested functions** can access variables from outer functions
 
