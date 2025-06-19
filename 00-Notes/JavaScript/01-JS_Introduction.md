@@ -48,6 +48,8 @@
   - `WINDOW` is the big box (browser window).  
   - `BOM` (Browser Object Model) is a set of tools inside the box to control the browser.  
   - `DOM` (Document Object Model) is the webpage inside the box.
+>**Note:**
+>To learn more about Browser Interfaces, [click here](04-JS_DOM_BOM.md)
 
 ---
 
