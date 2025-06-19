@@ -98,3 +98,6 @@ Every execution context contains three main parts:
 ### Call Stack (Execution Context Stack)
 The **Call Stack** is where execution contexts are **pushed** and **popped** to manage function calls in correct order.
 ![](IMGs/call-stack.png)
+
+>**Note:**
+> - In starting of creation phase, every var variables values are defiend as `undefined`, and functions values have function itself. After going into the execution phase, then each variable and function gets their value.
