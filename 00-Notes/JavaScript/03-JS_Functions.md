@@ -55,7 +55,7 @@ console.log(result); // [1, 2, 3, 10]
 
 ### What is mutation in JavaScript?
 - Mutation means modifying orignal data (arrays, objects)
-- In JavaScript, only **objects and arrays** can be mutated (they are reference types)
+- In JavaScript, only **objects and arrays** can be mutated (they are reference/non primitive data types)
 - Mutation breaks purity, It leads to **impure functions
 
 Example of Mutation:
@@ -65,6 +65,22 @@ let arr = [1, 2, 3];
 arr.push(4);  // changes original array
 ```
 2. Object Mutation
+```js
+let user = { name: "Vimal" };
+user.age = 22; // adds/modifies property directly
+```
+
+### Side Effects that break Purity
+- `console.log()` inside the function
+- Reading/modifying global variables
+- Network requests (`fetch`, `axios`, etc)
+- DOM manipulation (`document.getElementById`, etc)
+- Updating local storage, cookies, etc
+
+### Making impure function pure
+- Use **spread operator(`...`) to avoid mutation
+- Retrun **new values,** don't change orignal ones
+- Keep functions **small and focused**
 
 ---
 
