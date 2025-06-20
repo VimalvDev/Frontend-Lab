@@ -3,6 +3,10 @@
 1. [What is a Function](#what-is-a-function)
 2. [First-Class Functions](#first-class-functions)
 3. [Pure Functions](#pure-functions)
+  - [What is a Pure function?](#What-is-a-Pure-function)
+  - [What is Mutation?](#What-is-mutation)
+  - [Side Effects that break Purity](#side-effects-that-break-purity)
+  - [Side Effects that break Purity](#side-effects-that-break-purity) 
 4. [Types of Functions](#types-of-functions)  
   - a. [User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)  
     - [ES5 Version (Older JavaScript)](#es5-version-older-javascript)  
@@ -53,10 +57,10 @@ console.log(nums);   // [1, 2, 3] — not mutated
 console.log(result); // [1, 2, 3, 10]
 ```
 
-### What is mutation in JavaScript?
-- Mutation means modifying orignal data (arrays, objects)
-- In JavaScript, only **objects and arrays** can be mutated (they are reference/non primitive data types)
-- Mutation breaks purity, It leads to **impure functions
+### What is Mutation in JavaScript?
+- Mutation means modifying original data like arrays or objects
+- In JavaScript, only **objects and arrays** (reference/non primitive types) can be mutated
+- Mutation breaks the rules of pure functions and leads to **impure functions**
 
 Example of Mutation:
 1. Array Mutation:
@@ -71,16 +75,16 @@ user.age = 22; // adds/modifies property directly
 ```
 
 ### Side Effects that break Purity
-- `console.log()` inside the function
+- Using `console.log()` inside the function
 - Reading/modifying global variables
-- Network requests (`fetch`, `axios`, etc)
+- Making network requests (`fetch`, `axios`, etc)
 - DOM manipulation (`document.getElementById`, etc)
-- Updating local storage, cookies, etc
+- Writing to local storage, session storage or cookies
 
-### Making impure function pure
+### How to make an Impure Function Pure
 - Use **spread operator(`...`) to avoid mutation
-- Retrun **new values,** don't change orignal ones
-- Keep functions **small and focused**
+- Retrun **new values** instead of modifying the original ones
+- Keep functions **small, focused, and predictable**
 
 ---
 
