@@ -4,7 +4,7 @@
 2. [First-Class Functions](#first-class-functions)
 3. [Pure Functions](#pure-functions)
     - [What is a Pure function?](#What-is-a-Pure-function)
-    - [What is Mutation?](#What-is-mutation)
+    - [What is Mutation?](#What-is-mutation-in-javascript)
     - [Side Effects that break Purity](#side-effects-that-break-purity)
     - [How to make an Impure Function Pure](#how-to-make-an-impure-function-pure) 
 4. [Types of Functions](#types-of-functions)  
