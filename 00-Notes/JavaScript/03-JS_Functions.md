@@ -6,7 +6,7 @@
   - [What is a Pure function?](#What-is-a-Pure-function)
   - [What is Mutation?](#What-is-mutation)
   - [Side Effects that break Purity](#side-effects-that-break-purity)
-  - [Side Effects that break Purity](#side-effects-that-break-purity) 
+  - [How to make an Impure Function Pure](#how-to-make-an-impure-function-pure) 
 4. [Types of Functions](#types-of-functions)  
   - a. [User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)  
     - [ES5 Version (Older JavaScript)](#es5-version-older-javascript)  
