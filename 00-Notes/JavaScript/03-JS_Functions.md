@@ -37,25 +37,34 @@
   - Functions can be **returned from another function**.
 
 ## Pure Functions
-
-- A **Pure function** returns the same output for the same inputs.
-- Doesn't modify external variables, data or state.
-- Uses only the data given to it through parameters, doesn't depend on any variables or state from outside.
-- Example
+### What is a Pure function?
+- Always returns the **same output** for the same input
+- Doesn't **change or depend on external state** (no side effects)
+- Doesn't mutate (change) any object, array, or variable outside its scope
+- Uses only the data given to it through parameters
 ```js
-//Pure function
-function add(a, b) {
-  return a + b; // Always same output for same inputs
+function addItemPure(arr) {
+  return [...arr, 10]; // creates a new array
 }
-console.log(add(2, 3)); // Output: 5
 
-//Not a pure function
-let total = 0;
-function addToTotal(num) { 
-  total += num; // Modifies external variable → Side effect
-  return total;
-}
+const nums = [1, 2, 3];
+const result = addItemPure(nums);
+console.log(nums);   // [1, 2, 3] — not mutated
+console.log(result); // [1, 2, 3, 10]
 ```
+
+### What is mutation in JavaScript?
+- Mutation means modifying orignal data (arrays, objects)
+- In JavaScript, only **objects and arrays** can be mutated (they are reference types)
+- Mutation breaks purity, It leads to **impure functions
+
+Example of Mutation:
+1. Array Mutation:
+```js
+let arr = [1, 2, 3];
+arr.push(4);  // changes original array
+```
+2. Object Mutation
 
 ---
 
