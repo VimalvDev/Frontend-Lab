@@ -1,15 +1,19 @@
 # 📘 JavaScript Functions – Table of Contents
 
 1. [What is a Function](#what-is-a-function)
-2. [First-Class Functions](#first-class-functions)
-     - [What is a Pure function?](#What-is-a-Pure-function)
-    - [What is Mutation?](#What-is-mutation-in-javascript)
-    - [Side Effects that break Purity](#side-effects-that-break-purity)
+   
+3. [First-Class Functions](#first-class-functions)
+    - [What does "First-Class" mean?](#what-does-first-class-mean)
+    - [Store functions in a variable](#1-store-functions-in-a-variable)
+    - [Pass functions as arguments to other functions](#2-pass-functions-as-arguments-to-other-functions)
+    - [Return functions from other functions](#3-return-functions-from-other-functions)
+  
 3. [Pure Functions](#pure-functions)
     - [What is a Pure function?](#What-is-a-Pure-function)
     - [What is Mutation?](#What-is-mutation-in-javascript)
     - [Side Effects that break Purity](#side-effects-that-break-purity)
-    - [How to make an Impure Function Pure](#how-to-make-an-impure-function-pure) 
+    - [How to make an Impure Function Pure](#how-to-make-an-impure-function-pure)
+      
 4. [Types of Functions](#types-of-functions)  
 - a. [User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)  
     - [ES5 Version (Older JavaScript)](#es5-version-older-javascript)  
@@ -43,7 +47,7 @@
 - In JavaScript, **functions are treated like values**, just like strings, numbers, or object. This powerful feature is called **first-class functions**.
 - This is the foundation for **higher-order functions, callbacks**, and **functional programming** in JavaScript.
 
-### Store functions in a variable
+### 1. Store functions in a variable
 ```js
 const greet = function () {
   return "Hello!";
@@ -51,7 +55,7 @@ const greet = function () {
 
 console.log(greet()); // Hello!
 ```
-### Pass functions as arguments to other functions
+### 2. Pass functions as arguments to other functions
 ```js
 function callFunction(fn) {
   console.log("Calling function...");
@@ -60,7 +64,7 @@ function callFunction(fn) {
 
 callFunction(greet); // Hello!
 ```
-### Return functions from other functions
+### 3. Return functions from other functions
 ```js
 function outer() {
   return function inner() {
