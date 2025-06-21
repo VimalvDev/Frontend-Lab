@@ -83,7 +83,7 @@ A higher order function is a function that does at least one the following:
   - Takes another function as an **argument**
   - Returns another function as its **output**
 
-### Takes another function as an argument
+### 1. Takes another function as an argument
 ```js
 function greet(name) {
   return "Hello, " + name;
@@ -97,7 +97,7 @@ function processUserInput(callback) {
 console.log(processUserInput(greet)); // Hello, Vimal
 ```
 
-### Returns a function
+### 2. Returns a function
 ```js
 function multiplier(x) {
   return function(y) {
