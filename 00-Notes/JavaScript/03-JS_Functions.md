@@ -114,6 +114,21 @@ const double = multiplier(2);
 console.log(double(5)); // 10
 ```
 
+### Built-in Higher-Order Functions (HOFs) in JavaScript
+
+- `setTimeout()`
+- `setInterval()`
+- `addEventListener()`
+- `map()`
+- `filter()`
+- `reduce()`
+- `forEach()`
+- `some()`
+- `every()`
+- `find()`
+- `findIndex()`
+- `sort()`
+
 ---
 
 ## Pure Functions
