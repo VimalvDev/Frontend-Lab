@@ -42,8 +42,8 @@
 ### What does "First-Class" mean?
 - In JavaScript, **functions are treated like values**, just like strings, numbers, or object. This powerful feature is called **first-class functions**.
 - This is the foundation for **higher-order functions, callbacks**, and **functional programming** in JavaScript.
-- We can do:
-  - Store functions in a variable
+
+### Store functions in a variable
 ```js
 const greet = function () {
   return "Hello!";
@@ -51,7 +51,7 @@ const greet = function () {
 
 console.log(greet()); // Hello!
 ```
-  - Pass functions as arguments to other functions
+### Pass functions as arguments to other functions
 ```js
 function callFunction(fn) {
   console.log("Calling function...");
@@ -60,7 +60,7 @@ function callFunction(fn) {
 
 callFunction(greet); // Hello!
 ```
-  - Return functions from other functions
+### Return functions from other functions
 ```js
 function outer() {
   return function inner() {
