@@ -1,5 +1,5 @@
 Error handling – try(), catch() and finally
-	Error handling is a way to manage exceptions (errors) that occur during code execution **without crashing the program**.
+Error handling is a way to manage exceptions (errors) that occur during code execution **without crashing the program**.
 	Why use try-catch?
 •	Prevents the program from stopping due to runtime errors.
 •	Helps in debugging by showing custom error messages.
