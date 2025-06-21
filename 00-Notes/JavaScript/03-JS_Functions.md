@@ -10,8 +10,8 @@
 
 3. [Higher Order Function](#higher-order-function)
     - [What is a Higher-Order Function](#what-is-a-higher-order-function)
-    - [1. Takes another function as an argument](#1-takes-another-function-as-an-argument)
-    - [2. Returns a function](#2-returns-a-function)
+    - [Takes another function as an argument](#1-takes-another-function-as-an-argument)
+    - [Returns a function](#2-returns-a-function)
   
 4. [Pure Functions](#pure-functions)
     - [What is a Pure function?](#What-is-a-Pure-function)
