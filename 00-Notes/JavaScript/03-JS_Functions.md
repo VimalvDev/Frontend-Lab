@@ -33,12 +33,16 @@
   - No need to specify a **return type** (like `int`, `string`, etc.) as in other languages.
   - Functions are defined using the `function` keyword.
 
+---
+
 ## First-Class Functions
 
 - JavaScript treats functions as **first-class citizens**, which means:
   - Functions can be **assigned to variables**.
   - Functions can be **passed as arguments** to other functions.
   - Functions can be **returned from another function**.
+    
+---
 
 ## Pure Functions
 ### What is a Pure function?
