@@ -8,7 +8,7 @@
     - [Pass functions as arguments to other functions](#2-pass-functions-as-arguments-to-other-functions)
     - [Return functions from other functions](#3-return-functions-from-other-functions)
 
-3. [Higher Order Function](#higher-order-functions)
+3. [Higher Order Function](#higher-order-function)
     - [What is a Higher-Order Function](#what-is-a-higher-order-function)
     - [1. Takes another function as an argument](#1-takes-another-function-as-an-argument)
     - [2. Returns a function](#2-returns-a-function)
