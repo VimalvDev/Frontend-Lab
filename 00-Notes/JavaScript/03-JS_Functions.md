@@ -75,6 +75,39 @@ function outer() {
 const result = outer();
 console.log(result()); // I’m the returned function!
 ```
+---
+
+## Higher Order Function
+### What is a Higher Order Function
+A higher order function is a function that does at least one the following:
+  - Takes another function as an **argument**
+  - Returns another function as its **output**
+
+### Takes another function as an argument
+```js
+function greet(name) {
+  return "Hello, " + name;
+}
+
+function processUserInput(callback) {
+  const name = "Vimal";
+  return callback(name);
+}
+
+console.log(processUserInput(greet)); // Hello, Vimal
+```
+
+### Returns a function
+```js
+function multiplier(x) {
+  return function(y) {
+    return x * y;
+  };
+}
+
+const double = multiplier(2);
+console.log(double(5)); // 10
+```
 
 ---
 
