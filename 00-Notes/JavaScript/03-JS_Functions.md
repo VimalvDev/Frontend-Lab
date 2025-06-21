@@ -2,6 +2,9 @@
 
 1. [What is a Function](#what-is-a-function)
 2. [First-Class Functions](#first-class-functions)
+     - [What is a Pure function?](#What-is-a-Pure-function)
+    - [What is Mutation?](#What-is-mutation-in-javascript)
+    - [Side Effects that break Purity](#side-effects-that-break-purity)
 3. [Pure Functions](#pure-functions)
     - [What is a Pure function?](#What-is-a-Pure-function)
     - [What is Mutation?](#What-is-mutation-in-javascript)
@@ -36,12 +39,39 @@
 ---
 
 ## First-Class Functions
+### What does "First-Class" mean?
+- In JavaScript, **functions are treated like values**, just like strings, numbers, or object. This powerful feature is called **first-class functions**.
+- This is the foundation for **higher-order functions, callbacks**, and **functional programming** in JavaScript.
+- We can do:
+  - Store functions in a variable
+```js
+const greet = function () {
+  return "Hello!";
+};
 
-- JavaScript treats functions as **first-class citizens**, which means:
-  - Functions can be **assigned to variables**.
-  - Functions can be **passed as arguments** to other functions.
-  - Functions can be **returned from another function**.
-    
+console.log(greet()); // Hello!
+```
+  - Pass functions as arguments to other functions
+```js
+function callFunction(fn) {
+  console.log("Calling function...");
+  console.log(fn());
+}
+
+callFunction(greet); // Hello!
+```
+  - Return functions from other functions
+```js
+function outer() {
+  return function inner() {
+    return "I’m the returned function!";
+  };
+}
+
+const result = outer();
+console.log(result()); // I’m the returned function!
+```
+
 ---
 
 ## Pure Functions
