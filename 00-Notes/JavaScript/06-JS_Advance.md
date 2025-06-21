@@ -11,7 +11,7 @@ Error handling – try(), catch() and finally
 4.	If no error occurs, the code inside try() runs normally, and catch is ignored
 
 
-	Example: 
+Example: 
 function divide(a, b) {
   try { // Code that may cause an error
     if (b == 0) throw Error("Can't divide by 0!"); // Throwing an error
