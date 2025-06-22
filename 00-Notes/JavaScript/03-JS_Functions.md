@@ -180,6 +180,19 @@ function demo(a = 5) {
 }
 ``` 
 
+## `...rest` Parameter in JavaScript
+- Used to collect multiple arguments into a **true array**
+- Modern replacement for the old `arguments` object
+- Can only be used as the **last parameter** in the function definition
+- All array methods can be used unlike `arguments` object
+```js
+function printAll(...rest) {
+  console.log(rest);         // [1, 2, 3]
+  console.log(Array.isArray(rest)); // true
+}
+printAll(1, 2, 3);
+```
+
 ---
 ## Pure Functions
 ### What is a Pure function?
