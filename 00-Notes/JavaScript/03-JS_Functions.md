@@ -140,6 +140,7 @@ console.log(double(5)); // 10
 ## `arguments` Object in JavaScript
 - A special built-in object available inside **non-arrow functions**
 - Contains all **arguments passed** to the function, even if not defined in parameters
+- Not used much in Modern development, instead use `...rest` parameter
 
 ### Accepts Arbitrary Arguments
 We can pass any **number of arguments** to a function, even if no parameters are defined
