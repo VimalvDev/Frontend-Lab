@@ -18,8 +18,10 @@
     - [What is Mutation?](#What-is-mutation-in-javascript)
     - [Side Effects that break Purity](#side-effects-that-break-purity)
     - [How to make an Impure Function Pure](#how-to-make-an-impure-function-pure)
-      
-5. [Types of Functions](#types-of-functions)  
+
+5. - [Arguments Object](#arguments-object-in-javascript)
+
+6. [Types of Functions](#types-of-functions)  
 - a. [User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)  
     - [ES5 Version (Older JavaScript)](#es5-version-older-javascript)  
     - [ES6 Version (Modern JavaScript)](#es6-version-modern-javascript)  
@@ -131,6 +133,49 @@ console.log(double(5)); // 10
 
 ---
 
+## `arguments` Object in JavaScript
+- A special built-in object available inside **non-arrow functions**
+- Contains all **arguments passed** to the function, even if not defined in parameters
+
+### Accepts Arbitrary Arguments
+We can pass any **number of arguments** to a function, even if no parameters are defined
+```js
+function argumentObject()
+{
+    console.log(arguments)
+}
+argumentObject(1,2,3,4,5)
+// Output : [Arguments] { '0': 1, '1': 2, '2': 3, '3': 4, '4': 5 }
+```
+
+### Array-Like (Not a True Array)
+- We can access values using indexing: `arguments[0]`, `arguments[1]`, etc
+- We can use `.length`, `for` loop, `for...of` (after conversion)
+- Can't use array methods like `.map()`, `.filter()`, etc
+- Convert to array using:
+```js
+let args = [...arguments];
+// or
+let args = Array.from(arguments);
+```
+
+### Mutable via Indexing
+- We can change the values of parameters using index:
+```js
+arguments[0] = 100;
+```
+
+### Default Parameters Behavior
+- If a function uses **default parameter values**, the link between `arguments[0]` and the parameter breaks
+```js
+function demo(a = 5) {
+  console.log(a);         // 5
+  arguments[0] = 10;
+  console.log(a);         // Still 5, not 10
+}
+``` 
+
+---
 ## Pure Functions
 ### What is a Pure function?
 - Always returns the **same output** for the same input
