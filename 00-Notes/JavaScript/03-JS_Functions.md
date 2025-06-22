@@ -25,7 +25,9 @@
     - [Mutable via Indexing](#Mutable-via-Indexing)
     - [Default Parameters Behavior](#Default-Parameters-Behavior)
 
-6. [Types of Functions](#types-of-functions)  
+6. [Rest Parameter](#rest-parameter-in-javascript)
+
+7. [Types of Functions](#types-of-functions)  
 - a. [User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)  
     - [ES5 Version (Older JavaScript)](#es5-version-older-javascript)  
     - [ES6 Version (Modern JavaScript)](#es6-version-modern-javascript)  
