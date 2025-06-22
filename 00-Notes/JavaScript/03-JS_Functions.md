@@ -19,7 +19,11 @@
     - [Side Effects that break Purity](#side-effects-that-break-purity)
     - [How to make an Impure Function Pure](#how-to-make-an-impure-function-pure)
 
-5. - [Arguments Object](#arguments-object-in-javascript)
+5. [Arguments Object](#arguments-object-in-javascript)
+    - [Accepts Arbitrary Arguments](#Accepts-Arbitrary-Arguments)
+    - [Array-Like (Not a True Array)](#Array-Like-Not-a-True-Array)
+    - [Mutable via Indexing](#Mutable-via-Indexing)
+    - [Default Parameters Behavior](#Default-Parameters-Behavior)
 
 6. [Types of Functions](#types-of-functions)  
 - a. [User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)  
