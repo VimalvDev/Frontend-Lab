@@ -181,6 +181,7 @@ function demo(a = 5) {
   console.log(a);         // Still 5, not 10
 }
 ``` 
+---
 
 ## `...rest` Parameter in JavaScript
 - Used to collect multiple arguments into a **true array**
