@@ -29,10 +29,10 @@
 
 
 4. [Types of Functions](#types-of-functions)
-   - a. [User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)
+   a. [User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)
      - [ES5 Version (Older JavaScript)](#es5-version-older-javascript)
      - [ES6 Version (Modern JavaScript)](#es6-version-modern-javascript)
-   - b. [In-Built Functions (Predefined Functions)](#b-in-built-functions-predefined-functions)
+   b. [In-Built Functions (Predefined Functions)](#b-in-built-functions-predefined-functions)
      - [Timing Functions](#1-timing-functions)
      - [Event Functions](#2-event-functions)
      - [Console & Debugging Functions](#3-console--debugging-functions)
