@@ -271,7 +271,7 @@ console.log(y); // ❌ Error! y is not defined outside the block
 ## JavaScript Scope and Scope Chain
 
 ### What is Scope?
-Scope means where a variable is accessible in our code. JavaScript has 3 main types of scope.
+Scope means **where a variable is accessible** in our code. JavaScript has **3 main types of scope**.
 
 ### 1. Global Scope
 - Declared **outside** of any function or block
@@ -323,7 +323,7 @@ function outer() {
 ```
 
 ### Scope Chain - Scope Behavior
-- When a variable is not found in the current scope, JavaScript goes outward to find it
+- When a variable is not found in the current scope, JavaScript looks in outer scopes (one by one)
 - In the Example, `c()` can access everything from `b()` and `a()`
 ```js
 function a() { //Parent function
@@ -342,10 +342,10 @@ a();
 ```
 
 ### Lexical Environment - Internal Mechanism
-- Each function/block has a hidden object:
-   - **Environment Record** → Stores declared variables/functions
-   - **Outer Reference → Points to its parent scope
-- Used internally to build the **scope chain**.
+- Each function/block has a hidden structure called **Lexical Environment. It has two parts:
+   - **Environment Record** → Stores all variables/functions declared in the current scope
+   - **Outer Reference → Points to its **parent Lexical Environment**
+- It is used internally by JavaScript to build the **scope chain**
 - Its similar to [Execution Context](01-JS_Introduction.md#javascript-execution-context--call-stack-how-js-code-runs-behind-the-scenes).
 
 
