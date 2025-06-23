@@ -19,7 +19,7 @@
      - [How to make an Impure Function Pure](#how-to-make-an-impure-function-pure)
    - [Closures](#closures-in-javascript)
 
-3. [Function Utilities](#function-utilities-in-javascript)
+3. Function Utilities
    - [`arguments` Object](#arguments-object-in-javascript)
      - [Accepts Arbitrary Arguments](#accepts-arbitrary-arguments)
      - [Array-Like (Not a True Array)](#array-like-not-a-true-array)
