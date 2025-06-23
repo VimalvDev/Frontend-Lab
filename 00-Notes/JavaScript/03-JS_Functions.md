@@ -27,7 +27,10 @@
 
 6. [Rest Parameter](#rest-parameter-in-javascript)
 
-7. [Types of Functions](#types-of-functions)  
+
+7. [Recusrion Function](#Recursion-in-JavaScript)
+
+8. [Types of Functions](#types-of-functions)  
 - a. [User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)  
     - [ES5 Version (Older JavaScript)](#es5-version-older-javascript)  
     - [ES6 Version (Modern JavaScript)](#es6-version-modern-javascript)  
@@ -42,7 +45,6 @@
     - [Math Functions (Important)](#8-math-functions-important)  
     - [Type Checking](#9-type-checking)  
 
-8. [Recusrion Function](#Recursion-in-JavaScript)
 ---
 
 ## What is a Function?
