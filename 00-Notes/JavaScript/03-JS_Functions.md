@@ -142,6 +142,79 @@ console.log(double(5)); // 10
 
 ---
 
+## Pure Functions
+### What is a Pure function?
+- Always returns the **same output** for the same input
+- Doesn't **change or depend on external state** (no side effects)
+- Doesn't mutate (change) any object, array, or variable outside its scope
+- Uses only the data given to it through parameters
+```js
+function addItemPure(arr) {
+  return [...arr, 10]; // creates a new array
+}
+
+const nums = [1, 2, 3];
+const result = addItemPure(nums);
+console.log(nums);   // [1, 2, 3] — not mutated
+console.log(result); // [1, 2, 3, 10]
+```
+
+### What is Mutation in JavaScript?
+- Mutation means modifying original data like arrays or objects
+- In JavaScript, only **objects and arrays** (reference/non primitive types) can be mutated
+- Mutation breaks the rules of pure functions and leads to **impure functions**
+
+Example of Mutation:
+1. Array Mutation:
+```js
+let arr = [1, 2, 3];
+arr.push(4);  // changes original array
+```
+2. Object Mutation
+```js
+let user = { name: "Vimal" };
+user.age = 22; // adds/modifies property directly
+```
+
+### Side Effects that break Purity
+- Using `console.log()` inside the function
+- Reading/modifying global variables
+- Making network requests (`fetch`, `axios`, etc)
+- DOM manipulation (`document.getElementById`, etc)
+- Writing to local storage, session storage or cookies
+
+### How to make an Impure Function Pure
+- Use **spread operator(`...`) to avoid mutation
+- Retrun **new values** instead of modifying the original ones
+- Keep functions **small, focused, and predictable**
+
+---
+
+## Closures in JavaScript
+### What is a Closure?
+- A closure is created when a **function remembers variables** from its **outer scope**, even after the outer function has finished executing.
+
+### Why Do Closures Happen?
+- In JavaScript, **functions are first-class**, and each function has a **lexical scope**
+- When a funciton is created, it **remembers the scope** in which it was declared, not where it's called
+```js
+function outer() {
+  let counter = 0;
+  return function inner() {
+    counter++;
+    console.log(counter);
+  };
+}
+
+const count = outer();
+count(); // 1
+count(); // 2
+```
+> - The `inner()` function **remembers** the `counter` variable **even after** `outer()` has returned.
+> - This is because `inner()` forms a **closure** over `counter`.
+
+---
+
 ## `arguments` Object in JavaScript
 - A special built-in object available inside **non-arrow functions**
 - Contains all **arguments passed** to the function, even if not defined in parameters
@@ -198,53 +271,6 @@ function printAll(...rest) {
 }
 printAll(1, 2, 3);
 ```
-
----
-## Pure Functions
-### What is a Pure function?
-- Always returns the **same output** for the same input
-- Doesn't **change or depend on external state** (no side effects)
-- Doesn't mutate (change) any object, array, or variable outside its scope
-- Uses only the data given to it through parameters
-```js
-function addItemPure(arr) {
-  return [...arr, 10]; // creates a new array
-}
-
-const nums = [1, 2, 3];
-const result = addItemPure(nums);
-console.log(nums);   // [1, 2, 3] — not mutated
-console.log(result); // [1, 2, 3, 10]
-```
-
-### What is Mutation in JavaScript?
-- Mutation means modifying original data like arrays or objects
-- In JavaScript, only **objects and arrays** (reference/non primitive types) can be mutated
-- Mutation breaks the rules of pure functions and leads to **impure functions**
-
-Example of Mutation:
-1. Array Mutation:
-```js
-let arr = [1, 2, 3];
-arr.push(4);  // changes original array
-```
-2. Object Mutation
-```js
-let user = { name: "Vimal" };
-user.age = 22; // adds/modifies property directly
-```
-
-### Side Effects that break Purity
-- Using `console.log()` inside the function
-- Reading/modifying global variables
-- Making network requests (`fetch`, `axios`, etc)
-- DOM manipulation (`document.getElementById`, etc)
-- Writing to local storage, session storage or cookies
-
-### How to make an Impure Function Pure
-- Use **spread operator(`...`) to avoid mutation
-- Retrun **new values** instead of modifying the original ones
-- Keep functions **small, focused, and predictable**
 
 ---
 
