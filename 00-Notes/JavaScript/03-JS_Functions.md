@@ -2,7 +2,7 @@
 
 1. [What is a Function](#what-is-a-function)
 
-2. [Function Behaviors](#function-behaviors)
+2. Function Behaviors
    - [First-Class Functions](#first-class-functions)
      - [What does "First-Class" mean?](#what-does-first-class-mean)
      - [Store functions in a variable](#1-store-functions-in-a-variable)
