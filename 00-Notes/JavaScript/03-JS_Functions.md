@@ -26,7 +26,7 @@
      - [Mutable via Indexing](#mutable-via-indexing)
      - [Default Parameters Behavior](#default-parameters-behavior)
    - [`...rest` Parameter](#rest-parameter-in-javascript)
-   - [Default Parameters](#default-parameters-in-javascript)
+
 
 4. [Types of Functions](#types-of-functions)
    - a. [User-Defined Functions - Custom Functions](#a-user-defined-functions---custom-functions)
