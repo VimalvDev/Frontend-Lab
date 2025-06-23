@@ -337,7 +337,7 @@ a();
    - **Environment Record** → Stores declared variables/functions
    - **Outer Reference → Points to its parent scope
 - Used internally to build the **scope chain**.
-- Its similar to how [Code Execution](
+- Its similar to [Execution Context](01-JS_Introduction.md#javascript-execution-context--call-stack-how-js-code-runs-behind-the-scenes). 
 ---
 
 ## Operators
