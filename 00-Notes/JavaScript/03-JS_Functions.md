@@ -8,7 +8,7 @@
      - [Store functions in a variable](#1-store-functions-in-a-variable)
      - [Pass functions as arguments to other functions](#2-pass-functions-as-arguments-to-other-functions)
      - [Return functions from other functions](#3-return-functions-from-other-functions)
-   - [Higher-Order Functions](#higher-order-functions)
+   - [Higher-Order Function](#higher-order-function)
      - [What is a Higher-Order Function](#what-is-a-higher-order-function)
      - [Takes another function as an argument](#1-takes-another-function-as-an-argument)
      - [Returns a function](#2-returns-a-function)
