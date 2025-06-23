@@ -38,8 +38,8 @@
    - [for...of Loop](#forof-loop)
    - [do...while Loop](#dowhile-loop)
 10. [Controlling Loop Execution](#controlling-loop-execution)
-   - [break](#break)
-   - [continue](#continue)
+    - [break](#break)
+    - [continue](#continue)
  
 ---
 
