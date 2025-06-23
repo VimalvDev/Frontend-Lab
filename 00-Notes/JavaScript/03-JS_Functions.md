@@ -42,6 +42,7 @@
     - [Math Functions (Important)](#8-math-functions-important)  
     - [Type Checking](#9-type-checking)  
 
+8. [Recusrion Function](#Recursion-in-JavaScript)
 ---
 
 ## What is a Function?
@@ -608,3 +609,21 @@ console.log(str.charCodeAt(0)); // Output: 65
   console.log(typeof undefined);   // Output: "undefined"
   console.log(typeof null);        // Output: "object" (this is a known JavaScript long-standing bug)
   ```
+
+---
+
+## Recursion in JavaScript
+
+- Recursion is when a function calls itself.
+- Used for solving problems that can be broken into smaller sub-problems.
+- Common examples: factorial, nested structures, tree traversal.
+
+### Example:
+```js
+function countDown(n) {
+  if (n === 0) return;
+  console.log(n);
+  countDown(n - 1); // recursive call
+}
+countDown(5); // Output: 5 4 3 2 1
+```
