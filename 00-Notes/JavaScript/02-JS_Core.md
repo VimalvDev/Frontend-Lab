@@ -259,6 +259,85 @@ function myFunction{
 console.log(y); // ❌ Error! y is not defined outside the block
 ```
 
+## JavaScript Scope and Scope Chain
+
+### What is Scope?
+Scope means where a variable is accessible in our code. JavaScript has 3 main types of scope.
+
+### 1. Global Scope
+- Declared **outside** of any function or block
+- Can be accessed **anywhere** in the program
+```js
+let a = 10;
+
+function show() {
+  console.log(a); // ✅ Accessible
+}
+```
+
+### 2. Function (Local) Scope
+- Variables declared **inside a function**
+- Accessible only **insdie that function**
+```js
+function test() {
+  let x = 5;
+  console.log(x); // ✅
+}
+console.log(x); // ❌ Not defined
+```
+
+### 3. Block Scope
+- Variables declared inside `{}` using `let` or `const` (not `var`)
+- Accessible only **inside that block**
+```js
+if (true) {
+  let y = 20;
+  const z = 30;
+}
+console.log(y); // ❌ Not accessible
+```
+
+### Lexical Scope - Scope Rule
+- Lexical Scope means Scope is decided **by where a function is written**, not where it's called
+- A function can access variables from:
+  - Its own scope
+  - Its outer function
+  - The global scope
+```js
+function outer() {
+  let a = 10;
+  function inner() {
+    console.log(a); // ✅ accessible due to lexical scope
+  }
+  inner();
+}
+```
+
+### Scope Chain - Scope Behavior
+- When a variable is not found in the current scope, JavaScript goes outward to find it
+- In the Example, `c()` can access everything from `b()` and `a()`
+```js
+function a() { //Parent function
+  let x = 1;
+  function b() { // Inner function
+    let y = 2;
+    function c() { // Inner inner function
+      console.log(x); // ✅ from a()
+      console.log(y); // ✅ from b()
+    }
+    c();
+  }
+  b();
+}
+a();
+```
+
+### Lexical Environment - Internal Mechanism
+- Each function/block has a hidden object:
+   - **Environment Record** → Stores declared variables/functions
+   - **Outer Reference → Points to its parent scope
+- Used internally to build the **scope chain**.
+- Its similar to how [Code Execution](
 ---
 
 ## Operators
