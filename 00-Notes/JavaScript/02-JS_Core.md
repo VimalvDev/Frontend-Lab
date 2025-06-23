@@ -14,23 +14,30 @@
    - [Some advance object Topics](#some-advance-object-topics)
 3. [Truthy and Falsy Values](#truthy-and-falsy-values)
 4. [Variables and Constants](#variables-and-constants)
-5. [Operators](#operators)
+5. [JavaScript Scope and Scope Chain](#javascript-scope-and-scope-chain)
+   - [Global Scope](#1-global-scope)
+   - [Function Scope](#2-function-local-scope)
+   - [Block Scope](#3-block-scope)
+   - [Lexical Scope - Scope Rule](#lexical-scope-scope-rule)
+   - [Scope Chain - Scope Behavior](#scope-chain-scope-behavior)
+   - [Lexical Environment - Internal mechanism](#lexical-environment-internal-mechanism)
+6. [Operators](#operators)
    - [Arithmetic Operators](#1-arithmetic-operators)
    - [Assignment Operators](#2-assignment-operators)
    - [Comparison Operators](#3-comparison-operators)
    - [Logical Operators](#4-logical-operators)
    - [Nullish Coalescing Operator](#5-nullish-coalescing-operator)
    - [Optional Operators](#6-optional-operators)
-6. [Template Literals / Interpolation](#template-literal--interpolation)
-7. [Conditional Statements](#conditional-statements)
-8. [Loops](#loops)
+7. [Template Literals / Interpolation](#template-literal--interpolation)
+8. [Conditional Statements](#conditional-statements)
+9. [Loops](#loops)
    - [for Loop](#for-loop)
    - [forEach Loop](#foreach-loop)
    - [while Loop](#while-loop)
    - [for...in Loop](#forin-loop)
    - [for...of Loop](#forof-loop)
    - [do...while Loop](#dowhile-loop)
-9. [Controlling Loop Execution](#controlling-loop-execution)
+10. [Controlling Loop Execution](#controlling-loop-execution)
    - [break](#break)
    - [continue](#continue)
  
@@ -259,6 +266,8 @@ function myFunction{
 console.log(y); // ❌ Error! y is not defined outside the block
 ```
 
+---
+
 ## JavaScript Scope and Scope Chain
 
 ### What is Scope?
@@ -337,7 +346,9 @@ a();
    - **Environment Record** → Stores declared variables/functions
    - **Outer Reference → Points to its parent scope
 - Used internally to build the **scope chain**.
-- Its similar to [Execution Context](01-JS_Introduction.md#javascript-execution-context--call-stack-how-js-code-runs-behind-the-scenes). 
+- Its similar to [Execution Context](01-JS_Introduction.md#javascript-execution-context--call-stack-how-js-code-runs-behind-the-scenes).
+
+
 ---
 
 ## Operators
