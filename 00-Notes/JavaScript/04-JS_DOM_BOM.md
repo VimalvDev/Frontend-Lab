@@ -222,7 +222,7 @@ btn.addEventListener("click", function () { //adding event listener
 #### Event Listeners:
 
 - **Mouse Events** <br>
-`clickw` - Triggers when an element is clicked <br>
+`click` - Triggers when an element is clicked <br>
 `dblclick` - When an element is double-clicked <br>
 `mouseover` -	When the mouse moves over an element (triggers once, Also work on child) <br>
 `mousemove` - Tracks the mouse movement over an element (triggers continously) <br>
@@ -234,7 +234,8 @@ btn.addEventListener("click", function () { //adding event listener
 `keyup` -	Triggers when a key is released
 
 - **Forms & Inputs Events** <br>
-`input` -	Fires when a user types or changes value in an input/textarea <br>
+`input` - Fires when a user types or changes value in an input/textarea <br>
+`change` - Fires when an input, checkbox, radio, or select element loses focus and its value has changed <br>
 `submit` -	When a form is submitted
 
 
