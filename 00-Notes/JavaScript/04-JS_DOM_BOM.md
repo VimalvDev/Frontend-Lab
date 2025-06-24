@@ -271,6 +271,12 @@ btn.addEventListener("click", function () { //adding event listener
 - Keyboard Events (keydown, keyup) <br>
 `event.key` → The actual key pressed (e.g., "Enter", "a", "Shift")
 
+- Event Object Methods
+`stopPropagation()` → Stops bubbling up
+`preventDefault()` → Stops default behaviours such as:
+   - Stops a form from submitting
+   - Prevents anchor tags `<a>` from navigating
+
 - Example:
 ```js
 document.body.addEventListener("mousemove", function (event) {
