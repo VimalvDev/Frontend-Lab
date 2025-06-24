@@ -4,6 +4,37 @@
 
 ![Rendering Flow](IMGs/rendering-flow.png)
 
+### 1. Load HTML
+- Browser starts reading the HTML file from top to bottom
+
+### 2. Parse HTML
+- HTML is parsed and converted into a **DOM Tree**
+- DOM is a tree-like structure that represents all elements of the webpage
+
+### 3. Load CSS
+- External stylesheets (`<links>` tags) or internal styles (`<style>` tags) are loaded
+
+### 4. Parse CSS
+- CSS is parsed into another tree called **CSSOM** (CSS Object Model)
+- It contains styling information for each element
+
+### 5. DOM + CSSOM → Render Tree
+- DOM and CSSOM are combined to form the **Render Tree**
+- This includes only **visible** elements (no `<head>` or `display: none`)
+
+### 6. Visual Formatting Model (VFM)
+- The render tree is used to calculate:
+   - Box model
+   - Layout positions
+   - Flex/Grid behavior
+   - Inline/Block behavior
+
+### 7. Final Step: Painting and Compositing
+- The browser **paints** the pixels to screen (text, colors, images)
+- Layers are **composited** together and shown to the user
+
+---
+ 
 ## Window Object
 
 - The `window` object represents the **browser window or tab**.
