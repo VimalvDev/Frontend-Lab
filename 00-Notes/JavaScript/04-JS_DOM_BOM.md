@@ -1,4 +1,8 @@
-# 🌐 Window, BOM, and DOM in JavaScript
+# 🌐 JavaScript: Window, BOM, DOM + rendering Flow
+
+## Browser Rendering Flow (How HTML & CSS become visible on screen)
+
+![Rendering Flow](IMGs/rendering-flow.png)
 
 ## Window Object
 
