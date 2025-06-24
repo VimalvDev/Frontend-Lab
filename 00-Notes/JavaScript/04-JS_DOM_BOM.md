@@ -278,3 +278,54 @@ document.body.addEventListener("mousemove", function (event) {
   console.log("X:", event.clientX, "Y:", event.clientY); // Logs mouse position
 });
 ```
+---
+
+## JavaScript Event Flow - Bubbling, Capturing & Delegation
+### 1. Event Bubbling (Default in JS)
+- When an event happens on a element, it **bubbles up** to its parent, grandparent, etc.
+- How it works:
+   - First, the child's event runs
+   - Then the parent's event runs
+   - Then the grandparent's (if any)
+```js
+<div class="parent">
+  <button class="child">Click me</button>
+</div>
+
+<script>
+  document.querySelector(".child").addEventListener("click", () => {
+    console.log("Child Clicked");
+  });
+
+  document.querySelector(".parent").addEventListener("click", () => {
+    console.log("Parent Clicked");
+  });
+</script>
+
+// Output:
+Child Clicked  
+Parent Clicked
+```
+- To Stop bubbling:
+```js
+element.addEventListener("click", function (event) {
+  event.stopPropagation(); // Stops it from going up
+});
+```
+
+### 2. Event Capturing (Less Common)
+- Opposite of bubbling: Events go from **top (Parent) to bottom (Child)**
+```js
+document.body.addEventListener("click", () => {
+  console.log("Body Capturing");
+}, true); // true = capturing phase
+```
+
+### 3. Event Delegation (Used a lot in real projects)
+- A **smart way to handle events** on many elements using **only one parent listener**.
+- Uses **event bubbling** behind the scenes
+- Perfect for elements that are added **dynamically** (like cards, lists, dropdown, items, etc)
+- Why use it?
+   - We don't need to add event listeners to each item
+   - Saves performance and memory
+   - Works on elements added **later** with JS
