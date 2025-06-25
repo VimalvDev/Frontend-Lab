@@ -49,8 +49,4 @@ This repository exists to:
 
 ---
 
-## 📜 License
-
-This project is for **educational** purposes only.  
-> 🚫 **Commercial use is not allowed.**
 
