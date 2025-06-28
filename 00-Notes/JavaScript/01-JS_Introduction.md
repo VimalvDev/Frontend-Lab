@@ -194,3 +194,26 @@ const c = 30;
   console.log(x);  // ✅ Works: 10
 }
 ```
+
+---
+
+## `defer` and `async` in JavaScript
+### `defer`
+- Tells the browser to **download the script in parallel while parsing HTML**
+- Script execution **waits** untill **HTML parsing is complete**
+- Executes the script after the **HTML is fully parsed**
+- Maintains **execution order** if multiple `defer` scripts are present.
+- Best for scripts that depend on the DOM being ready
+```js
+<script src="script.js" defer></script>
+```
+
+### `async`
+- Tells the browser to **download the script in parallel while parsing HTML**
+- Executes **immediately once downloaded**, even if **HTML is still parsing**
+- Doesn't maintain **order** if there are multiple `async` scripts.
+- Can **block HTML parsing** briefly when it executes
+- Useful for **independent scripts** like analytics or ads that don't depend on DOM or other scripts
+```js
+<script src="script.js" async></script>
+```
