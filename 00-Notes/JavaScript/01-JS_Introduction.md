@@ -1,6 +1,4 @@
-#📘 JavaScript Introduction – Table of Contents
-
----
+# JavaScript Introduction – Table of Contents
 
 1. [Introduction to JavaScript](#JavaScript-Introduction)  
    - [History](#history)  
