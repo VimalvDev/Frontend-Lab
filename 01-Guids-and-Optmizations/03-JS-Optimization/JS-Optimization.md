@@ -8,5 +8,5 @@
 - Avoid blocking HTML parsing.
 - Scripts execute after DOM is ready.
 - Improves load speed.
-- Learn more about [`defer` and `async` in JavaScript](00-Notes/JavaScript/01-JS_Introduction.md#defer-and-async-in-javascript).
+- Learn more about [`defer` and `async` in JavaScript](/00-Notes/JavaScript/01-JS_Introduction.md#defer-and-async-in-javascript).
 
