@@ -1,5 +1,7 @@
 #📘 JavaScript Introduction – Table of Contents
 
+---
+
 1. [Introduction to JavaScript](#JavaScript-Introduction)  
    - [History](#history)  
    - [ES5 vs ES6+](#JavaScript-Versions)  
