@@ -1,4 +1,4 @@
-# 🧪 Frontend Lab
+# Frontend Lab
 
 A personal lab of real-world frontend learnings, best practices, and bug fixes — built and documented while mastering tools like **HTML**, **CSS**, **JavaScript**, **GSAP**, and more. This repository reflects my self-created notes, structured guides, and practical solutions to issues I encountered during my journey.
 
