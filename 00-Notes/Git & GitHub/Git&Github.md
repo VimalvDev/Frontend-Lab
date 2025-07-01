@@ -51,3 +51,37 @@
 
 ---
 
+## Process: Creating a Repo and Uploading on GitHub
+
+1. Create a local repo and type command to start Git tracking in our folder:
+Open your terminal, go to your project folder, and type:
+```bash
+git init
+```
+
+2. Add files:
+```bash
+git add .
+```
+
+3. Commit changes:
+```bash
+git commit -m "initial commitJ"
+```
+4. Create a repo on GitHub and copy **repo URL**
+
+5. Connect our local repo to Github:
+```bash
+git remote add origin <repo-url>
+```
+6. Push to GitHub:
+```bash
+git push -u origin main
+```
+
+7. Future changes
+```bash
+git add .
+git commit -m "Your message"
+git push
+```
