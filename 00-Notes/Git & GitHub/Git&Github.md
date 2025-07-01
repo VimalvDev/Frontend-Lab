@@ -39,15 +39,22 @@
 
 ## Useful Git Commands
 
-- `git init` → Start using Git in our folder.
-- `git clone <repo-url>` → Copy a remote repo locally
-- `git remote add origin
-- `git status` → Check the status of changes in your working directory.
-- `git add filename` or `git add .` → Getting a specific or all files ready to save in Git.
-- `git commit -m "commit message"` → Create a commit with a message describing our changes.
+- `git init` → Start using Git in your folder.
+- `git clone <repo-url>` → Copy a remote repo from GitHub to your computer.
+- `git remote add origin <repo-url>` → Connect your local repo to GitHub.
+- `git remote -v` → Check connected GitHub repo URLs (remotes).
+- `git add filename` or `git add .` → Get a specific file or all files ready to save in Git.
+- `git commit -m "commit message"` → Save your changes with a descriptive message.
+- `git status` → Check which files have been changed and are ready/not ready to save.
 - `git log` → Show commit history.
-- `git branch` → List branches in our repo.
 - `git checkout -b branchname` → Create and switch to a new branch.
+- `git checkout main` → Switch to the `main` branch.
+- `git branch` → List all branches in your repo.
+- `git merge branchname` → Merge another branch into your current branch.
+- `git branch -d branchname` → Delete a branch (after merging).
+- `git push -u origin main` → Upload (push) your commits to GitHub for the first time.
+- `git push` → Upload commits to GitHub after the first push.
+- `git pull origin main` → Download and merge the latest changes from GitHub into your local repo.
 
 ---
 
