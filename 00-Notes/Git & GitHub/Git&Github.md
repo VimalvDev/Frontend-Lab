@@ -47,6 +47,7 @@
 - `git commit -m "commit message"` → Save your changes with a descriptive message.
 - `git status` → Check which files have been changed and are ready/not ready to save.
 - `git log` → Show commit history.
+- `git log --oneline` → Show commit history but in short.
 - `git checkout -b branchname` → Create and switch to a new branch.
 - `git checkout main` → Switch to the `main` branch.
 - `git branch` → List all branches in your repo.
