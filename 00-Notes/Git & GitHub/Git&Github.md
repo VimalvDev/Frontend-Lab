@@ -22,42 +22,32 @@
 
 ---
 
-## Important Git & GitHub Terminologies
+## Git & GitHub: Key Terminologies
 
-- **Repository (Repo)**:
-  - A folder where your project and its **Git tracking** are stored.
-  - Can be **local (on your computer)** or **remote (on GitHub).**
+- **Repository (Repo):** A project folder tracked by Git, storing our code and its version history.
+- **Commit:** Saving your changes with a short message.
+- **Clone:** Copy a GitHub (remote) repo to our local machine.
+- **Push:** Upload our saved changes (commits) to GitHub.
+- **Pull:** Download changes from GitHub to our computer.
+- **Branch:** A copy of your project to add new features without breaking your main project.
+- **Merge:** Combine changes from one branch into another.
+- **Fork:** Create a personal copy of someone else’s repo on our GitHub.
+- **Pull Request (PR):** A request to merge our changes into the main repo (used in collaboration).
+- **Remote:** The URL of our online repo usually named `origin`.
 
-- **Commit**:
-  - A **snapshot of your project** at a point in time.
-  - Saves your changes with a **message describing what you changed.**
+---
 
-- **Clone**:
-  - Copy a **remote repository** (from GitHub) to your **local machine**.
+## Useful Git Commands
 
-- **Push**:
-  - Send your local commits to the **remote repository (GitHub)**.
-
-- **Pull**:
-  - Fetch and merge the latest changes from the **remote repository** to your local machine.
-
-- **Branch**:
-  - A separate line of development to **work on new features without affecting the main code.**
-  - Default branch is usually called **`main` or `master`.**
-
-- **Merge**:
-  - Combine changes from one branch into another (often used to merge a feature branch into `main`).
-
-- **Fork**:
-  - Create a **copy of someone else’s repository on your GitHub account** to modify without affecting the original project.
-
-- **Pull Request (PR)**:
-  - A request to **merge your changes from your branch or fork into another repository.**
-  - Used for **code review and collaboration.**
-
-- **Remote**:
-  - A **version of your repository hosted on the internet (like GitHub).**
-  - Usually called `origin` by default.
+- `git init` → Start using Git in our folder.
+- `git clone <repo-url>` → Copy a remote repo locally
+- `git remote add origin
+- `git status` → Check the status of changes in your working directory.
+- `git add filename` or `git add .` → Getting a specific or all files ready to save in Git.
+- `git commit -m "commit message"` → Create a commit with a message describing our changes.
+- `git log` → Show commit history.
+- `git branch` → List branches in our repo.
+- `git checkout -b branchname` → Create and switch to a new branch.
 
 ---
 
