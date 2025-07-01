@@ -92,3 +92,67 @@ git add .
 git commit -m "Your message"
 git push
 ```
+
+---
+
+## 🖥️ Useful Terminal Commands (Windows + macOS/Linux)
+
+These commands help you **navigate folders, manage files, and work with Git easily.**
+
+---
+
+## 📂 Navigation Commands
+
+| Task | Windows PowerShell | macOS/Linux |
+|------|---------------------|-------------|
+| Show current folder | `pwd` | `pwd` |
+| List files in current folder | `ls` or `Get-ChildItem` | `ls` |
+| List all files including hidden | `ls -Force` | `ls -a` |
+| List all files with details | `ls -Force` | `ls -la` |
+| Change folder | `cd foldername` | `cd foldername` |
+| Go back one folder | `cd ..` | `cd ..` |
+| Clear terminal screen | `clear` or `cls` | `clear` |
+| Go to home directory | `cd ~` | `cd ~` |
+
+---
+
+## 🛠️ Folder & File Management
+
+| Task | Windows PowerShell | macOS/Linux |
+|------|---------------------|-------------|
+| Create a new folder | `mkdir foldername` | `mkdir foldername` |
+| Create a new file | `ni filename.txt` | `touch filename.txt` |
+| Delete a file | `rm filename.txt` | `rm filename.txt` |
+| Delete a folder | `rm -r foldername` | `rm -r foldername` |
+| Copy a file | `cp filename newname` | `cp filename newname` |
+| Move/Rename a file | `mv filename newname` | `mv filename newname` |
+
+---
+
+## 🪐 Other Useful Commands
+
+| Task | Windows PowerShell | macOS/Linux |
+|------|---------------------|-------------|
+| Check current user | `whoami` | `whoami` |
+| Check network IP | `ipconfig` | `ifconfig` |
+| See running processes | `Get-Process` | `ps` |
+| Exit the terminal | `exit` | `exit` |
+
+---
+
+## 🚀 Tips for Practice
+
+✅ **Start using these commands while managing your projects to build muscle memory.**  
+✅ Use **Git Bash** on Windows if you want to practice macOS/Linux commands before switching.  
+✅ Use `Tab` for **auto-completion** of folder and file names.
+
+---
+
+## 🌻 Recommended Commands to Remember First
+
+✅ `pwd` → Check where you are.  
+✅ `ls` → List files.  
+✅ `cd foldername` / `cd ..` → Navigate folders.  
+✅ `mkdir` / `touch` → Create folders and files.  
+✅ `rm` → Delete files/folders (use carefully).  
+✅ `clear` → Clear screen.
