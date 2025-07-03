@@ -22,6 +22,14 @@
 
 ---
 
+## ⚙Git Configuration Commands
+
+- `git config --global user.name "Your Name"` → Set your Git username (needed for commits).
+- `git config --global user.email "youremail@example.com"` → Set your Git email (needed for commits).
+- `git config --list` → Check your current Git configurations (name, email, etc.).
+
+---
+
 ## Git & GitHub: Key Terminologies
 
 - **Repository (Repo):** A project folder tracked by Git, storing our code and its version history.
