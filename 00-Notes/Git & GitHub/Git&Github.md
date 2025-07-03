@@ -193,4 +193,4 @@ dist/
 ```
 
 ### tools for generating `.gitignore` file
-**gitignore.io** - [](https://www.toptal.com/developers/gitignore)
+**gitignore.io** - [gitignore.io](https://www.toptal.com/developers/gitignore)
