@@ -355,3 +355,26 @@ import('./utils.js')
 1. `.js` -> Default, works in both browser and Node.js
 2. `.mjs` -> Used in Node.js if `type: module` is **not set** in package.json
 3. `.ts`/`.mts` -> For TypeScript-Based modules
+
+---
+
+## Asynchronous JavaScript
+### What are `sync` and `async`?
+- `sync`(Synchronous): Tasks run **one by one in order** inside the **main call stack**. Js will **not move to the next task** untill **current task finishes**.
+- `async`(Asynchronous): Tasks that **take time**(like API calls, timers) are moved to the **async environment** or **callback queue**.
+
+### Event Loop - How Async tasks execute
+- The event looop **continously checks** if the **main call stack** is **empty**.
+- If **empty**, it **moves async tasks (from the callback queue) into the **main call stack** so they can run.
+- This ensures **non-blocking behavior** in JavaScript
+
+### When do we use Async Code?
+- Any task that **takes time** should be handled asynchronously, such as:
+   - `setTimeout`, `setInterval`
+   - Fetching data using `fetch` or `axios`
+   - Promises and `async/await`
+   - Event listeners
+
+>**Note:**
+> - In Js, **time-consuming** tasks automatically moves ot the **side stack** and **wait untill the main call stack is empty to run.
+
