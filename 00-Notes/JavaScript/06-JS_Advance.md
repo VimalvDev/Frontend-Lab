@@ -378,3 +378,7 @@ import('./utils.js')
 >**Note:**
 > - In Js, **time-consuming** tasks automatically moves ot the **side stack** and **wait untill the main call stack is empty to run.
 
+### Fetch API
+- `fetch()` is used to **get data from other sites or APIs**
+- It **makes HTTPS requests and returns a Promise**
+
