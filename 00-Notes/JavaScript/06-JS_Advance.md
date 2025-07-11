@@ -363,12 +363,12 @@ import('./utils.js')
 - `sync`(Synchronous): Tasks run **one by one in order** inside the **main call stack**. Js will **not move to the next task** untill **current task finishes**.
 - `async`(Asynchronous): Tasks that **take time**(like API calls, timers) are moved to the **async environment** or **callback queue**.
 
-### Event Loop - How Async tasks execute
+## Event Loop - How Async tasks execute
 - The event looop **continously checks** if the **main call stack** is **empty**.
 - If **empty**, it **moves async tasks (from the callback queue) into the **main call stack** so they can run.
 - This ensures **non-blocking behavior** in JavaScript
 
-### When do we use Async Code?
+## When do we use Async Code?
 - Any task that **takes time** should be handled asynchronously, such as:
    - `setTimeout`, `setInterval`
    - Fetching data using `fetch` or `axios`
@@ -378,7 +378,38 @@ import('./utils.js')
 >**Note:**
 > - In Js, **time-consuming** tasks automatically moves ot the **side stack** and **wait untill the main call stack is empty to run.
 
-### Fetch API
+## Fetch API
 - `fetch()` is used to **get data from other sites or APIs**
 - It **makes HTTPS requests and returns a Promise**
 
+### How `fetch()` works:
+- 1. We call the `fetch()` with a URL which requests data from the API (server)
+  2. The first `.then()` recevies a **response object** (raw data). This data is in **machine reabable format**
+  3. We use `.json()` on the response to convert the raw stream into **JSON data**
+  4. The second `.then()` receives the **parsed JSON data**, which is now **human-readable** and usable in our app
+```js
+fetch("https://api.example.com/data")
+  .then(response => response.json()) // converts raw response to JSON
+  .then(data => console.log(data))   // usable, readable data
+```
+
+## Axios in JavaScript
+- Axios is a popular **promise-based** HTTP client library for making requests to APIs in JavaScript
+- Works in **browsers and Node.js**
+- Used to fetch, post, update, or delte data from APIs
+
+### Why use Axios?
+- Automatically **transforms JSON data**
+- Handles **HTTP errors** easily
+- Supports **request cancellation**
+- Allows **request and response interceptors** (helpful for adding tokens automatically)
+- Supports timeouts
+- Easy to handle **custom headers**
+- Works well for large scale projects with many API calls.
+
+```js
+axios.get("https://api.example.com/data")
+  .then(response => {
+    console.log(response.data);
+  })
+```
