@@ -479,3 +479,26 @@ userPromise
   .then(data => console.log("Success:", data.results[0].gender))
   .catch(err => console.log("Error:", err));
 ```
+
+---
+
+## Asynchronous Callback Function
+### What is a Callback Function?
+- A **callback** is a function passed as **argument** to **another function** to be executed later
+
+### What are Asynchronous Callback?
+- Callbacks executed after an asynchronous task completes
+- They do not block code execution while waiting for the async task to finish
+```js
+function userData(url, callback) {
+  fetch(url)
+    .then(raw => raw.json())
+    .then(result => {
+      callback(result); // async callback execution
+    });
+}
+
+userData("https://randomuser.me/api/", function(result) {
+  console.log(result.results[0].name.first);
+});
+```
