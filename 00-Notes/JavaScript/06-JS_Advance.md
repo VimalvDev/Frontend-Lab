@@ -413,3 +413,65 @@ axios.get("https://api.example.com/data")
     console.log(response.data);
   })
 ```
+
+---
+
+## JavaScript Promises
+### What is a Promise?
+- A `Promise` is a **JS object** for handling **asynchronous operations**
+- Represents a **future value**, either:
+   - Fulfilled (Resolved)
+   - Rejected (Error)
+   - Pending (In-progress)
+
+### Why use Promises?
+- Avoid callback hell
+- Write clean, chainable async code
+- Handle API calls, timers, file reads, etc
+
+## Handling Promises
+- `.then(data => {...})` → runs on `resolve`, receives data
+- `.catch(error => {...})` → runs on `reject`, receives error.
+```js
+promise
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
+```
+
+## Visual Diagram
+```js
+new Promise((resolve, reject) => {
+    // do something
+    if (ok) {
+        resolve(result);
+    } else {
+        reject(error);
+    }
+});
+
+          |
+          V
+        Promise
+          |
+    +-----------+
+    | pending   |  → (resolve called) → fulfilled → triggers .then(data)
+    |           |  → (reject called)  → rejected  → triggers .catch(error)
+    +-----------+
+```
+
+## Example
+```js
+const userPromise = new Promise((resolve, reject) => {
+  fetch("https://randomuser.me/api/")
+    .then(res => res.json())
+    .then(data => {
+      if (data.results[0].gender === "male") resolve(data);
+      else reject("Gender is not male");
+    })
+    .catch(err => reject(err));
+});
+
+userPromise
+  .then(data => console.log("Success:", data.results[0].gender))
+  .catch(err => console.log("Error:", err));
+```
