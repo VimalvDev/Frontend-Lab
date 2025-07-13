@@ -502,3 +502,56 @@ userData("https://randomuser.me/api/", function(result) {
   console.log(result.results[0].name.first);
 });
 ```
+---
+
+## JavaScript `async/await`
+### What is `async/await`?
+- `async/await` is **syntax** for writing **asynchronouse** code in a synchronouse style
+- It works with `Promises` but makes the code cleaner (no `.then()` chaining)
+- It does not **block the main thread** while waiting for async operations
+
+### Why do we use it?
+- When we **fetch data from an API** or read files, it takes time,
+- We don't want to block the browser during that time
+- Using `Promises` with `.then()` can get messy:
+```js
+fetch(url)
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
+```
+- Using `async/await`:
+```js
+async function getData() {
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log(data);
+}
+getData();
+```
+
+## How does it work?;
+### 1. `async` keyword before function
+```js
+async function getData() {...}
+```
+- This makes the function **always return a `Promise`
+
+### 2.`await` before a **Promise-returning function** to **pause** until the Promise resolves:
+```js
+const data = await fetch(url);
+```
+
+## Error Handling with `try/catch`
+```js
+async function getData() {
+  try {
+    const res = await fetch("https://randomuser.me/api/");
+    const data = await res.json();
+    console.log(data);
+  } catch (err) {
+    console.log("Error:", err);
+  }
+}
+getData();
+```
