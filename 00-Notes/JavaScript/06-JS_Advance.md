@@ -378,6 +378,8 @@ import('./utils.js')
 >**Note:**
 > - In Js, **time-consuming** tasks automatically moves ot the **side stack** and **wait untill the main call stack is empty to run.
 
+---
+
 ## Fetch API
 - `fetch()` is used to **get data from other sites or APIs**
 - It **makes HTTPS requests and returns a Promise**
@@ -392,6 +394,8 @@ fetch("https://api.example.com/data")
   .then(response => response.json()) // converts raw response to JSON
   .then(data => console.log(data))   // usable, readable data
 ```
+
+---
 
 ## Axios in JavaScript
 - Axios is a popular **promise-based** HTTP client library for making requests to APIs in JavaScript
