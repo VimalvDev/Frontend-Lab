@@ -555,3 +555,24 @@ async function getData() {
 }
 getData();
 ```
+---
+
+## JavaScript Generators
+### What are Generators?
+- Generators are **special functions** in JavaScript that can **pause and resume** execution
+- Created using `function*` syntax
+- Use the `yield` keyword to **pause and return a value
+- Execution resumes when you call `.next()` on the generator
+```js
+function* prinNum() {
+    for (let i = 0; i < 10; i++) {
+        yield i; // pauses and returns i
+    }
+}
+
+const ans = prinNum();
+
+console.log(ans.next().value); // 0
+console.log(ans.next().value); // 1
+console.log(ans.next().value); // 2
+```
