@@ -576,3 +576,36 @@ console.log(ans.next().value); // 0
 console.log(ans.next().value); // 1
 console.log(ans.next().value); // 2
 ```
+
+---
+
+## JavaScript Web Workers
+### What are Web Workers?
+- Web Workers allow **running JavaScript** in a **background or additional thread**
+- They **do not block the main thread (UI)** while running heavy tasks
+- Useful for **Large data processing, heavy calculations, or parsing files** without freezing the website
+
+>**Note:**
+> - A **Thread** is a like a single path of execution in your program.
+> - By default, JavaScript runs on a single thread, meaning it can only do **one thing at a time**.
+> - Web Workers help you **create another thread in the background** so we can run heavy tasks on the additional thread.
+
+### Example:
+- main.js
+```js
+const worker = new Worker("worker.js");
+
+worker.postMessage([1,2,3,4,5); // Sending data to the worker
+
+worker.onmessage = function(event) { // Receiving the processed data from the worker
+  console.log("Sum from worker:", event.data); // Output: 15
+};
+```
+- worker.js
+```js
+onmessage = function(event) {
+  const numbers = event.data
+  const sum = numbers.reduce((acc,item) => acc + item, 0)
+  postMessage(sum);
+```
+
