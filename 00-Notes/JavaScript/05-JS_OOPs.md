@@ -82,7 +82,7 @@ dog.speak(); // Animal speaks
 
 Constructors are used to **create and initialize objects**. JavaScript supports two types:
 
-### 1. Function-Based Constructor (ES5)
+## 1. Function-Based Constructor (ES5)
 
 > Older way of creating constructor functions before ES6.
 
@@ -100,7 +100,7 @@ console.log(ans);
 - This approach mimics class-like behavior.
 
 ## 2. Class-Based Constructor (ES6+)
->Introduced in ES6 — modern way to create reusable and clean object structures.
+> Introduced in ES6 — modern way to create reusable and clean object structures.
 ```js
 class person {   //class
   constructor(nickname,surname) { //constructor with 2 parameters
@@ -117,32 +117,9 @@ console.log(calling.method()) //calling the method
 
 - `class` is a blueprint of code which is used to create multiple `objects`
 - Helps organize code and supports object-oriented design.
-- Use the constructor() method to initialize or assign parameters (properties) to objects when creating them using the new keyword.
+- Use the `constructor()` method to initialize or assign parameters (properties) to objects when creating them using the new keyword.
 
-### Some important questions
-
-#### 1. Do we always need classes + constructors to create objects?
-- No, For simple use cases:
-```js
-const user = {
-  name: "Vimal",
-  age: 20
-};
-```
-
-- Yes, For professional & scalable Development
-    - Create multiple reusable objects
-    - Keep code clean, scalable, and organized
-```js
-class User {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-}
-```
-
-#### 2. How `new` and `this` work together?
+## How `new` and `this` work together?
 ```js
 function User(name, age) {
   this.name = name; //Assigning
@@ -180,8 +157,7 @@ let person = new User("Vimal", 20); // Creating new object
 
 ---
 
-# Principles of OOPs
-
+## Principles of OOPs
 ## 1. Inheritance 
 
 Inheritance is a core concept of Object-Oriented Programming that allows one class or function to **acquire the properties** and **methods** of another. In JavaScript, inheritance can be implemented in two main ways:
@@ -267,6 +243,7 @@ dog.speak(); // Output: Buddy, the Labrador, barks.
 ```
 
 >**Note**
+>
 > To identify the type of an `object` and its relation to `classes` or `constructors`
 >
 > ### `instanceof` Operator
@@ -296,7 +273,7 @@ dog.speak(); // Output: Buddy, the Labrador, barks.
 
 > 💊 Think of it like a medicine capsule — the ingredients are safely packed inside. Only specific instructions (methods) can access or change them.
 
-### Private Properties
+## Private Properties
 
 In modern JavaScript (ES2020+), we can declare **private fields** by adding **before variable** names with `#`.
 
@@ -320,7 +297,7 @@ console.log(account.getBalance()); // $100
 > console.log(account.#balance); <br>
 > // SyntaxError: Private field '#balance' must be declared in an enclosing class
 
-### Getters and Setters
+## Getters and Setters
 Getters and setters allow **controlled access** to private or protected data. They are used to read or modify properties safely, often including validation or additional logic.
 
 **Example**
@@ -416,9 +393,9 @@ class BankAccount {
 ### What is Polymorphism?
 Polymorphism means **many forms**. It allows one function or method to **behave differently** depending on the object that it is called on.
 
-### Polymorphism Types
+## Polymorphism Types
 
-#### 1. Static Polymorphism (Compile-time)
+### 1. Static Polymorphism (Compile-time)
 - Achieved using `static` keyword in JavaScript.
 - **Static methods** are called directly on the class (not on objects).
 - Which method to call is decided before the program runs. That’s why we don’t create objects to use static methods.
@@ -433,7 +410,7 @@ class Calculator {
 console.log(Calculator.add(5, 3)); // No need to create object
 ```
 
-#### 2. Dynamic Polymorphism (Runtime)
+### 2. Dynamic Polymorphism (Runtime)
 - Achieved through **method overriding** in child classes.
 - A child class provides its **own version of a method** already defined in its parent class.
 - When the method is called on a child class object, the **child’s version runs** instead of the parent’s.
