@@ -1,36 +1,44 @@
-Error handling – try(), catch() and finally
-Error handling is a way to manage exceptions (errors) that occur during code execution **without crashing the program**.
-	Why use try-catch?
-•	Prevents the program from stopping due to runtime errors.
-•	Helps in debugging by showing custom error messages.
-•	Improves user experience by handling failures smoothly
-	How try-catch Works?
-1.	The try block contains the code that might cause an error
-2.	If an error occurs, throw Error(‘message’) is used to send the error to the catch() block
-3.	The catch() block receives the error and handles it without stopping the whole program
-4.	If no error occurs, the code inside try() runs normally, and catch is ignored
+# Advance JavaScript notes - Table content
 
+## 📑 Table of Contents
 
-Example: 
-function divide(a, b) {
-  try { // Code that may cause an error
-    if (b == 0) throw Error("Can't divide by 0!"); // Throwing an error
-    console.log(a / b); // Code runs if no error
-  } catch (error) { // Code that runs if an error occurs
-    console.log(error); // Catching and displaying the error
-  }
-finally { // Code that always runs (optional)
-    console.log("Division function executed.");
-  }
+- [Error Handling – try, catch](#error-handling:-try-catch)
+- [Advanced Object Concepts](#advanced-object-concepts)
+  - [Optional Chaining](#optional-chaining)
+  - [Object Destructuring](#object-destructuring)
+- [Understanding `this` Keyword](#understanding-this-keyword)
+  - [Explicit Binding - call, apply, bind](#explicit-binding---call-apply-bind)
+- [JavaScript Modules](#javascript-modules)
+- [Asynchronous JavaScript](#asynchronous-javascript)
+  - [Fetch API](#fetch-api)
+  - [Axios](#axios)
+  - [Promises](#promises)
+  - [Asynchronous Callback Functions](#asynchronous-callback-functions)
+  - [Async/Await](#asyncawait)
+- [JavaScript Generators](#javascript-generators)
+- [JavaScript Web Workers](#javascript-web-workers)
+- [Form Validation using RegEx](#form-validation-using-regex)
+
+---
+
+## Error Handling: `try`, `catch`
+- Used to **handle errors without crashing the program**
+- Helps in debugging by showing custom error messages.
+
+### How try-catch Works?
+1. The `try` block contains the code that might cause an error
+2. If an error occurs, `throw Error ("message")` is used to send the error to the `catch()` block
+3. The `catch()` block receives the error and handles it without stopping the whole program
+4. If no error occurs, the code inside `try()` runs normally, and `catch()` is ignored
+
+### Example:
+```js
+try{
+// risky code
+} catch(err) {
+// Handle error
 }
-divide(12, 0); 
-// Caught Error: Can't divide by 0!
-Division function executed.
-
-`error parameter` in catch(error)
-Error.name – Name/type of error (referenceError, typeError etc)
-Error.message – Error description (what went wrong)
-Error.stack – Tracing error location (line number + call path of the error code)
+```
 
 ---
 ## Advance `object` Concepts
@@ -121,8 +129,8 @@ console.log(js);   // "learning"
 > **Note:**
 > `completion` is not a `variable` here, only its properties (`html`, `css`, `js`) are extracted.
 
-
 ---
+
 ## Understanding `this` Keyword in JavaScript
 
 ### What is a Keyword?
@@ -607,5 +615,30 @@ onmessage = function(event) {
   const numbers = event.data
   const sum = numbers.reduce((acc,item) => acc + item, 0)
   postMessage(sum);
+```
+
+---
+
+## Form Validation using Regular Expressions (RegEx)
+### What is RegEx?
+- It is a **pattern** used to match, search, and manipulate strings.
+- Used for **validation (emails, phone numbers, passwords)**.
+- `.test()` return `true` if the RegEx code matches, otherwise `false`
+
+### Example for form validation:
+```js
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent default form submission
+    
+    const userEmail = document.getElementById("email").value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Can be created for other validations
+    
+    if (emailPattern.test(userEmail)) {
+        alert("✅ Email is valid");
+        // proceed with form submission or AJAX call
+    } else {
+        alert("❌ Please enter a valid email address");
+    }
+});
 ```
 
