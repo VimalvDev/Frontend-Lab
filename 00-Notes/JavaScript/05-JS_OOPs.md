@@ -1,4 +1,20 @@
 # Object-Oriented Programming in JavaScript
+## Table of Contents
+
+- [Object-Oriented Programming in JavaScript](#object-oriented-programming-in-javascript)
+  - [OOPs and Prototype-Based Programming](#oops-and-prototype-based-programming)
+    - [Class](#class)
+    - [Objects / Instances](#objects--instances)
+    - [Modification in an Instance](#modification-in-an-instance)
+  - [Prototype-Based Programming](#prototype-based-programming)
+    - [Prototype Real life Example](#prototype-real-life-example)
+    - [Object.create() for Prototypal Inheritance](#another-way-of-creating-object-in-javascript)
+  - [Constructors in JavaScript](#constructors-in-javascript)
+    - [Function-Based Constructor (ES5)](#1-function-based-constructor-es5)
+    - [Class-Based Constructor (ES6+)](#2-class-based-constructor-es6)
+    - [Do we always need classe]()
+
+---
 
 ## OOPs and Prototype-Based Programming
 ![OOPs IMG](IMGs/js_oops.png)
