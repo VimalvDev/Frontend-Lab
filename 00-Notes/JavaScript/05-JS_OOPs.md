@@ -16,7 +16,7 @@
     - [How `new` and `this` work together](#2-how-new-and-this-work-together)
   - [Principles of OOPs](#principles-of-oops)
     - [Inheritance](#1-inheritance)
-      - [Prototype-Based Inheritance (Before ES6)](#prototype-based-inheritance-before-es6)
+      - [Prototype-Based Inheritance (Before ES6)](#1-prototype-based-inheritance-before-es6)
       - [Class-Based Inheritance (ES6 and Modern JavaScript)](#2-class-based-inheritance-es6-and-modern-javascript)
       - [super() usage](#example-with-super)
       - [instanceof and constructor](#note)
@@ -25,8 +25,8 @@
       - [Getters and Setters](#getters-and-setters)
     - [Abstraction](#3-abstraction)
     - [Polymorphism](#4-polymorphism)
-      - [Static Polymorphism (Compile-time)](#static-polymorphism-compile-time)
-      - [Dynamic Polymorphism (Runtime)](#dynamic-polymorphism-runtime)
+      - [Static Polymorphism (Compile-time)](#1-static-polymorphism-compile-time)
+      - [Dynamic Polymorphism (Runtime)](#2-dynamic-polymorphism-runtime)
 
 ---
 
