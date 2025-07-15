@@ -2,7 +2,7 @@
 
 ## 📑 Table of Contents
 
-- [Error Handling – try, catch](#error-handling:-try-catch)
+- [Error Handling – try, catch](#error-handling-try-catch)
 - [Advance Object Concepts](#advance-object-concepts)
   - [Optional Chaining](#optional-chaining)
   - [Object Destructuring](#object-destructuring)
