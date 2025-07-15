@@ -2,7 +2,7 @@
 
 ## 📑 Table of Contents
 
-- [Error Handling – try, catch](#error-handling:-try-catch)
+- [Error Handling – try, catch](#error-handling--try-catch)
 - [Advanced Object Concepts](#advanced-object-concepts)
   - [Optional Chaining](#optional-chaining)
   - [Object Destructuring](#object-destructuring)
@@ -11,13 +11,14 @@
 - [JavaScript Modules](#javascript-modules)
 - [Asynchronous JavaScript](#asynchronous-javascript)
   - [Fetch API](#fetch-api)
-  - [Axios](#axios)
-  - [Promises](#promises)
-  - [Asynchronous Callback Functions](#asynchronous-callback-functions)
-  - [Async/Await](#asyncawait)
+  - [Axios](#axios-in-javascript)
+  - [JavaScript Promises](#javascript-promises)
+  - [Asynchronous Callback Functions](#asynchronous-callback-function)
+  - [JavaScript async/await](#javascript-asyncawait)
 - [JavaScript Generators](#javascript-generators)
 - [JavaScript Web Workers](#javascript-web-workers)
-- [Form Validation using RegEx](#form-validation-using-regex)
+- [Form Validation using RegEx](#form-validation-using-regular-expressions-regex)
+
 
 ---
 
