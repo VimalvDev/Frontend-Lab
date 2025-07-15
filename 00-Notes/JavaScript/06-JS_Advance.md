@@ -2,11 +2,12 @@
 
 ## 📑 Table of Contents
 
-- [Error Handling – try, catch](#error-handling--try-catch)
-- [Advanced Object Concepts](#advanced-object-concepts)
+- [Error Handling – try, catch](#error-handling:-try-catch)
+- [Advance Object Concepts](#advance-object-concepts)
   - [Optional Chaining](#optional-chaining)
   - [Object Destructuring](#object-destructuring)
-- [Understanding `this` Keyword](#understanding-this-keyword)
+- [Understanding `this` Keyword](#understanding-this-keyword-in-javascript)
+  - [Value of `this` in different conditions](#value-of-this-in-different-conditions)
   - [Explicit Binding - call, apply, bind](#explicit-binding---call-apply-bind)
 - [JavaScript Modules](#javascript-modules)
 - [Asynchronous JavaScript](#asynchronous-javascript)
