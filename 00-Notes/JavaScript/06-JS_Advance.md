@@ -2,7 +2,7 @@
 
 ## 📑 Table of Contents
 
-- [Error Handling – try, catch](#error-handling-try-catch)
+- [Error Handling – try, catch](#error-handling--try-catch)
 - [Advance Object Concepts](#advance-object-concepts)
   - [Optional Chaining](#optional-chaining)
   - [Object Destructuring](#object-destructuring)
@@ -23,7 +23,7 @@
 
 ---
 
-## Error Handling: `try`, `catch`
+## Error Handling- `try`, `catch`
 - Used to **handle errors without crashing the program**
 - Helps in debugging by showing custom error messages.
 
