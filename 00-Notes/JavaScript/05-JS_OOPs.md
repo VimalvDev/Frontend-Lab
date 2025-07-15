@@ -12,7 +12,21 @@
   - [Constructors in JavaScript](#constructors-in-javascript)
     - [Function-Based Constructor (ES5)](#1-function-based-constructor-es5)
     - [Class-Based Constructor (ES6+)](#2-class-based-constructor-es6)
-    - [Do we always need classe]()
+    - [Do we always need classes + constructors?](#some-important-questions)
+    - [How `new` and `this` work together](#2-how-new-and-this-work-together)
+  - [Principles of OOPs](#principles-of-oops)
+    - [Inheritance](#1-inheritance)
+      - [Prototype-Based Inheritance (Before ES6)](#prototype-based-inheritance-before-es6)
+      - [Class-Based Inheritance (ES6 and Modern JavaScript)](#2-class-based-inheritance-es6-and-modern-javascript)
+      - [super() usage](#example-with-super)
+      - [instanceof and constructor](#note)
+    - [Encapsulation](#2-encapsulation)
+      - [Private Properties](#private-properties)
+      - [Getters and Setters](#getters-and-setters)
+    - [Abstraction](#3-abstraction)
+    - [Polymorphism](#4-polymorphism)
+      - [Static Polymorphism (Compile-time)](#static-polymorphism-compile-time)
+      - [Dynamic Polymorphism (Runtime)](#dynamic-polymorphism-runtime)
 
 ---
 
