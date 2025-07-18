@@ -47,3 +47,20 @@ const element = <h1>Hello, {name}!</h1>;
   - Updates **only the changed parts** in the real DOM for performance.
 
 ---
+
+## React Fragments
+
+### What are Fragments?
+- Fragments **allow grouping multiple elements without adding extra nodes to the DOM**.
+- Useful when a component needs to return **multiple sibling elements**.
+- **Syntax:**
+```jsx
+return (
+  <>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+  </>
+);
+```
+
+---
