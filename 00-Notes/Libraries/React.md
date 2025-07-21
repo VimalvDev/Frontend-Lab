@@ -141,3 +141,21 @@ export default function TernaryToggle() {
 }
 ```
 - Usefull if rendering something when `show` is `true`
+
+## Updating `Objects` and `Arrays` in `useState`
+### Why cant we update objects/arrays directly?
+- Objects and arrays are **reference types** in JavaScript
+- If we **mutate them directly**, React may **not detect the change** and **skip re-rendering**
+- React re-renders only when the **reference changes**
+
+## Use `Spread` Operator for Safe Updates
+```jsx
+const [user, setUser] = useState({ name: "Alex", age: 20 });
+
+const increaseAge = () => {
+  setUser(prev => ({ // setUser passes a arrow function which returns an **Object**
+    ...prev, // Copies all previous key-value pairs
+    age: prev.age + 1 // overwritten with updated value
+  }));
+};
+```
