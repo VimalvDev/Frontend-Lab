@@ -64,3 +64,80 @@ return (
 ```
 
 ---
+
+## React `useState()`
+### What is `useState()`
+- `useState` is a **React Hook** used to add **state** to functional components
+- It allows components to **store** and update data
+
+### Basic Syntax
+```jsx
+const [stateVariable, setStateFunction] = useState(initialValue); // Destructuring useState array values
+```
+
+### Example
+```jsx
+import { useState } from "react"; 
+
+export default function Counter() {
+    const [count, setCount] = useState(0); // Destructuring array elements
+
+    return (
+        <> // Fragments
+            <h1>{count}</h1>
+            <button onClick={() => setCount(prev => prev + 1)}>Increment</button> // Functional updater
+            <button onClick={() => setCount(0)}>Reset</button>
+        </>
+    );
+}
+```
+
+## Conditonal Rendering in React
+### What is Conditional Rendering?
+- It means **show** or **hide** something based on a **condition**
+
+## Method 1: Using Logical AND (`&&`)
+```jsx
+import { useState } from "react";
+
+export default function ToggleVisibility() {
+    const [show, setShow] = useState(false);
+
+    return (
+        <>
+            {show && <h1>Hello, I am visible!</h1>}
+
+            <button onClick={() => setShow(prev => !prev)}>
+                Toggle
+            </button>
+        </>
+    );
+}
+```
+- The `<h1` shows only if `show` is `true`
+- Clicking `Toggle` changes `show`, toggling visibility
+- Usefull if rendering something when `show` is `true` and dont need `false`
+
+## Method 2: Using Ternary Operator
+```jsx
+import { useState } from "react";
+
+export default function TernaryToggle() {
+    const [show, setShow] = useState(false);
+
+    return (
+        <>
+            {show ? (
+                <h1>👋 I am visible now!</h1>
+            ) : (
+                null
+            )}
+
+            <button onClick={() => setShow(prev => !prev)}>
+                Toggle
+            </button>
+        </>
+    );
+}
+```
+- Usefull if rendering something when `show` is `true`
