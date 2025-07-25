@@ -159,3 +159,22 @@ const increaseAge = () => {
   }));
 };
 ```
+
+---
+
+
+## What is State?
+
+- **State** is a **built-in React object** used to store **dynamic, changeable data within a component**.
+- When state changes, the component **re-renders automatically** to reflect the new data.
+- Used for data that **changes over time** (like form inputs, counters, toggles, API data).
+
+### Key Points:
+- **Mutable** within the component.
+- Local to the component unless passed via props.
+- Managed using the **`useState` hook** in functional components.
+
+### Example:
+```jsx
+import React, { useState } from "react";
+```
