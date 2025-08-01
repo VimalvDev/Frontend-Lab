@@ -162,19 +162,43 @@ const increaseAge = () => {
 
 ---
 
-
-## What is State?
-
-- **State** is a **built-in React object** used to store **dynamic, changeable data within a component**.
-- When state changes, the component **re-renders automatically** to reflect the new data.
-- Used for data that **changes over time** (like form inputs, counters, toggles, API data).
-
-### Key Points:
-- **Mutable** within the component.
-- Local to the component unless passed via props.
-- Managed using the **`useState` hook** in functional components.
-
-### Example:
-```jsx
-import React, { useState } from "react";
+## React Routing (React Router DOM)
+- React uses **React Router DOM** to navigate between pages without regreshing the browser. This is called **client-side routing**.
+### Installation
+- React Routing is an external pack, which we need to install using:
+```bash
+npm install react-router-dom
 ```
+
+## Basic Setup
+- Wrap the `App` with `BroswerRouter` in `main.jsx`
+```jsx
+import { BrowserRouter } from 'react-router-dom';
+
+<StrictMode>
+  <BrowserRouter>
+     <App />
+  </BrowserRouter>
+</StrictMode>,
+```
+
+## Define Routes
+- Use `Routes` and `Route` to map paths to **components**:
+```jsx
+import { Routes, Route } from 'react-router-dom';
+
+<Routes> // Structure for  paths
+  <Route path="/" element={<Home />} /> // Path value and element on which we want to redirect
+  <Route path="/about" element={<About />} />
+</Routes>
+```
+
+## Navigation
+- Use `<Link>` instead of `<a>` to navigate without reloading:
+```jsx
+import { Link } from 'react-router-dom';
+
+<Link to="/">Home</Link>
+<Link to="/about">About</Link>
+```
+
