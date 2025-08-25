@@ -50,15 +50,29 @@
 1. **Single Parent Element**
   - JSX must return one root element
   - Use `<></>` (React Fragments) if you don't want an extra HTML wrapper.
+
 ---
 
-## How React Renders
-- React uses **virtual DOM** to track changes.
-- On state or props change:
-  - React updates the virtual DOM.
-  - Compares with the previous version.
-  - Updates **only the changed parts** in the real DOM for performance.
+## React Virtual DOM & Rendering
+### What is Virtual DOM?
+- A **Lightweight JS object** representing the real DOM
+- React keeps this Virtual DOM in memory for faster updates
+- Updates are first applied to the **Virtal DOM**, then synchronized with the real DOM
 
+### Why Virtal DOM?
+- Direct manipulation of **real DOM is slow**
+- Virtal DOM maked updates **fast and efficient** by:
+  - Minimizing direct DOM operations
+  - Batching and applying only **necessary changes**
+>**Note:** <br>
+>**Batching** means grouping multiple UI updates together and applying them in a single render cycle instead of one at a time**
+
+## Reconciliation
+- It is the **process** React used to **sync** the Virtual DOM with the **real DOM**
+- Steps:
+  - React builds a new Virtual DOM tree after state/props change
+  - It compares (diffs) with the previous Virtual DOM
+  - Updates **only the changed nodes** in the real DOM
 ---
 
 ## React Fragments
