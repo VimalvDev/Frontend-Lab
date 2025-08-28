@@ -40,8 +40,6 @@
 > **Note: Syntax extension -** <br>
 > Adding new rules or new ways of writing code to a language’s existing syntax, without changing the language itself.
 
----
-
 ### Key Points about JSX:
 1. **Single Parent Element**
   - JSX must return one root element
