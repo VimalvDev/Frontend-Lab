@@ -12,15 +12,11 @@
   - Creates **fast, interactive, and reusable UI components**.
   - Uses **Virtual DOM** to efficiently update only the necessary parts of the UI.
 
----
-
 ### What is React?
 - **React** is an **open-source JavaScript library** developed by **Facebook** for building **user interfaces**.
 - It is **component-based**: UI is divided into small, reusable building blocks.
 - React is **declarative**: You describe what the UI should look like, and React takes care of updating it when data changes.
 - React is not a framework — it focuses only on the **view layer** in the MVC pattern.
-
----
 
 ### Why Do We Use React?
 - **Performance**:
