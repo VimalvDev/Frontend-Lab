@@ -86,10 +86,46 @@ return (
 
 ---
 
+## React Hooks
+- **Functional components** were orignally just for showing UI (they couldn't store data or run lifecycle code)
+- Hooks were introduced (React 16.8) to give **functional components more power**
+- Hooks are special **functions** that let **functional components remember** things and **react** to changes
+
+### Example without hooks (old way)
+```jsx
+class Counter extends React.Component {
+  state = { count: 0 };
+
+  render() {
+    return <h1>{this.state.count}</h1>;
+  }
+}
+```
+### Example with hooks (modern way)
+```jsx
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return <h1>{count}</h1>;
+}
+```
+
+### Common React Hooks
+1. `useState` -> state management
+2. `useRef` -> refs & mutable values
+3. `useEffect` -> side effects (API calls, timers)
+4. `useReducer` -> complex state logic
+5. `useContext` -> global state via Context API
+6. `useMemo` -> memoize expensive calculations
+7. `useCallback` -> memoize functions
+
+---
+
 ## React `useState()`
 ### What is `useState()`
 - `useState` is a **React Hook** used to add **state** to functional components
-- It allows components to **store** and update data
+- **State** lets components **store values** and **re-render** when updated
 
 ### Basic Syntax
 ```jsx
@@ -112,6 +148,8 @@ export default function Counter() {
     );
 }
 ```
+
+---
 
 ## Conditonal Rendering in React
 ### What is Conditional Rendering?
