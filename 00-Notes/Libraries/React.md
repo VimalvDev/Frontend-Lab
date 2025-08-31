@@ -87,7 +87,7 @@ return (
 ---
 
 ## React Hooks
-- **Functional components** were orignally just for showing UI (they couldn't store data or run lifecycle code)
+- **Functional components** were originally just for showing UI (they couldn't store data or run lifecycle code)
 - Hooks were introduced (React 16.8) to give **functional components more power**
 - Hooks are special **functions** that let **functional components remember** things and **react** to changes
 
@@ -149,9 +149,26 @@ export default function Counter() {
 }
 ```
 
+## Updating `Objects` and `Arrays` in `useState`
+### Why cant we update objects/arrays directly?
+- Objects and arrays are **reference types** in JavaScript
+- If we **mutate them directly**, React may **not detect the change** and **skip re-rendering**
+- React re-renders only when the **reference changes**
+
+## Use `Spread` Operator for Safe Updates
+```jsx
+const [user, setUser] = useState({ name: "Alex", age: 20 });
+
+const increaseAge = () => {
+  setUser(prev => ({ // setUser takes aa arrow function which returns an **Object**
+    ...prev, // Copies all previous key-value pairs
+    age: prev.age + 1 // overwritten with updated value
+  }));
+};
+```
 ---
 
-## Conditonal Rendering in React
+## Conditional Rendering in React
 ### What is Conditional Rendering?
 - It means **show** or **hide** something based on a **condition**
 
@@ -173,9 +190,9 @@ export default function ToggleVisibility() {
     );
 }
 ```
-- The `<h1` shows only if `show` is `true`
+- The `<h1>` shows only if `show` is `true`
 - Clicking `Toggle` changes `show`, toggling visibility
-- Usefull if rendering something when `show` is `true` and dont need `false`
+- Useful if rendering something when `show` is `true` and dont need `false`
 
 ## Method 2: Using Ternary Operator
 ```jsx
@@ -200,25 +217,6 @@ export default function TernaryToggle() {
 }
 ```
 - Usefull if rendering something when `show` is `true`
-
-## Updating `Objects` and `Arrays` in `useState`
-### Why cant we update objects/arrays directly?
-- Objects and arrays are **reference types** in JavaScript
-- If we **mutate them directly**, React may **not detect the change** and **skip re-rendering**
-- React re-renders only when the **reference changes**
-
-## Use `Spread` Operator for Safe Updates
-```jsx
-const [user, setUser] = useState({ name: "Alex", age: 20 });
-
-const increaseAge = () => {
-  setUser(prev => ({ // setUser passes a arrow function which returns an **Object**
-    ...prev, // Copies all previous key-value pairs
-    age: prev.age + 1 // overwritten with updated value
-  }));
-};
-```
-
 ---
 
 ## React Routing (React Router DOM)
