@@ -155,7 +155,7 @@ export default function Counter() {
 - If we **mutate them directly**, React may **not detect the change** and **skip re-rendering**
 - React re-renders only when the **reference changes**
 
-## Use `Spread` Operator for Safe Updates
+### Use `Spread` Operator for Safe Updates
 ```jsx
 const [user, setUser] = useState({ name: "Alex", age: 20 });
 
@@ -165,6 +165,17 @@ const increaseAge = () => {
     age: prev.age + 1 // overwritten with updated value
   }));
 };
+```
+
+---
+## Props in React
+### What are Props?
+- Props (short for **properties**) are used to **pass data** from a **parent component** to a **child component**
+- Props are **read-only** -> child components **can't modify** them
+```jsx
+function Greeting({ name }) {
+  return <h1>Hello, {name}!</h1>;
+}
 ```
 ---
 
