@@ -230,6 +230,21 @@ export default function TernaryToggle() {
 - Usefull if rendering something when `show` is `true`
 ---
 
+## React `useRef()`
+### What is `useRef()`
+- `useRef` is a **React Hook** that lets you create a **mutable reference** (an object with a `.current` property)
+- Unlike `useState`, **changing `.current` does not cause re-render**
+- Commonly used to:
+  - Access and manipulate **DOM elements** directly
+  - Store **mutable values** that you don’t want to trigger re-renders
+  - Keep **values persistent** across renders (like a variable that survives re-renders)
+
+### Basic Syntax
+```jsx
+const refName = useRef(initialValue); // refName.current = initialValue
+
+---
+
 ## React Routing (React Router DOM)
 - React uses **React Router DOM** to navigate between pages without regreshing the browser. This is called **client-side routing**.
 ### Installation
