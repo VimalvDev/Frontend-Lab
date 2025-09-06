@@ -285,3 +285,23 @@ import { Link } from 'react-router-dom';
 <Link to="/about">About</Link>
 ```
 
+---
+## AJAX, Fetch, Axios & API
+
+## What is AJAX?
+- **AJAX (Asynchronous JavaScript and XML)** allows communication between **frontend** and **backend** without reloading the page.
+- It helps update parts of a web page dynamically with data from the server.
+
+## Fetch & Axios
+- `fetch()` and **Axios** are tools used to make **AJAX requests**
+- **`fetch()`**
+   - Built-in JavaScript function
+   - Returns a **Promise**
+- **Axios**
+   - External library (needs to be installed**
+   - Easier syntax, supports older browsers, and handles JSON automatically
+
+## What is an API?
+- **API** (Application Programming Interface)** = A set of backend **rules/endpoints** that define how frontend and backend communicate.
+- An **endpoint** (like `https://api.example.com/users`) is an **URL** where the frontend sends requests.
+- The **backend** process the request (often interacts with database) and returns a response.
