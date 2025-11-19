@@ -321,3 +321,57 @@ String s = sc.nextLine();
 - O(n²) → nested loops  
 
 ---
+
+## Returning Arrays in Java
+
+When a method needs to return multiple values, Java allows returning an **array**.  
+There are two common ways to do this.
+
+## 1. Declaring an Array and Then Returning It
+
+- In this approach, an array variable is created inside the method, values are assigned to it, and then the variable is returned.  
+
+```java
+int[] result = {p, q, r, s, t};
+return result;
+```
+- This method is useful when you want to perform operations on the array before returning it.
+
+## 2. Returning an Anonymous Array
+
+- Java also allows returning an array **directly** without giving it a name.  
+```java
+return new int[]{p, q, r, s, t};
+```
+
+- This is called an **anonymous array** because it has no variable name.  
+- It is commonly used in platforms like GFG and LeetCode, where the array is created only for returning the result.
+
+## Why `{a, b, c}` Cannot Be Returned Directly
+
+```java
+return {p, q, r, s, t};   // ❌ Not valid in Java
+```
+
+- The shorthand `{...}` can only be used **during array declaration**.  
+- It cannot be used by itself in a return statement.  
+- Java requires either:
+   - the name of an already-declared array, or  
+   - a full array creation expression like `new int[]{...}`.
+
+## Summary Table
+
+| Syntax | Allowed? | Meaning |
+|--------|----------|---------|
+| `int[] arr = {a, b, c};` | ✔ | Declares and initializes an array |
+| `return arr;` | ✔ | Returns an existing array |
+| `return new int[]{a, b, c};` | ✔ | Creates and returns an anonymous array |
+| `return {a, b, c};` | ✘ | Invalid, cannot return using shorthand |
+
+## When to Use Each Approach?
+
+- **Anonymous array (`new int[]{...}`)**  
+  Use this when the array exists only for returning and is not needed inside the method.
+
+- **Declared array (`int[] arr = {...}`)**  
+  Use this when you need to store the array in a variable to modify or process
