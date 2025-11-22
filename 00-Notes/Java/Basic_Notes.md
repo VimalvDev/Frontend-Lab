@@ -375,3 +375,77 @@ return {p, q, r, s, t};   // ❌ Not valid in Java
 
 - **Declared array (`int[] arr = {...}`)**  
   Use this when you need to store the array in a variable to modify or process
+
+---
+
+# Java Varargs (Variable Arguments) — Notes
+
+## 1. Overview
+Varargs (variable arguments) allow a method to accept zero or more values of the same type.  
+They provide flexibility when the number of inputs is not fixed.  
+The ellipsis/spread operator (`...`) in the parameter list indicates that the method can receive multiple arguments.
+
+```java
+void exampleMethod(int... numbers) { }
+```
+
+## 2. Why Varargs Are Used
+- To simplify method calls.
+- To avoid manually creating arrays.
+- To handle a flexible number of parameters.
+- To improve readability in utility or helper functions.
+
+### Example without varargs:
+```java
+printNumbers(new int[]{1, 2, 3});
+```
+
+### Example with varargs:
+```java
+printNumbers(1, 2, 3);
+```
+
+## 3. How Varargs Work Internally
+Varargs are internally treated as arrays.  
+When a varargs method is called, Java automatically packs the provided values into an array before the method receives them.
+
+```java
+// This method
+void printNumbers(int... nums)
+
+// Is treated as:
+void printNumbers(int[] nums)
+```
+
+## 4. Rules of Varargs
+1. Only one varargs parameter is allowed per method.
+2. The varargs parameter must always be the last parameter in the method signature.
+3. Regular parameters must appear before the varargs parameter.
+
+### Example
+```java
+// Valid:
+void demo(String name, int... nums)
+
+// Invalid:
+void demo(int... nums, String name) // Error
+```
+
+## 5. Common Use Cases
+- Logging frameworks that accept multiple arguments.
+- String formatting utilities.
+- Library methods that accept a flexible number of items.
+- Utility methods where the number of arguments is not fixed.
+
+## 6. Pros and Cons
+
+### Pros
+- More flexibility in method calls.
+- Cleaner syntax.
+- Reduces the need for multiple overloaded methods.
+
+### Cons
+- Can create ambiguity when combined with method overloading.
+- May have a small performance cost due to array creation.
+- Makes strict argument validation more difficult.
+
