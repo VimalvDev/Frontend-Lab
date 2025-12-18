@@ -17,7 +17,7 @@
 - Framework is to give everything together like nexjs gives bundling, routing, SEO etc.
 
 ### Import and Export
-[Click here to read](/JavaScript/06-JS_Advance.md#javascript-modules)
+[JavaScript Modules](../JavaScript/06-JS_Advance.md#javascript-modules)
 
 ### What is React?
 - **React** is an **open-source JavaScript library** developed by **Facebook** for building **user interfaces (UI)**.
