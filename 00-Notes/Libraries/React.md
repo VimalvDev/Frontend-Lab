@@ -39,26 +39,16 @@
 
 ---
 
-## What is JSX?
-- - **JSX (JavaScript XML)** is a syntax extension for JavaScript that allows you to write **HTML-like code inside JavaScript**.
-- It makes UI code easier to read, write, and maintain.
-- Browsers **cannot understand JSX directly**. It must be **transpiled by Babel** into standard JavaScript using `React.createElement()`.
-
-> **Note: Syntax extension -** <br>
-> Adding new rules or new ways of writing code to a language’s existing syntax, without changing the language itself.
-
-### Key Points about JSX:
-1. **Single Parent Element**
-  - JSX must return one root element
-  - Use `<></>` (React Fragments) if you don't want an extra HTML wrapper.
-
----
-
 ## React Virtual DOM & Rendering
 ### What is Virtual DOM?
 - A **Lightweight JS object** representing the real DOM
 - React keeps this Virtual DOM in memory for faster updates
 - Updates are first applied to the **Virtal DOM**, then synchronized with the real DOM
+
+### How Virtual DOM works?
+- First, React creates a copy of the Real dom
+- then, whenever there are changes in the copy dom, it compares it with real dom
+- after comparing, it changes/updates only the changed part not full dom
 
 ### Why Virtal DOM?
 - Direct manipulation of **real DOM is slow**
@@ -74,6 +64,21 @@
   - React builds a new Virtual DOM tree after state/props change
   - It compares (diffs) with the previous Virtual DOM
   - Updates **only the changed nodes** in the real DOM
+---
+
+## What is JSX?
+- - **JSX (JavaScript XML)** is a syntax extension for JavaScript that allows you to write **HTML-like code inside JavaScript**.
+- It makes UI code easier to read, write, and maintain.
+- Browsers **cannot understand JSX directly**. It must be **transpiled by Babel** into standard JavaScript using `React.createElement()`.
+
+> **Note: Syntax extension -** <br>
+> Adding new rules or new ways of writing code to a language’s existing syntax, without changing the language itself.
+
+### Key Points about JSX:
+1. **Single Parent Element**
+  - JSX must return one root element
+  - Use `<></>` (React Fragments) if you don't want an extra HTML wrapper.
+
 ---
 
 ## React Fragments
