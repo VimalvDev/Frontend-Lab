@@ -279,6 +279,11 @@ JavaScript Modules help us split code into smaller, reusable files. This makes p
 - Reuse code in multiple files.
 - Keep functions and variables in their own files.
 
+>##NOTE:
+>```<script type="module" src="script.js"></script>```
+>use this before using module js.
+>It tells the HTML file that we are using module js code.
+
 ## Types of Modules
 
 ### 1. ES Modules (Modern JavaScript Modules)
