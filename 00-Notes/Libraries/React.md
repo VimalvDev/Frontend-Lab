@@ -12,8 +12,15 @@
   - Creates **fast, interactive, and reusable UI components**.
   - Uses **Virtual DOM** to efficiently update only the necessary parts of the UI.
 
+### Library vs Framework
+- Library is to give a particular feature to the website like animation (GSAP), UI elements (React), smooth scrolling (Lenis).
+- Framework is to give everything together like nexjs gives bundling, routing, SEO etc.
+
+### Import and Export
+[Click here to read](00-Notes/JavaScript/06-JS_Advance.md#javascript-modules)
+
 ### What is React?
-- **React** is an **open-source JavaScript library** developed by **Facebook** for building **user interfaces**.
+- **React** is an **open-source JavaScript library** developed by **Facebook** for building **user interfaces (UI)**.
 - It is **component-based**: UI is divided into small, reusable building blocks.
 - React is **declarative**: You describe what the UI should look like, and React takes care of updating it when data changes.
 - React is not a framework — it focuses only on the **view layer** in the MVC pattern.
