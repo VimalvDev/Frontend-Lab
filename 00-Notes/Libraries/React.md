@@ -98,6 +98,25 @@ return (
 
 ---
 
+## Props in React
+### What are Props?
+- Props (short for **properties**) are used to **pass data** from only **parent component** to a **child component**
+- Props are **read-only** -> child components **can't modify** them
+- The prop is in the form of object not a string or number form.
+```jsx
+//Parent component
+<>
+   <Greeting name="vimal" age={20} /> //name is a prop
+</>
+
+//Child component
+function Greeting({ name, age }) {
+  return <h1>Hello, {name}!</h1>;
+}
+```
+
+---
+
 ## React Hooks
 - **Functional components** were originally just for showing UI (they couldn't store data or run lifecycle code)
 - Hooks were introduced (React 16.8) to give **functional components more power**
@@ -179,16 +198,6 @@ const increaseAge = () => {
 };
 ```
 
----
-## Props in React
-### What are Props?
-- Props (short for **properties**) are used to **pass data** from a **parent component** to a **child component**
-- Props are **read-only** -> child components **can't modify** them
-```jsx
-function Greeting({ name }) {
-  return <h1>Hello, {name}!</h1>;
-}
-```
 ---
 
 ## Conditional Rendering in React
