@@ -114,6 +114,12 @@ function Greeting({ name, age }) {
   return <h1>Hello, {name}!</h1>;
 }
 ```
+---
+
+## Object Destructuring
+- It is highly used to simplfy the objects in react
+
+[Click here to read](../JavaScript/06-JS_Advance.md#object-destructuring)
 
 ---
 
