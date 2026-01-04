@@ -332,3 +332,182 @@ import { Link } from 'react-router-dom';
 - **API** (Application Programming Interface)** = A set of backend **rules/endpoints** that define how frontend and backend communicate.
 - An **endpoint** (like `https://api.example.com/users`) is an **URL** where the frontend sends requests.
 - The **backend** process the request (often interacts with database) and returns a response.
+
+---
+
+# 📘 React Router Notes (Vite + React)
+
+Short and clear notes covering React Router basics, common mistakes, and correct usage.  
+Designed for quick revision and GitHub README.
+
+---
+
+## 1️⃣ What is React Router?
+
+- React Router is used to change UI based on the URL without reloading the page  
+- Provides a multi-page feel in React apps
+- Works on the client side (Single Page Application – SPA)
+
+---
+
+## 2️⃣ Correct package to install (Very Important)
+
+### ✅ For Vite / browser React apps
+```bash
+npm install react-router-dom
+```
+
+### ❌ Do NOT use directly
+
+react-router
+
+### Why?
+
+- react-router → core routing logic (low-level)
+- react-router-dom → browser support (BrowserRouter, Link, etc.)
+- react-router-dom already includes react-router
+
+---
+
+## 3️⃣ If installed both by mistake (common issue)
+
+### Problem
+
+- Editor auto-imports from react-router ❌
+
+### Solution
+```bash
+npm uninstall react-router  
+npm install react-router-dom  
+```
+---
+
+## 4️⃣ BrowserRouter – what & why
+### main.jsx
+```jsx
+import { BrowserRouter } from "react-router-dom";
+
+<BrowserRouter>
+  <App />
+</BrowserRouter>
+```
+
+- Required for browser/web apps
+- Uses browser URL (window.history)
+- Must be imported from react-router-dom
+
+---
+
+## 5️⃣ `<Routes />` vs `<Route />`
+
+### `<Routes />`
+
+- Decides which route matches the URL
+- Renders only one route at a time
+- Like a container for the `<Route />`
+
+### `<Route />`
+
+- Defines path → component
+- Does nothing alone
+- Must be inside `<Routes />`
+
+### Example
+
+```jsx
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="*" element={<NotFound />} />
+</Routes>
+```
+### Meaning
+
+- / → Home  
+- /about → About  
+- Anything else → NotFound (404)
+
+---
+
+## 6️⃣ path="*" (Catch-all route)
+
+- Matches any unmatched URL
+- Used for 404 / Not Found pages
+
+```jsx
+<Route path="*" element={<NotFound />} />
+```
+---
+
+## 7️⃣ Navigation types (Very important distinction)
+
+### Routing (page change)
+
+Used when:
+- Different pages
+- Different layouts
+- Different data
+  
+---
+
+### Navigation on a single long page
+
+If **all content** is on **ONE** page:
+- Do **NOT** use React Router
+- Use section (`<a/>`) scrolling
+
+---
+
+## 8️⃣ Single-page section navigation
+
+### Step 1: Add section IDs
+
+```jsx
+<section id="home">Home</section>
+<section id="about">About</section>
+```
+
+### Step 2: Navbar links
+
+```jsx
+<a href="#home">Home</a>
+<a href="#about">About</a>
+```
+
+### Step 3: Smooth scrolling
+
+```css
+html {
+  scroll-behavior: smooth;
+}
+```
+---
+
+## 9️⃣ Navigation ≠ Routing
+
+- Navigation → scroll inside the same page
+- Routing → change page via URL
+
+---
+
+## 1️⃣0️⃣ React Router docs confusion (Important clarity)
+
+You may see:
+- @react-router/dev/routes
+- routes.ts
+- loaders, actions
+
+### This is:
+
+React Router Framework Mode (Advanced)
+
+- No BrowserRouter
+- File/config-based routing
+- Similar to Next.js / Remix
+
+### For learning & normal frontend apps:
+
+- Ignore framework mode
+- Use react-router-dom + BrowserRouter
+
+---
