@@ -511,3 +511,39 @@ React Router Framework Mode (Advanced)
 - Use react-router-dom + BrowserRouter
 
 ---
+
+## Folder Structure
+
+```bash
+src/
+│
+├── components/          # Reusable UI components
+│   ├── Button.jsx
+│   ├── Card.jsx
+│   ├── Modal.jsx
+│   └── Loader.jsx
+│
+├── layouts/             # Page layouts (structure)
+│   ├── MainLayout.jsx
+│   └── AuthLayout.jsx
+│
+├── pages/               # Page-level components (routes)
+│   ├── Home/
+│   │   ├── HomePage.jsx
+│   │   ├── Hero.jsx
+│   │   └── FAQ.jsx
+│   │
+│   ├── About/About.jsx
+│   ├── Contact/Contact.jsx
+│   └── NotFound.jsx
+│
+├── routes/              # Routing logic
+│   └── AppRoutes.jsx
+│
+├── hooks/               # Custom hooks
+│   └── useScrollToTop.js
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
