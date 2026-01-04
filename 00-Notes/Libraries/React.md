@@ -512,7 +512,23 @@ React Router Framework Mode (Advanced)
 
 ---
 
-## Folder Structure
+# Folder Structure
+
+## 1️⃣ Core principle (Most important)
+
+- `App.jsx` should **NOT contain page logic**
+- It should only:
+  - Load routing
+  - Apply global layouts
+- Pages and UI logic must live elsewhere
+
+> App.jsx = entry + routing wrapper only
+
+---
+
+## 2️⃣ Professional folder structure (scalable)
+
+```bash
 
 ```bash
 src/
@@ -546,4 +562,185 @@ src/
 ├── App.jsx
 ├── main.jsx
 └── index.css
+```
+
+---
+## 3️⃣ What goes where
+
+## What goes inside `components/`
+
+- Small, reusable UI parts
+- No routing
+- No page-level responsibility
+
+Examples:
+- Button
+- Card
+- Modal
+- Loader
+- Navbar items
+
+Rule:
+> If it is reused → component
+
+## What goes inside `pages/`
+
+- Components that deserve a **URL**
+- Each page represents a full screen
+
+Examples:
+- HomePage → `/`
+- About → `/about`
+- Contact → `/contact`
+
+Rule:
+> If it needs a URL → page → route
+
+## What goes inside `layouts/`
+
+- Shared structure for pages
+- Uses `<Outlet />`
+- Controls what stays fixed and what changes
+
+Examples:
+- Navbar
+- Footer
+- Sidebar layouts
+- Auth layouts
+
+Rule:
+> If it wraps pages → layout
+
+## Routing logic belongs in `routes/`
+
+- All `<Routes>` and `<Route>` live here
+- App.jsx stays minimal
+- Easy to manage many routes
+
+Rule:
+> Routing logic ≠ UI logic
+
+---
+
+## 4️⃣ Clean & professional `App.jsx`
+
+- No UI components
+- No routes written directly
+- Only loads routing file
+
+Purpose:
+- Keeps entry file clean
+- Improves readability
+- Easier to scale
+
+```jsx
+import AppRoutes from "./routes/AppRoutes";
+
+function App() {
+  return <AppRoutes />;
+}
+
+export default App;
+```
+
+---
+
+## 5️⃣ Professional layout (MainLayout.jsx)
+
+```jsx
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Outlet } from "react-router-dom";
+
+function MainLayout() {
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  );
+}
+
+export default MainLayout;
+```
+
+- Navbar & Footer → always visible
+- Pages render inside <Outlet />
+
+---
+## 6️⃣ Example page (HomePage.jsx)
+```
+import Hero from "./Hero";
+import FAQ from "./FAQ";
+
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <FAQ />
+    </>
+  );
+}
+
+export default HomePage;
+```
+- No routing here.
+- Just composing UI.
+
+---
+
+## 7️⃣ Professional routing file (AppRoutes.jsx)
+
+```jsx
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "../layouts/MainLayout";
+
+import HomePage from "../pages/Home/HomePage";
+import About from "../pages/About/About";
+import Contact from "../pages/Contact/Contact";
+import NotFound from "../pages/NotFound";
+
+function AppRoutes() {
+  return (
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
+
+export default AppRoutes;
+```
+## 8️⃣ Common beginner mistakes (Avoid these)
+
+- Putting everything in App.jsx  
+- Creating routes for buttons or sections  
+- Mixing UI components with pages  
+- Repeating Navbar/Footer in every page  
+
+These make apps hard to maintain.
+
+---
+
+### ✅ Final rule
+
+- If it needs a URL → page → route  
+- If it’s reused → component  
+- If it wraps pages → layout  
+- If it controls navigation → routes file
+
+```bash
+BrowserRouter
+ └── App
+     └── Routes
+         └── Layout
+             ├── Navbar
+             ├── Page (via Outlet)
+             └── Footer
 ```
