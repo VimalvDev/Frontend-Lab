@@ -448,15 +448,40 @@ Used when:
 - Different layouts
 - Different data
 
-## How  to Navigate
+## 1. `<Link>` (without active state)
 - `<Link>` is used to **move between routes**
 - Changes the URL **without** page reload**
-```
+- Used for page-to-page navigation
+```jsx
 <Link to="/">Home</Link>
 <Link to="/checkout">Checkout</Link>
 <Link to="/order">Order</Link>
 ```
----
+
+### Used for:
+- Buttons
+- Cards
+- Simple navigation
+
+## 2. `<NavLink>` (with active state)
+- `<NavLink>` is a special version of `<Link>`
+- It knows **which route is currently active**
+- Used mainly in **Navbar / Sidebar**
+
+```jsx
+<NavLink
+  to="/"
+  className={({ isActive }) =>
+    isActive ? "nav-link active" : "nav-link"
+  }
+>
+  Home
+</NavLink>
+```
+
+### Used for:
+- Highlight active page
+- Apply active styles automatically
 
 ## Navigation on a single long page
 
