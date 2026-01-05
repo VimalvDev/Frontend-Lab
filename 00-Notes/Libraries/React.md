@@ -441,16 +441,24 @@ import { BrowserRouter } from "react-router-dom";
 
 ## 7️⃣ Navigation types (Very important distinction)
 
-### Routing (page change)
+## Routing (page change)
 
 Used when:
 - Different pages
 - Different layouts
 - Different data
-  
+
+## How  to Navigate
+- `<Link>` is used to **move between routes**
+- Changes the URL **without** page reload**
+```
+<Link to="/">Home</Link>
+<Link to="/checkout">Checkout</Link>
+<Link to="/order">Order</Link>
+```
 ---
 
-### Navigation on a single long page
+## Navigation on a single long page
 
 If **all content** is on **ONE** page:
 - Do **NOT** use React Router
