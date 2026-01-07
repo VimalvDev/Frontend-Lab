@@ -203,6 +203,66 @@ const increaseAge = () => {
   }));
 };
 ```
+---
+
+## useEffect Hook
+
+## What is useEffect?
+- `useEffect` is a React Hook used to run **side effects** in a function component.
+- Side Effects are things React does **outside rendering**, such as:
+    - Fetching data from an API
+    - Updating the page title
+    - Using timers (`setInterval`, `setTimeot`)
+    - Adding event listerners
+
+ ## What does "render" mean?
+- A **render** is when react:
+    - Runs your component function
+    - Decides what should appear on the screen
+
+- The **First render** is when the component shows for the first time.
+
+## Why use useEffect?
+- If we write side-effect code directly insdie a component, it wwill run **on every render**.
+- `useEffect` lets us **control when that code runs**.
+
+```jsx
+## Basic syntax
+```js
+useEffect(() => {
+  // side-effect code
+}, [dependencies]);
+```
+
+>**Note**: Important line
+>Run this code after render, but only when these values change
+>useEffect is used to run side effects after render and control when they run using dependencies.
+
+## When does useEffect run?
+### 1. Run once on first render
+Empty Dependency array
+```jsx
+useEffect(() => {
+  console.log("Runs only once");
+}, []); // => this is the dependency array
+```
+
+
+### 2. Run when a value changes
+Dependency array value changes
+```jsx
+useEffect(() => {
+  console.log("Count changed");
+}, [count]);
+```
+
+### 3. Run on every render
+When there is **Dependency array**, then it will run on every render
+```jsx
+useEffect(() => {
+  console.log("Runs on every render");
+});
+```
 
 ---
 
