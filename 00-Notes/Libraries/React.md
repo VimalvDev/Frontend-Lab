@@ -837,3 +837,44 @@ BrowserRouter
              ├── Page (via Outlet)
              └── Footer
 ```
+
+---
+
+## `<base href="/">` in React
+
+### What it does
+`<base href="/">` defines the **base URL (root path)** for all relative links and assets in the app.
+
+After setting this, the browser treats `/` as the starting point for:
+- Relative URLs
+- Links (`<a href="...">`)
+- CSS, JS, and image paths
+
+### Why it is used in React
+- React apps use **client-side routing**.  
+- When the URL changes (e.g. `/cart`, `/products/1`), the browser still needs a fixed base path to load assets correctly.
+
+`<base href="/">` ensures:
+- Assets always load from the root
+- Links work correctly on page refresh
+- Routes behave consistently
+
+### Example
+```html
+<base href="/" />
+```
+
+### Without `<base>`:
+`href="about"` on `/products` → `/products/about` ❌
+
+### with `<base href="/">:`
+`href="about"` → `/about` ✅
+
+## When to change it
+- If the app is deployed in a subfolder
+```html
+<base href="/shop/" />
+```
+
+>**Note:**
+>`<base>` affects **all relative paths. A wrong value can break links, images, and styles.
