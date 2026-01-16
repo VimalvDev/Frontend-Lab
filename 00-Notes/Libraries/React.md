@@ -883,4 +883,4 @@ After setting this, the browser treats `/` as the starting point for:
 
 ## Async and Await
 
-[Click here to Read](../JavaScript/06-JS_Advance.md#javascript-asyncawait)
+[Click here to Read](../JavaScript/06-JS_Advance.md##javascript-asyncawait)
