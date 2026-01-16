@@ -878,3 +878,9 @@ After setting this, the browser treats `/` as the starting point for:
 
 >**Note:**
 >`<base>` affects **all relative paths. A wrong value can break links, images, and styles.
+
+---
+
+## Async and Await
+
+[Click here to Read](../JavaScript/06-JS_Advance.md#javascript-asyncawait)
