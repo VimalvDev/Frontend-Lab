@@ -884,3 +884,14 @@ After setting this, the browser treats `/` as the starting point for:
 ## Async and Await
 
 [Click here to Read](../JavaScript/06-JS_Advance.md##javascript-asyncawait)
+
+---
+## Data Mutation
+- We send a request to the backend using the `axios.post` method.
+- We pass the data we want to update as an object in the request body.
+
+```jsx
+axios.post("API", {productName: name, productId: id}); // {} => request body
+```
+>**Note**
+>axios.get is used to receive response and axios.post is used to send request
