@@ -895,3 +895,21 @@ axios.post("API", {productName: name, productId: id}); // {} => request body
 ```
 >**Note**
 >axios.get is used to receive response and axios.post is used to send request
+
+---
+## Controlled Input
+- A controlled input is an input whoese value is stored in **React state** and updated using **onChange**. React controls what appears in the input
+
+### Why use it?
+- Easy validation
+- Easy to read/update/reset values
+- Best for forms or in which input is required
+
+```jsx
+const [text, setText] = useState("");
+
+<input
+  value={text}
+  onChange={(e) => setText(e.target.value)}
+/>
+```
