@@ -913,3 +913,33 @@ const [text, setText] = useState("");
   onChange={(e) => setText(e.target.value)}
 />
 ```
+
+---
+
+## React Compiler
+
+### What is React Compiler?
+- The **React Compiler** is a build-time optimization tool from the **:contentReference[aoichit:)]{index=0}** team.
+- It automatically optimizes React components to reduce unnecessary re-renders.
+
+### Why React Compiler Exists
+Before:
+- Developers manually used:
+    - `useMemo`
+    - `useCallback`
+    - `React.memo`
+- This caused:
+    - Complex code
+    - Bugs from wrong dependecies
+    - Premature optimization
+
+Now:
+- The compiler **handles memoization automatically**
+- You write **simple React code**
+- Performance optimizations happen under the hood
+
+### What it Does
+- Skips unnecessary re-renders
+- Automatically memoizes values & functions
+- Tracks fine-graine state usage
+- Improves performance without changing your code
