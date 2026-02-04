@@ -11,5 +11,5 @@ Decouple font-size and line-height using clamp + fixed px or containers.
 
 ## Code
 ```jsx
-<h1 className="text-[clamp(6rem,9.5vw,11rem)] leading-[130px]">
+<h1 className="text-[clamp(6rem,9.5vw,11rem)] leading-[0.85em]">
 ```
