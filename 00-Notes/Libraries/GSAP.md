@@ -6,41 +6,39 @@ A **JavaScript animation library** used to create **smooth, performant animation
 
 ### 🚀 Two Ways to Apply Animations
 
-#### 1️⃣ Initial ➔ Final Position
+#### 1️⃣ Initial ➔ Final State
+- Used when the element is already in its starting position.
 ```js
-gsap.to("elemName", { /* properties */ });
+gsap.to(".box", { x: 300, duration: 1 });
 ```
 
-#### 2️⃣ Final ➔ Initial Position
+#### 2️⃣ Final ➔ Initial State
 ```js
-gsap.from("elemName", { /* properties */ });
+gsap.from(".box", { opacity: 0, y: 100 });
 ```
 
 ---
 
 ## ⏱️ GSAP Timeline
+- A **timeline** lets you sequence multiple animations in a controlled order
+- Animations play one after another
+- Useful for **page load animations**, **menus**, **hero sections**
+- Can be controlled at any time
 
-- Allows **chaining multiple animations** to play in sequence.
-- All animations inside a timeline will **play one after another**.
-- Useful for **complex animation sequences**.
-
-#### Pause / Play / Reverse Timeline:
+### Common Timeline Controls
 ```js
-tl.pause();      // Pauses timeline
 tl.play();       // Plays timeline
+tl.pause();      // Pauses timeline
 tl.reverse();    // Reverses timeline
+tl.restart()     // Restarts from beginning
 ```
 
----
+### Timeline vs Delay
 
-### 🆚 Timeline vs Delay
+- **Timeline:** different elements, different animations, ordered
+- **Delay:** same animation, just starts later
 
-- **Timeline:** Method to animate **different elements with different names** in sequence.
-- **Delay:** Property to delay animations on **same-named elements with same animations**.
-
----
-
-### ✅ Example:
+### Example:
 ```js
 let tl = gsap.timeline();
 tl.to("#box1", {
@@ -55,43 +53,32 @@ tl.to("#box2", {
 
 ---
 
-## ⚙️ Some GSAP Properties
+## Frequently Used GSAP Properties
 
-- `x` / `y`: Move element horizontally/vertically in pixels relative to parent (`x: 100`).
-- `xPercent` / `yPercent`: Move relative to element’s width/height.
-- `rotation`: Rotate the element in degrees.
-- `scale`: Scale element size.
-- `stagger`: Delay between animations for multiple elements.
-- `repeat`: Number of times to repeat (`0` = 1 time, `1` = 2 times, `-1` = infinite).
-- `yoyo`: `true/false` - Animation reverses direction on each repeat.
+### Transform Properties
+- `x` / `y`: Move in pixels
+- `xPercent` / `yPercent`: Move relative to element size
+- `scale`: Resize element
+- `rotation`: Rotate the element in degrees
 
----
+### Timing & Control
+- `duration`: Animation length
+- `delay`: Wait before animation starts
+- `stagger`: Delay between multiple elements
+- `repeat`: Number of times to repeat (`-1` = infinite)
+- `yoyo`: `true/false` - Reverses direction on each repeat
 
-## 🪐 GSAP Easing
-
-- **Easing** defines the **animation curve** (speed variation) between initial and final positions for smoother animations.
+### Overwrite
+Controls how GSAP handles **conflicting animations** on the same element
+- `overwrite: auto` -> safest, GSAP cancels conflicting tweens automatically
+- `overwrite: true` -> forcefully kills existing animations
+- `overwrite: false` -> allows multiple tweens (can cause bugs)
 
 ---
 
 ## 🌀 ScrollTrigger (GSAP Plugin)
+- Used for **scroll-based animations**
 
-Used for **scroll-based animations** on websites.
-
----
-
-### ⚡ ScrollTrigger Properties
-
-1. `trigger`: `"elemName"` ➔ Element that triggers the animation.
-2. `scroller`: `"parentName"` ➔ Parent element acting as the scrollbar (default `body`).
-3. `start`: `"top 10%"` ➔ Animation starts when top of element reaches 10% of viewport.
-4. `end`: Defines when animation ends relative to viewport.
-5. `markers: true` ➔ Shows start/end markers for debugging.
-6. `scrub: 1-5` ➔ Smooth scroll-linked animation (higher = smoother).
-7. `pin: true` ➔ Pins element during scroll for scroll-based animations.
-
----
-
-### ✅ Example:
 ```js
 gsap.to("#parent-element", {
   scrollTrigger: {
@@ -103,6 +90,47 @@ gsap.to("#parent-element", {
 });
 ```
 
+## ScrollTrigger Properties
+
+### Trigger & Scroll Position
+- `trigger: "elemName"` ➔ Element that controls the animation
+- `scroller: "parentName"` ➔ Scroll container (default `body`)
+- `start: "top 10%"` ➔ When animation starts (ex: "top 10%")
+- `end: "top -100%` ➔ When animation end
+
+### Debugging
+- `markers: true` ➔ shows start/end markers
+
+### Scroll Sync
+- `scrub: true` ➔ Links animation progress to scroll
+- `scrub: 1-5` ➔ Smoother interpolation
+
+### Pin Elements
+- `pin: true` ➔ Pins element during scroll for scroll-based animations
+- `pinSpacing: true/false` ➔ True keeps layout space. False removes extra spaces (overlappping sections)
+- `pinReparent: true` ➔ Moves pinned element to body
+> (Used when parent has overflow hidden or z-index issues occur)
+- `pinType: "transform"` ➔ default (better performance)
+- `pinType: "fixed"` ➔ needed for some mobile layouts
+
+- `anticipatePin: 0.5 - 1` ➔ Smooths jumps when pin starts
+> (Used when you see a visual jump on pin start or large pinned elements)
+
+### Refresh
+- `invalidateOnRefresh: true` ➔ recalculates values on resize/refresh
+
+Essential when:
+- Using dynamic heights
+- Responsive layouts
+- `vh` / `%` animations
+
+### Recalculation
+- `ScrollTrigger.refresh()` ➔ Manually recalculates all triggers
+  
+Used after:
+- DOM changes
+- Image loads
+- Layout updates
 ---
 
 ## 📱 Responsive GSAP Animations with `ScrollTrigger.matchMedia()`
